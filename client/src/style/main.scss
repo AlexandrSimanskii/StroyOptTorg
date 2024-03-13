@@ -12,6 +12,9 @@ ul {
   list-style-type: none;
 }
 
+button {
+  cursor: pointer;
+}
 .container {
   max-width: 1660px;
   padding: 0 20px;
@@ -20,3 +23,4 @@ ul {
 
 @import "fonts";
 @import "header";
+@import "footer";
