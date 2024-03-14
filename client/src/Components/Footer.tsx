@@ -77,8 +77,8 @@ const Footer = () => {
             </div>
 
             <ul className="footer-main-list__info footer-main-list">
-              {informationCollection.map((item) => (
-                <li className="footer-main-list__item">{item}</li>
+              {informationCollection.map((item,idx) => (
+                <li key={idx} className="footer-main-list__item">{item}</li>
               ))}
             </ul>
           </div>
@@ -95,8 +95,8 @@ const Footer = () => {
             </div>
 
             <ul className="footer-main-list__catalog footer-main-list">
-              {catalogCollection.map((item) => (
-                <li className="footer-main-list__item">{item}</li>
+              {catalogCollection.map((item,idx) => (
+                <li key={idx} className="footer-main-list__item">{item}</li>
               ))}
             </ul>
           </div>

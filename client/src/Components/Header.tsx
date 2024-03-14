@@ -2,7 +2,7 @@ import { LuMenu } from "react-icons/lu";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <div className="container">
         <div className="header-top">
           <div className="header-menu">
@@ -27,14 +27,6 @@ const Header = () => {
             <button className="header-inform__button">заказать звонок</button>
           </div>
         </div>
-
-
-
-
-
-
-
-
 
         <div className="header-bottom">
           <img

@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  font-family: "Helvetica Neue Cyr Medium Italic";
+  font-family: "Helvetica Neue Cyr Medium Italic", sans-serif;
 }
 $theme-color: rgba(24, 111, 212, 1);
 $second-theme-color: rgba(238, 9, 6, 1);
@@ -24,3 +24,4 @@ button {
 @import "fonts";
 @import "header";
 @import "footer";
+@import "homeSlider";
