@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Шуруповерт",
+    "regularPrice": 6700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 5200,
+    "category": "Инструменты",
+    "label": "Makita",
+    "article": "XJ89YHGO",
+    "sale": 20
+  },
+  {
+    "name": "Перфоратор",
+    "regularPrice": 16700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+
+    "category": "Инструменты",
+    "label": "Makita",
+    "article": "XJ89YHGO",
+    "sale": 0
+  },
+  {
+    "name": "Фен строительный",
+    "regularPrice": 4000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 3600,
+    "category": "Инструменты",
+    "label": "Makita",
+    "article": "XJ89YHGO",
+    "sale": 10
+  },
+  {
+    "name": "Турбинка",
+    "regularPrice": 4700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 3000,
+    "category": "Инструменты",
+    "label": "Makita",
+    "article": "XJ89YHGO",
+    "sale": 20
+  },
+  {
+    "name": "Миксер строительный",
+    "regularPrice": 3000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 2900,
+    "category": "Инструменты",
+    "label": "Makita",
+    "article": "XJ89YHGO",
+    "sale": 3
+  },
+  {
+    "name": "Шуруповерт",
+    "regularPrice": 6700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 5200,
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 20
+  },
+  {
+    "name": "Перфоратор",
+    "regularPrice": 16700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 0
+  },
+  {
+    "name": "Фен строительный",
+    "regularPrice": 4000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 3600,
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 10
+  },
+  {
+    "name": "Турбинка",
+    "regularPrice": 4700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 3000,
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 20
+  },
+  {
+    "name": "Миксер строительный",
+    "regularPrice": 3000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 2900,
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 3
+  },
+  {
+    "name": "Лобзик",
+    "regularPrice": 3000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 2900,
+    "category": "Инструменты",
+    "label": "Bosch",
+    "article": "XJ89YHGO",
+    "sale": 3
+  },
+  {
+    "name": "Дрель",
+    "regularPrice": 4500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 4000,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 11
+  },
+  {
+    "name": "Перфоратор",
+    "regularPrice": 12500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 12000,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 4
+  },
+  {
+    "name": "Угловая шлифмашина",
+    "regularPrice": 5600,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 5200,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 7
+  },
+  {
+    "name": "Фрезер",
+    "regularPrice": 7800,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 7000,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 10
+  },
+  {
+    "name": "Болгарка",
+    "regularPrice": 6400,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 5900,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 8
+  },
+  {
+    "name": "Гайковерт",
+    "regularPrice": 9800,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 9000,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 8
+  },
+  {
+    "name": "Строительный фен",
+    "regularPrice": 3900,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 3600,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 8
+  },
+  {
+    "name": "Перфоратор",
+    "regularPrice": 18900,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 18000,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 5
+  },
+  {
+    "name": "Шлифмашинка",
+    "regularPrice": 5500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 4800,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 12
+  },
+  {
+    "name": "Отбойный молоток",
+    "regularPrice": 12500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 11000,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 12
+  },
+  {
+    "name": "Болгарка",
+    "regularPrice": 7400,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 6700,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 10
+  },
+  {
+    "name": "Круг пильный",
+    "regularPrice": 1200,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 1000,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 16.67
+  },
+  {
+    "name": "Дрель-шуруповерт",
+    "regularPrice": 8700,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 7800,
+    "category": "Инструменты",
+    "label": "DEWALT",
+    "article": "XJ89YHGO",
+    "sale": 10.34
+  },
+  {
+    "name": "Угловая шлифмашина",
+    "regularPrice": 8900,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 7800,
+    "category": "Инструменты",
+    "label": "Metabo",
+    "article": "XJ89YHGO",
+    "sale": 12.36
+  },
+  {
+    "name": "Круглая пила",
+    "regularPrice": 7500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 7000,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 6
+  },
+  {
+    "name": "Электродрель",
+    "regularPrice": 4500,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 4000,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 11
+  },
+  {
+    "name": "Угловая шлифмашина",
+    "regularPrice": 5600,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-6.png?alt=media&token=11f334ef-ec86-4b5f-b211-12ab5e4aa5af",
+    "discountPrice": 4800,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 14
+  },
+  {
+    "name": "Дрель-шуруповерт",
+    "regularPrice": 6800,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2022-10.png?alt=media&token=d9f59e8b-6c04-4c6e-b10f-75ca802f63f0",
+    "discountPrice": 6200,
+    "category": "Инструменты",
+    "label": "Dexp",
+    "article": "XJ89YHGO",
+    "sale": 9
+  },
+  {
+    "name": "Перфоратор",
+    "regularPrice": 11000,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 10000,
+    "category": "Инструменты",
+    "label": "Metabo",
+    "article": "XJ89YHGO",
+    "sale": 9
+  },
+  {
+    "name": "Циркулярная пила",
+    "regularPrice": 9800,
+    "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectan66.png?alt=media&token=6df12fbf-1a77-47e4-9ef3-800ab61aea07",
+    "discountPrice": 9000,
+    "category": "Инструменты",
+    "label": "Metabo",
+    "article": "XJ89YHGO",
+    "sale": 8
+  }
+]

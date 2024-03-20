@@ -1,8 +1,8 @@
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 
 interface Product {
+  name: string;
   image: string;
-  title: string;
   regularPrice: number;
   discountPrice: number;
   sale: number;
@@ -11,16 +11,16 @@ interface Product {
   isComparison: boolean;
 }
 
-const CardProduct = (product: Product) => {
+const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
   return (
-    <div>
-      <img src={product.image} alt={product.title} />
-      <p>{product.article}</p>
-      <h3>{product.title}</h3>
-      <p>
-        <span>{product.regularPrice}</span>
-        {product.discountPrice}
-        <span>{product.sale}</span>
+    <div className="card">
+      <img className="card__img" src={product.image} alt={product.name} />
+      <p className="card__article">Артикул {product.article}</p>
+      <h3 className="card__title">{product.name}</h3>
+      <p className="card-params">
+        <span className="card-params__price">{product.regularPrice}</span>
+        {product?.discountPrice && product.discountPrice}
+        <span>{product.sale && product.sale}</span>
       </p>
       <button>
         <HiOutlineShoppingCart /> Купить

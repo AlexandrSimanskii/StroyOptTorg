@@ -2,7 +2,25 @@ import HomeSlider from "../Components/HomeComponents'/HomeSlider";
 import { assortiment, catalog } from "../assets/data/homeData";
 import AssortimentCard from "../Components/HomeComponents'/AssortimentCard";
 import HomeCatalogCard from "../Components/HomeComponents'/HomeCatalogCard.";
+import { useEffect, useState } from "react";
+import CardProduct from "../Components/CardProduct";
 const Home = () => {
+  const [bestseller, setBestseller] = useState([]);
+
+  const getBestsellerProduct = async () => {
+    try {
+      const res = await fetch("http://localhost:3004/api/products/get");
+      const data: [] = await res.json();
+      setBestseller([...data]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getBestsellerProduct();
+  }, []);
+
   return (
     <main>
       <div className="container">
@@ -50,9 +68,37 @@ const Home = () => {
             <li className="home-sale-list__item">Для дома</li>
             <li className="home-sale-list__item">Для сада</li>
           </ul>
-          <div className="home-sale-products"></div>
+          <div className="home-sale-products">
+            {bestseller.length &&
+              bestseller.map((product) => <CardProduct product={product} />)}
+          </div>
         </section>
-        <section className="home-brand"></section>
+        <section className="home-brand">
+          <h2 className="home-brand-title">Популярные брэнды</h2>
+          <ul className="home-brand-list">
+            <li className="home-brand-list__item">
+              <img src="/images/image/keramin.png" alt="keramin" />
+            </li>
+            <li className="home-brand-list__item">
+              <img src="/images/image/ceresit.png" alt="keramin" />
+            </li>
+            <li className="home-brand-list__item">
+              <img src="/images/image/electrolux.png" alt="electrolux" />
+            </li>
+            <li className="home-brand-list__item">
+              <img src="/images/image/bauproffe.png" alt="bauproffe" />
+            </li>
+            <li className="home-brand-list__item">
+              <img src="/images/image/kinplast.png" alt="kinplast" />
+            </li>
+            <li className="home-brand-list__item">
+              <img src="/images/image/oasis.png" alt="oasis" />
+            </li>{" "}
+            <li className="home-brand-list__item">
+              <img src="/images/image/bosch.png" alt="oasis" />
+            </li>
+          </ul>
+        </section>
         <section className="home-better"></section>
         <section className="home-about-store"></section>
       </div>

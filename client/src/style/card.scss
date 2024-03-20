@@ -1,0 +1,17 @@
+.card {
+  &__img {
+    height: 162px;
+    width: 208px;
+    margin-bottom: 10px;
+  }
+  &__article {
+    color: rgb(168, 173, 178);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 550;
+    margin-bottom: 14px;
+  }
+}

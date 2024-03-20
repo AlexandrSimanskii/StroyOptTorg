@@ -85,4 +85,28 @@
       }
     }
   }
+  &-sale {
+    &-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    &-products {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-list {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 50px;
+      &__item {
+        cursor: pointer;
+        border: 1px solid rgba(242, 244, 245, 1);
+        border-radius: 6px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 550px;
+      }
+    }
+  }
 }
