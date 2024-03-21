@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const HomeSlider = () => {
   useEffect(() => {
-    const swiper = new Swiper(".swiper", {
+    new Swiper(".swiper", {
       direction: "horizontal",
       loop: true,
 
@@ -16,12 +16,6 @@ const HomeSlider = () => {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-
-      on: {
-        click: function () {
-          console.log("swiper click");
-        },
       },
     });
   }, []);

@@ -50,7 +50,7 @@
       background-color: aliceblue;
       border-radius: 50%;
       color: black;
-     
+
       top: 50%;
       right: 0;
       transform: translateX(50%);
@@ -88,4 +88,43 @@
     gap: 17px;
     border-radius: 8px;
   }
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+& .swiper-slide{
+  display: flex;justify-content: center;
+}
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &-button {
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    &-prev {
+      transform: translateX(30px);
+    }
+    &-next {
+      transform: translateX(-30px);
+    }
+    &__arrow {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.sale-slider__inner {
+  position: relative;
+  justify-content: space-between;
+  height: 300px;
 }
