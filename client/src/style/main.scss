@@ -15,6 +15,7 @@ ul {
 
 button {
   cursor: pointer;
+  border: none;
 }
 .container {
   max-width: 1660px;
@@ -29,3 +30,4 @@ button {
 @import "home";
 @import "homeSliders";
 @import "card";
+@import "newsCard";

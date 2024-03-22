@@ -1,0 +1,17 @@
+.news-card {
+  max-width: 400px;
+  &__img {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 16px;
+  }
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__text {
+    margin-bottom: 12px;
+  }
+  &__date {
+    margin-bottom: 12px;
+  }
+}

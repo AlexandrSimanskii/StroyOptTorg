@@ -166,4 +166,24 @@
       margin-bottom: 10px;
     }
   }
+  &-news {
+    padding: 90px 0;
+    &__group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    &__btn {
+      color: $theme-color;
+      padding: 17px 20px;
+      font-weight: 550px;
+      border-radius: 6px;
+    }
+    &__cards {
+      column-gap: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }

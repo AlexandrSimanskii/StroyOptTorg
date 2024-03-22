@@ -6,22 +6,14 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import HomeHitSaleSlider from "../Components/HomeComponents'/HomeHitSaleSlider";
 import CatalogList from "../Components/HomeComponents'/CatalogList";
 import { useEffect, useState } from "react";
+import { Product, News } from "../types/interfaces.ts";
 import CardProduct from "../Components/CardProduct";
-
-interface Product {
-  name: string;
-  image: string;
-  regularPrice: number;
-  discountPrice: number;
-  sale: number;
-  article: string;
-  _id: string;
-  isLike: boolean;
-  isComparison: boolean;
-}
+import NewsCard from "../Components/NewsCard.tsx";
 
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<Product[]>([]);
+  const [news, setNews] = useState<News[]>([]);
+
   const getBetterProducts = async () => {
     try {
       const res = await fetch("/api/products/get?limit=6&startIndex=12");
@@ -31,10 +23,22 @@ const Home = () => {
       console.log(error);
     }
   };
+  const getNews = async () => {
+    try {
+      const res = await fetch("/api/news/get?limit=4");
+      const data = await res.json();
+      setNews(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     getBetterProducts();
+    getNews();
   }, []);
+
+  console.log(news);
 
   return (
     <main>
@@ -168,15 +172,27 @@ const Home = () => {
                 денежных средств.
               </p>
               <button className="home-about__btn">
-                Подробнее о компании <MdKeyboardArrowRight className="home-about__btn-arrow"/>
+                Подробнее о компании{" "}
+                <MdKeyboardArrowRight className="home-about__btn-arrow" />
               </button>
             </div>
             <img src="/images/image/home_description.png" alt="" />
           </div>
         </div>
       </section>
-      <section className="home-last-news">
-        <div className="container"><h2>Последние новости</h2></div>
+      <section className="home-news">
+        <div className="container">
+          <div className="home-news__inner"></div>
+          <div className="home-news__group">
+            <h2 className="home-title">Последние новости</h2>
+            <button className="home-news__btn">Больше новостей</button>
+          </div>
+          <div className="home-news__cards">
+            {news?.map((data) => (
+              <NewsCard data={data} />
+            ))}
+          </div>
+        </div>
       </section>
     </main>
   );
