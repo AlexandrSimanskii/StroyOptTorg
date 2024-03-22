@@ -38,7 +38,7 @@ const Home = () => {
     getNews();
   }, []);
 
-  console.log(news);
+  
 
   return (
     <main>
@@ -188,9 +188,8 @@ const Home = () => {
             <button className="home-news__btn">Больше новостей</button>
           </div>
           <div className="home-news__cards">
-            {news?.map((data) => (
-              <NewsCard data={data} />
-            ))}
+            {news.length > 0 &&
+              news.map((data) => <NewsCard key={data._id} data={data} />)}
           </div>
         </div>
       </section>

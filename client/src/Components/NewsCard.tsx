@@ -10,5 +10,5 @@ const NewsCard: React.FC<{ data: News }> = ({ data }) => {
     </div>
   );
 };
-v
+
 export default NewsCard;

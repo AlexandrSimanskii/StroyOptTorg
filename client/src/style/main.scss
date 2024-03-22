@@ -6,9 +6,10 @@
 body {
   font-family: "Helvetica Neue Cyr Medium Italic", sans-serif;
 }
-$theme-color: rgba(24, 111, 212, 1);
-$second-theme-color: rgba(238, 9, 6, 1);
-$card-color: rgba(143, 146, 150, 1);
+$theme-color: rgb(24, 111, 212);
+$second-theme-color: rgb(238, 9, 6);
+$btn-color: rgb(1, 17, 32);
+$card-color: rgb(143, 146, 150);
 ul {
   list-style-type: none;
 }
@@ -19,7 +20,7 @@ button {
 }
 .container {
   max-width: 1660px;
-  padding: 0 20px 0 0;
+  padding: 0 20px ;
   margin: 0 auto;
 }
 
@@ -31,3 +32,4 @@ button {
 @import "homeSliders";
 @import "card";
 @import "newsCard";
+@import "notFound";
