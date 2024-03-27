@@ -24,6 +24,10 @@ const HomeSlider = () => {
     <div className="home-banner">
       <div className="swiper">
         <div className="swiper-wrapper">
+
+
+
+
           <div
             className="swiper-slide "
             style={{
@@ -41,15 +45,43 @@ const HomeSlider = () => {
               <button className="banner-inform__btn">
                 перейти к товарам <MdOutlineKeyboardArrowRight />
               </button>
+       
             </div>
+
+            
           </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
           <div
             className="swiper-slide "
             style={{
               backgroundImage: `URL("https://s3-alpha-sig.figma.com/img/9161/b297/5292207e5c8db76d7aa8040f19c0b492?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p5-P4FES-Q4Z0-2HUlQRfDj15inKZGIJw-6Hw6fnxtuwKmkZ-y8Fq1FQ0qXj-Fnuh-34eCexFIvt6VdEIwRVZvmD7Sirgr4DzHpOOHqh0zdvhDdk4qOqKEOKpIFoSZsIGWQX-fVEA8-QOqeU5T0S0yo4m92Yvl2wVLFuO0FH8mUgSnwbr7-HhsHfFugjot1lLBn3Q-eGcHTxpBETjo7nc43f3W67PxypV7reiFgcgUPsvFgb74EMyHTvKpY7tvdV5V2cU47JueaStTFpJfgIxw8yEeukisTlw2DJAIRcquljmO7wQLFjS9N02b-w510snwGj5xb9S7PsOG6hTtmMLg__")`,
             }}
           >
-            {" "}
+           
             <div className="banner-inform">
               <h2 className="banner-inform__title">
                 Электроинструмент для любых нужд

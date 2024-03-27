@@ -1,4 +1,5 @@
 import { LuMenu } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,7 +12,10 @@ const Header = () => {
           </div>
           <nav className="header-nav">
             <ul className="header-nav-list">
-              <li className="header-nav-list__element">О компании</li>
+              <li className="header-nav-list__element">
+                <Link to={"/about"}>О компании</Link>
+              </li>
+
               <li className="header-nav-list__element">Оплата</li>
               <li className="header-nav-list__element">Доставка</li>
               <li className="header-nav-list__element">Возврат</li>
@@ -29,11 +33,14 @@ const Header = () => {
         </div>
 
         <div className="header-bottom">
-          <img
-            className="header-bottom__logo"
-            src="/public/images/image/logo 1.svg "
-            alt="logo"
-          />
+          <Link to={"/"}>
+            <img
+              className="header-bottom__logo"
+              src="/public/images/image/logo 1.svg "
+              alt="logo"
+            />
+          </Link>
+
           <div className="header-bottom__group">
             <button className=" header-bottom__btn ">
               <img src="../../public/images/icons/menu.svg" alt="" /> Каталог

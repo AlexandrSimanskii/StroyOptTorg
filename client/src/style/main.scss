@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Helvetica Neue Cyr Medium Italic", sans-serif;
 }
@@ -13,23 +14,33 @@ $card-color: rgb(143, 146, 150);
 ul {
   list-style-type: none;
 }
-
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
 button {
   cursor: pointer;
   border: none;
 }
 .container {
   max-width: 1660px;
-  padding: 0 20px ;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
+@import "about";
 @import "fonts";
 @import "header";
 @import "footer";
-
 @import "home";
 @import "homeSliders";
 @import "card";
 @import "newsCard";
 @import "notFound";
+@import "infoBlock";

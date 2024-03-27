@@ -7,7 +7,7 @@ const AssortimentCard = (item: Item, idx: number) => {
   return (
     <li className="home-catalog-assortment-item" key={idx}>
       <img
-        className="home-catalog-assortment-item__img"
+    
         src={item.image}
         alt="image"
       />

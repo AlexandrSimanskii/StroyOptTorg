@@ -38,11 +38,22 @@ const HomeHitSaleSlider = () => {
     const swiper = new Swiper(".slider", {
       direction: "horizontal",
       loop: true,
-      slidesPerView: 4,
+      slidesPerView: 1,
 
       navigation: {
         nextEl: ".slider-button-next",
         prevEl: ".slider-button-prev",
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+        450: {
+          slidesPerView: 2,
+        },
       },
     });
 
