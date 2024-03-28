@@ -1,0 +1,32 @@
+.aside {
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 332px;
+  gap: 2px;
+}
+.range-value {
+  margin-bottom: 25px;
+  width: calc(50% - 10px);
+  border: 1px solid $border-color;
+  padding: 13px 0 13px 15px;
+  border-radius: 6px;
+  & span {
+    color: $border-color;
+  }
+  &-group {
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-between;
+  }
+}
+.category-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+input[type="checkbox"] {
+  width: 26px;
+  height: 26px;
+}

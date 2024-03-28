@@ -3,8 +3,9 @@ import Home from "../src/pages/Home.tsx";
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/About.tsx";
 import { Suspense } from "react";
-import Loyout from "./Components/Loyout.tsx";
+import Layout from "./Components/Layout.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Catalog from "./pages/Catalog.tsx";
 
 function App() {
   return (
@@ -14,12 +15,13 @@ function App() {
           path="/"
           element={
             <Suspense fallback={<p>Loading</p>}>
-              <Loyout />
+              <Layout />
             </Suspense>
           }
         >
-          <Route path="about" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

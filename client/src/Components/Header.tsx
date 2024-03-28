@@ -43,7 +43,9 @@ const Header = () => {
 
           <div className="header-bottom__group">
             <button className=" header-bottom__btn ">
-              <img src="../../public/images/icons/menu.svg" alt="" /> Каталог
+              <Link to={"/catalog"}>
+                <img src="../../public/images/icons/menu.svg" alt="" /> Каталог
+              </Link>
             </button>
             <form className="header-search-form">
               <input className="header-search-input" type="text" />

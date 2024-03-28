@@ -1,9 +1,12 @@
-import AsideFilter from "../Components/AsideFilter";
+import AsideFilter from "../Components/AsideFilter/AsideFilter";
 
 const Catalog = () => {
   return (
     <div className="catalog">
-      <AsideFilter />
+      <div className="container">
+        {" "}
+        <AsideFilter />
+      </div>
     </div>
   );
 };

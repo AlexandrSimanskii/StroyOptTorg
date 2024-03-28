@@ -11,11 +11,13 @@ $theme-color: rgb(24, 111, 212);
 $second-theme-color: rgb(238, 9, 6);
 $btn-color: rgb(1, 17, 32);
 $card-color: rgb(143, 146, 150);
+$border-color: rgb(223, 224, 226);
 ul {
   list-style-type: none;
 }
 a {
   text-decoration: none;
+  color: azure;
 }
 h1 {
   font-size: 48px;
@@ -33,14 +35,23 @@ button {
   padding: 0 20px;
   margin: 0 auto;
 }
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.outlet {
+  flex-grow: 1;
+}
 
 @import "about";
+@import "aside";
+@import "card";
+@import "footer";
 @import "fonts";
 @import "header";
-@import "footer";
 @import "home";
 @import "homeSliders";
-@import "card";
 @import "newsCard";
 @import "notFound";
 @import "infoBlock";
