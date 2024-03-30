@@ -17,7 +17,6 @@ ul {
 }
 a {
   text-decoration: none;
-  color: azure;
 }
 h1 {
   font-size: 48px;
@@ -47,6 +46,7 @@ main {
 @import "about";
 @import "aside";
 @import "card";
+@import "catalog";
 @import "footer";
 @import "fonts";
 @import "header";
@@ -55,3 +55,4 @@ main {
 @import "newsCard";
 @import "notFound";
 @import "infoBlock";
+@import "sortForm";

@@ -1,27 +1,50 @@
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import RangeInput from "./RangeInput";
+import { useState } from "react";
+import AsideCategory from "./AsideCategory";
+import AsideBrand from "./AsideBrand";
+import { AsideFilterProps, DataForm } from "../../types/types";
 import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
   Button,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import RangeInput from "./RangeInput";
-import { useState } from "react";
-import AsideCategory from "./AsideCategory";
-import AsideBrand from "./AsideBrand";
 
-const AsideFilter = () => {
-  const [formData, setFormData] = useState({});
-  const [price, setPrice] = useState<number[]>([20, 20007]);
-  const [category, setCategory] = useState("");
-  const [brand, setBrand] = useState<string[]>([]);
+import { SortFilterProps } from "../../types/types";
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+const AsideFilter = ({
+  limit,
+  sort,
+  price,
+  setPrice,
+  category,
+  setCategory,
+  brand,
+  setBrand,
+  setProducts,
+}: SortFilterProps & AsideFilterProps) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    try {
+      const params = new URLSearchParams({
+        price: price.join(","),
+        brand: brand.join(","),
+        sort: sort,
+        category: category,
+        limit: limit.toString(),
+      }).toString();
+
+      const res = await fetch(`/api/products/get?${params}`);
+      const data = await res.json();
+      setProducts(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
-    <aside className="filter">
+    <aside className="aside">
       <form className="form" onSubmit={handleSubmit}>
         <Accordion>
           <AccordionSummary

@@ -1,0 +1,18 @@
+.sort {
+  &-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-button {
+    background-color: transparent;
+    width: 50px;
+    height: 45px;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    &--active {
+      color: $theme-color;
+      background-color: rgb(246, 248, 251);
+    }
+  }
+}

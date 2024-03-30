@@ -9,6 +9,7 @@ export const getProducts = async (req, res) => {
     const order = req.query.order || "desc";
 
     const product = await Product.find().limit(limit).skip(startIndex);
+    console.log(req.query);
     return res.status(200).json(product);
   } catch (error) {
     console.log(error);

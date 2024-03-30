@@ -6,7 +6,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import HomeHitSaleSlider from "../Components/HomeComponents'/HomeHitSaleSlider";
 import CatalogList from "../Components/HomeComponents'/CatalogList";
 import { useEffect, useState } from "react";
-import { Product } from "../types/interfaces.ts";
+import { Product } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct";
 
 import InfoBlock from "../Components/InfoBlock.tsx";
@@ -24,19 +24,9 @@ const Home = () => {
       console.log(error);
     }
   };
-  const getNews = async () => {
-    try {
-      const res = await fetch("/api/news/get?limit=4");
-      const data = await res.json();
-      setNews(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   useEffect(() => {
     getBetterProducts();
-    getNews();
   }, []);
 
   return (

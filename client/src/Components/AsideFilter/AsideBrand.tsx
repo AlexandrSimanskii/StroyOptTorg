@@ -23,7 +23,7 @@ const AsideBrand: React.FC<BrandInputProps> = ({ brand, setBrand }) => {
       setBrand([...brand, newBrand]);
     }
   };
-  console.log(brand);
+
 
   return (
     <Accordion>

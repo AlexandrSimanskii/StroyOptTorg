@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { News } from "../types/interfaces.ts";
+import { News } from "../types/types.ts";
 import NewsCard from "../Components/NewsCard.tsx";
 
 const NewsComp = () => {
@@ -20,7 +20,6 @@ const NewsComp = () => {
 
   return (
     <>
-   
       <div className="home-news__cards">
         {news.length > 0 &&
           news.map((data) => <NewsCard key={data._id} data={data} />)}

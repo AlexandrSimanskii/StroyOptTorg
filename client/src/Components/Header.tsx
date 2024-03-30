@@ -42,11 +42,11 @@ const Header = () => {
           </Link>
 
           <div className="header-bottom__group">
-            <button className=" header-bottom__btn ">
-              <Link to={"/catalog"}>
+            <Link to={"/catalog"}>
+              <button className=" header-bottom__btn ">
                 <img src="../../public/images/icons/menu.svg" alt="" /> Каталог
-              </Link>
-            </button>
+              </button>{" "}
+            </Link>
             <form className="header-search-form">
               <input className="header-search-input" type="text" />
               <img

@@ -18,6 +18,7 @@ export interface RangeInputProps {
 }
 
 const RangeInput: React.FC<RangeInputProps> = ({ price, setPrice }) => {
+  
   const handleChange = (event: Event, newValue: number | number[]) => {
     setPrice(newValue as number[]);
   };
