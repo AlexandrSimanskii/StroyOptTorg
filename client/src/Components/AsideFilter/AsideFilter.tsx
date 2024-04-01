@@ -1,9 +1,9 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import RangeInput from "./RangeInput";
-import { useState } from "react";
+
 import AsideCategory from "./AsideCategory";
 import AsideBrand from "./AsideBrand";
-import { AsideFilterProps, DataForm } from "../../types/types";
+import { AsideFilterProps } from "../../types/types";
 import {
   Accordion,
   AccordionSummary,
@@ -11,9 +11,8 @@ import {
   Button,
 } from "@mui/material";
 
-import { SortFilterProps } from "../../types/types";
-
 const AsideFilter = ({
+ 
   limit,
   sort,
   price,
@@ -23,7 +22,7 @@ const AsideFilter = ({
   brand,
   setBrand,
   setProducts,
-}: SortFilterProps & AsideFilterProps) => {
+}: AsideFilterProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
