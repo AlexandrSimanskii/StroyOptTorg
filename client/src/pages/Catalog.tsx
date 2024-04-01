@@ -27,15 +27,28 @@ const Catalog = () => {
 
       const res = await fetch(`/api/products/get?${params}`);
       const data = await res.json();
+
       setProducts(data);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const getMinMaxPrices = async () => {
+    try {
+      const res = await fetch("/api/products/prices");
+      const data = await res.json();
+      setPrice(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
+    getMinMaxPrices();
     getProducts();
   }, []);
+  console.log(price);
 
   return (
     <div className="catalog">

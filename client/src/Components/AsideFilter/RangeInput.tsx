@@ -17,8 +17,7 @@ export interface RangeInputProps {
   setPrice: React.Dispatch<React.SetStateAction<number[]>>;
 }
 
-const RangeInput: React.FC<RangeInputProps> = ({ price, setPrice }) => {
-  
+const RangeInput = ({ price, setPrice }: RangeInputProps) => {
   const handleChange = (event: Event, newValue: number | number[]) => {
     setPrice(newValue as number[]);
   };
@@ -32,8 +31,8 @@ const RangeInput: React.FC<RangeInputProps> = ({ price, setPrice }) => {
           onChange={handleChange}
           valueLabelDisplay="auto"
           step={100}
-          min={0}
-          max={30000}
+          min={price[0]}
+          max={price[1]}
         />
       </Box>
     </div>

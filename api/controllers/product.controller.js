@@ -15,3 +15,32 @@ export const getProducts = async (req, res) => {
     console.log(error);
   }
 };
+export const getMinMaxPrices = async (req, res) => {
+  try {
+    const minMaxPrices = await Product.aggregate([
+      {
+        $group: {
+          _id: null,
+          minPrice: { $min: "$regularPrice" },
+          maxPrice: { $max: "$regularPrice" },
+          minDiscountPrice: { $min: "$discountPrice" },
+          maxPrice: { $max: "$regularPrice" },
+        },
+      },
+    ]);
+
+    const minPrice =
+      (await minMaxPrices[0].minPrice) > minMaxPrices[0].minDiscountPrice
+        ? minMaxPrices[0].minDiscountPrice
+        : minMaxPrices[0].minPrice;
+        
+    const maxPrice = await minMaxPrices[0].maxPrice;
+
+    const data = [minPrice, maxPrice];
+
+    return res.status(200).json(data);
+  } catch (error) {
+    console.log(console.error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
