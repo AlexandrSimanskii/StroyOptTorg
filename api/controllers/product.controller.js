@@ -1,20 +1,50 @@
 import Product from "../models/product.model.js";
 import mongoose from "mongoose";
 
-export const getProducts = async (req, res) => {
+export const getProducts = async (req, res, next) => {
+  console.log(req.query);
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
+    const label = req.query.label ? req.query.label.split(",") : [];
     const sort = req.query.sort || "createdAt";
     const order = req.query.order || "desc";
+    const category = req.query.category || "";
 
-    const product = await Product.find().limit(limit).skip(startIndex);
-    console.log(req.query);
-    return res.status(200).json(product);
+    const price = req.query.price?.split(",") || [0, Infinity];
+    let priceGte = price[0];
+    let priceLte = price[1];
+
+    let sortOptions = {};
+
+    if (sort === "regularPrice") {
+      sortOptions = { discountPrice: order, regularPrice: order };
+    } else {
+      sortOptions = { name: order };
+    }
+
+    let query = {
+      category: { $regex: category, $options: "i" },
+      regularPrice: { $gte: priceGte, $lte: priceLte },
+    };
+    if (label.length) {
+      query.label = label;
+    }
+
+    const totalProducts = await Product.countDocuments(query);
+    const totalPages = Math.ceil(totalProducts / limit);
+
+    const products = await Product.find(query)
+      .sort(sortOptions)
+      .limit(limit)
+      .skip(startIndex);
+
+    return res.status(200).json({ products, totalPages });
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 };
+
 export const getMinMaxPrices = async (req, res) => {
   try {
     const minMaxPrices = await Product.aggregate([
@@ -33,7 +63,7 @@ export const getMinMaxPrices = async (req, res) => {
       (await minMaxPrices[0].minPrice) > minMaxPrices[0].minDiscountPrice
         ? minMaxPrices[0].minDiscountPrice
         : minMaxPrices[0].minPrice;
-        
+
     const maxPrice = await minMaxPrices[0].maxPrice;
 
     const data = [minPrice, maxPrice];
@@ -44,3 +74,4 @@ export const getMinMaxPrices = async (req, res) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+

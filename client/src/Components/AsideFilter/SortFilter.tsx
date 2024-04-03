@@ -19,9 +19,10 @@ const SortFilter = ({
   products,
   setProducts,
   price,
-  brand,
+  label,
   category,
   startIndex,
+  setCountPages
 }: SortFilterProps) => {
   const handleButtonClick = async (buttonName: number) => {
     if (buttonName < limit) {
@@ -31,15 +32,17 @@ const SortFilter = ({
         const params = new URLSearchParams({
           startIndex: startIndex.toString(),
           price: price.join(","),
-          brand: brand.join(","),
-          sort: sort,
+          label: label.join(","),
+          sort: sort.split("_")[0],
+          order: sort.split("_")[1],
           category: category,
           limit: buttonName.toString(),
         }).toString();
 
         const res = await fetch(`/api/products/get?${params}`);
         const data = await res.json();
-        setProducts(data);
+        setProducts(data.products);
+        setCountPages(data.totalPages)
       } catch (error) {
         console.log(error);
       }
@@ -51,6 +54,9 @@ const SortFilter = ({
     const sortData = event.target.value.split("_");
     let sortedProducts: Product[] = [];
 
+    if (sortData[0] === "createdAt") {
+      return;
+    }
     if (sortData[0] === "regularPrice") {
       sortedProducts = products.sort((a, b) => {
         const priceA =
@@ -100,7 +106,7 @@ const SortFilter = ({
             Сортировка:
           </InputLabel>
           <Select
-            defaultValue={"regularPrice_asc"}
+            defaultValue={"createAt"}
             inputProps={{
               name: "age",
               id: "uncontrolled-native",
@@ -115,6 +121,9 @@ const SortFilter = ({
             }}
             onChange={handleChangeSort}
           >
+            <MenuItem sx={{ fontSize: "15px" }} value={"createAt"}>
+              По умолчанию
+            </MenuItem>
             <MenuItem sx={{ fontSize: "15px" }} value={"regularPrice_asc"}>
               По возрастанию
             </MenuItem>

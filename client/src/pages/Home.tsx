@@ -93,58 +93,56 @@ const Home = () => {
           </div>
         </section>
         <section className="home-about">
-          <div className="container">
-            <div className="home-about__inner">
-              <div className="home-about__content">
-                <h2 className="title">О нашем магазине</h2>
-                <p className="home-about__top-text">
-                  Цель и главная задача компании создать сервис, который не
-                  ограничится продажей строительных и отделочных материалов, а
-                  будет решать задачи и трудности,с которыми сталкиваются люди
-                  во время ремонта
-                </p>
-                <dl className="home-description">
-                  <div className="home-description-group">
-                    <dt className="home-description-term home-description-term-area">
-                      17805,3м<sup>2</sup>
-                    </dt>
-                    <dd className="home-description-definition">
-                      торговых и складских <br /> помещений
-                    </dd>
-                  </div>
-                  <div className="home-description-group">
-                    <dt className="home-description-term">50 000+</dt>
-                    <dd className="home-description-definition">
-                      наименований <br /> товара
-                    </dd>
-                  </div>
-                  <div className="home-description-group">
-                    <dt className="home-description-term">2 500+</dt>
-                    <dd className="home-description-definition">
-                      постоянных <br /> клиентов
-                    </dd>
-                  </div>
-                  <div className="home-description-group">
-                    <dt className="home-description-term">440</dt>
-                    <dd className="home-description-definition">
-                      опытных <br /> сотрудников
-                    </dd>
-                  </div>
-                </dl>
-                <p className="home-about__bottom-text">
-                  Уже второе десятилетия мы готовы воплотить в реальность Вашу
-                  мечту о красивом,комфортабельном доме,благоустроенном
-                  современом офисебуютной теплой даче, помочь реализовать любые
-                  строительные и дизайнерские фантазии и с минимальными
-                  затратами времени и денежных средств.
-                </p>
-                <button className="home-about__btn">
-                  Подробнее о компании{" "}
-                  <MdKeyboardArrowRight className="home-about__btn-arrow" />
-                </button>
-              </div>
-              <img src="/images/image/home_description.png" alt="rule" />
+          <div className="home-about__inner">
+            <div className="home-about__content">
+              <h2 className="title">О нашем магазине</h2>
+              <p className="home-about__top-text">
+                Цель и главная задача компании создать сервис, который не
+                ограничится продажей строительных и отделочных материалов, а
+                будет решать задачи и трудности,с которыми сталкиваются люди во
+                время ремонта
+              </p>
+              <dl className="home-description">
+                <div className="home-description-group">
+                  <dt className="home-description-term home-description-term-area">
+                    17805,3м<sup>2</sup>
+                  </dt>
+                  <dd className="home-description-definition">
+                    торговых и складских <br /> помещений
+                  </dd>
+                </div>
+                <div className="home-description-group">
+                  <dt className="home-description-term">50 000+</dt>
+                  <dd className="home-description-definition">
+                    наименований <br /> товара
+                  </dd>
+                </div>
+                <div className="home-description-group">
+                  <dt className="home-description-term">2 500+</dt>
+                  <dd className="home-description-definition">
+                    постоянных <br /> клиентов
+                  </dd>
+                </div>
+                <div className="home-description-group">
+                  <dt className="home-description-term">440</dt>
+                  <dd className="home-description-definition">
+                    опытных <br /> сотрудников
+                  </dd>
+                </div>
+              </dl>
+              <p className="home-about__bottom-text">
+                Уже второе десятилетия мы готовы воплотить в реальность Вашу
+                мечту о красивом,комфортабельном доме,благоустроенном современом
+                офисебуютной теплой даче, помочь реализовать любые строительные
+                и дизайнерские фантазии и с минимальными затратами времени и
+                денежных средств.
+              </p>
+              <button className="home-about__btn">
+                Подробнее о компании{" "}
+                <MdKeyboardArrowRight className="home-about__btn-arrow" />
+              </button>
             </div>
+            <div className="img"></div>
           </div>
         </section>
         <section className="home-news">

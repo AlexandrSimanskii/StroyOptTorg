@@ -9,18 +9,20 @@ const Catalog = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [startIndex, setStartIndex] = useState(0);
   const [limit, setLimit] = useState(12);
-  const [sort, setSort] = useState("price_asc");
+  const [sort, setSort] = useState("createdAt_desc");
   const [price, setPrice] = useState<number[]>([20, 20007]);
   const [category, setCategory] = useState("");
-  const [brand, setBrand] = useState<string[]>([]);
+  const [label, setLabel] = useState<string[]>([]);
+  const [countPages, setCountPages] = useState(1);
 
   const getProducts = async () => {
     try {
       const params = new URLSearchParams({
         startIndex: startIndex.toString(),
         price: price.join(","),
-        brand: brand.join(","),
-        sort: sort,
+        label: label.join(","),
+        sort: sort.split("_")[0],
+        order: sort.split("_")[1],
         category: category,
         limit: limit.toString(),
       }).toString();
@@ -28,7 +30,8 @@ const Catalog = () => {
       const res = await fetch(`/api/products/get?${params}`);
       const data = await res.json();
 
-      setProducts(data);
+      setProducts(data.products);
+      setCountPages(data.totalPages);
     } catch (error) {
       console.log(error);
     }
@@ -47,8 +50,7 @@ const Catalog = () => {
   useEffect(() => {
     getMinMaxPrices();
     getProducts();
-  }, []);
-  console.log(price);
+  }, [startIndex]);
 
   return (
     <div className="catalog">
@@ -59,17 +61,18 @@ const Catalog = () => {
             limit={limit}
             sort={sort}
             setPrice={setPrice}
-            brand={brand}
-            setBrand={setBrand}
+            label={label}
+            setLabel={setLabel}
             category={category}
             setCategory={setCategory}
             setProducts={setProducts}
+            setCountPages={setCountPages}
           />
           <div className="catalog-content">
             <SortFilter
               startIndex={startIndex}
               price={price}
-              brand={brand}
+              label={label}
               limit={limit}
               setLimit={setLimit}
               category={category}
@@ -77,14 +80,20 @@ const Catalog = () => {
               setSort={setSort}
               products={products}
               setProducts={setProducts}
+              setCountPages={setCountPages}
             />
             <div className="catalog-cards">
               {products.length > 0 &&
-                products.map((prod) => (
-                  <CardProduct key={prod._id} product={prod} />
+                products.map((product) => (
+                  <CardProduct key={product._id} product={product} />
                 ))}
             </div>
-            <Pagination setStartIndex={setStartIndex} />
+            <Pagination
+              setStartIndex={setStartIndex}
+              limit={limit}
+              countPages={countPages}
+              setCountPages={setCountPages}
+            />
           </div>
         </div>
       </div>

@@ -14,17 +14,25 @@ const List = styled("ul")({
 
 type PaginationProps = {
   setStartIndex: React.Dispatch<React.SetStateAction<number>>;
+  limit: number;
+  countPages: number;
+  setCountPages: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const Pagination = ({ setStartIndex }: PaginationProps) => {
+const Pagination = ({
+  setStartIndex,
+  limit,
+  countPages,
+  setCountPages,
+}: PaginationProps) => {
   const handleChange = (event: ChangeEvent<unknown>, page: number) => {
     if (page >= 1) {
-      setStartIndex(page);
+      setStartIndex((page - 1) * limit);
     }
   };
 
   const { items } = usePagination({
-    count: 10,
+    count: countPages,
     onChange: handleChange,
   });
 

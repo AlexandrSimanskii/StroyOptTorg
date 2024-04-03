@@ -24,7 +24,7 @@ const HomeHitSaleSlider = () => {
     try {
       const res = await fetch("/api/products/get?limit=12");
       const data = await res.json();
-      setBestseller(data);
+      setBestseller(data.products);
     } catch (error) {
       console.error("Ошибка при получении бестселлеров:", error);
     }

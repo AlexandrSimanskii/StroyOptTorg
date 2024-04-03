@@ -9,21 +9,20 @@ import {
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 interface BrandInputProps {
-  brand: string[];
-  setBrand: React.Dispatch<React.SetStateAction<string[]>>;
+  label: string[];
+  setLabel: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const AsideBrand: React.FC<BrandInputProps> = ({ brand, setBrand }) => {
+const AsideBrand = ({ label, setLabel }: BrandInputProps) => {
   const handleChange = (newBrand: string) => {
-    const isChecked = brand.includes(newBrand);
+    const isChecked = label.includes(newBrand);
 
     if (isChecked) {
-      setBrand(brand.filter((item) => item !== newBrand));
+      setLabel(label.filter((item) => item !== newBrand));
     } else {
-      setBrand([...brand, newBrand]);
+      setLabel([...label, newBrand]);
     }
   };
-
 
   return (
     <Accordion>
@@ -39,37 +38,37 @@ const AsideBrand: React.FC<BrandInputProps> = ({ brand, setBrand }) => {
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="Makita"
-            checked={brand.includes("Makita")}
+            checked={label.includes("Makita")}
             onChange={() => handleChange("Makita")}
           />
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="Bosch"
-            checked={brand.includes("Bosch")}
+            checked={label.includes("Bosch")}
             onChange={() => handleChange("Bosch")}
           />{" "}
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="DEWALT"
-            checked={brand.includes("DEWALT")}
+            checked={label.includes("DEWALT")}
             onChange={() => handleChange("DEWALT")}
           />{" "}
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="Dexp"
-            checked={brand.includes("Dexp")}
+            checked={label.includes("Dexp")}
             onChange={() => handleChange("Dexp")}
           />{" "}
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="HUNTER"
-            checked={brand.includes("HUNTER")}
+            checked={label.includes("HUNTER")}
             onChange={() => handleChange("HUNTER")}
           />{" "}
           <FormControlLabel
             control={<Checkbox sx={{ color: "rgb(223, 224, 226)" }} />}
             label="PECAHTA"
-            checked={brand.includes("PECAHTA")}
+            checked={label.includes("PECAHTA")}
             onChange={() => handleChange("PECAHTA")}
           />
         </FormGroup>

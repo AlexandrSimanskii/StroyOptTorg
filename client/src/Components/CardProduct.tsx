@@ -10,6 +10,7 @@ interface Product {
   discountPrice: number;
   sale: number;
   article: string;
+  label: string;
   _id: string;
   isLike: boolean;
   isComparison: boolean;
@@ -19,7 +20,7 @@ const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div className="card">
       <img className="card__img" src={product.image} alt={product.name} />
-      <p className="card__article">Артикул {product.article}</p>
+      <p className="card__article">Брэнд {product.label}</p>
       <h3 className="card__title">{product.name}</h3>
       {!product.sale ? (
         <p className="card-params">

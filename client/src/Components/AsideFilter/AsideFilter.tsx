@@ -12,31 +12,34 @@ import {
 } from "@mui/material";
 
 const AsideFilter = ({
- 
   limit,
   sort,
   price,
   setPrice,
   category,
   setCategory,
-  brand,
-  setBrand,
+  label,
+  setLabel,
   setProducts,
+  setCountPages,
 }: AsideFilterProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const params = new URLSearchParams({
         price: price.join(","),
-        brand: brand.join(","),
-        sort: sort,
+        label: label.join(","),
+        sort: sort.split("_")[0],
+        order: sort.split("_")[1],
         category: category,
         limit: limit.toString(),
       }).toString();
 
       const res = await fetch(`/api/products/get?${params}`);
       const data = await res.json();
-      setProducts(data);
+
+      setProducts(data.products);
+      setCountPages(data.totalPages);
     } catch (error) {
       console.log(error);
     }
@@ -70,7 +73,7 @@ const AsideFilter = ({
         </Accordion>
         <AsideCategory category={category} setCategory={setCategory} />
 
-        <AsideBrand brand={brand} setBrand={setBrand} />
+        <AsideBrand label={label} setLabel={setLabel} />
 
         <Button type="submit" variant="contained" sx={{ marginTop: "30px" }}>
           Применить фильтры

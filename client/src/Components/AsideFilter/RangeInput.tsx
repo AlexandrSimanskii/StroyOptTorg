@@ -1,5 +1,5 @@
 import { debounce, Slider, Box, styled } from "@mui/material";
-
+import { useEffect, useState } from "react";
 const Range = styled(Slider)({
   color: " rgb(24, 111, 212)",
   height: 2,
@@ -18,9 +18,17 @@ export interface RangeInputProps {
 }
 
 const RangeInput = ({ price, setPrice }: RangeInputProps) => {
+  const [maxValue, setMaxValue] = useState(price[1]);
+  const [minValue, setMinValue] = useState(price[0]);
+
   const handleChange = (event: Event, newValue: number | number[]) => {
     setPrice(newValue as number[]);
   };
+
+  useEffect(() => {
+    setMaxValue(price[1]);
+    setMinValue(price[0]);
+  }, []);
 
   return (
     <div>
@@ -31,8 +39,8 @@ const RangeInput = ({ price, setPrice }: RangeInputProps) => {
           onChange={handleChange}
           valueLabelDisplay="auto"
           step={100}
-          min={price[0]}
-          max={price[1]}
+          min={minValue}
+          max={maxValue}
         />
       </Box>
     </div>

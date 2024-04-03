@@ -71,6 +71,7 @@
     }
   }
   &-sale {
+    width: 100%;
     margin-bottom: 90px;
     overflow: hidden;
 
@@ -115,20 +116,30 @@
     }
   }
   &-about {
+    overflow: hidden;
+
     background-color: rgb(249, 250, 251);
     &__inner {
-      width: 100%S;
+      height: 100%;
       position: relative;
       display: flex;
-      align-items: center;
 
-      & img {
-        height: 566px;
-        max-width: 668px;
+      & .img {
+        height: 100%;
+        width: 200px;
+        background-image: url("/images/image/home_description.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // img {
+        //   width: 100%; /* Чтобы изображение занимало всю ширину родительского контейнера */
+        //   height: 100%; /* Чтобы изображение занимало всю высоту родительского контейнера */
+        //   object-fit: cover;
+        // }
       }
     }
     &__content {
-      width: 800px;
+      max-width: 800px;
     }
     &__top-text {
       font-size: 17px;
