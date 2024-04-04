@@ -117,30 +117,26 @@
   }
   &-about {
     overflow: hidden;
-
     background-color: rgb(249, 250, 251);
+
     &__inner {
-      height: 100%;
       position: relative;
       display: flex;
-
-      & .img {
-        height: 100%;
-        width: 200px;
-        background-image: url("/images/image/home_description.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        // img {
-        //   width: 100%; /* Чтобы изображение занимало всю ширину родительского контейнера */
-        //   height: 100%; /* Чтобы изображение занимало всю высоту родительского контейнера */
-        //   object-fit: cover;
-        // }
+      & img {
+        position: absolute;
+        width: auto;
+        height: 566px;
+        width: auto;
+        right: 0;
       }
     }
     &__content {
+      position: relative;
+      z-index: 2;
       max-width: 800px;
+      min-width: 600px;
     }
+
     &__top-text {
       font-size: 17px;
       font-weight: 550;
@@ -200,13 +196,18 @@
     }
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .home {
     &-catalog-assortment {
       flex-wrap: wrap;
 
       &-item {
         width: 120px;
+      }
+    }
+
+    &-about {
+      &__inner {
       }
     }
   }

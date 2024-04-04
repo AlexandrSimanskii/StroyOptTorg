@@ -143,6 +143,9 @@
 }
 
 @media (max-width: 640px) {
+  .title {
+    font-size: 24px;
+  }
   .banner-inform {
     display: flex;
     flex-direction: column;

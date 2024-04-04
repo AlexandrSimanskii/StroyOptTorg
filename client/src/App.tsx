@@ -6,6 +6,8 @@ import { Suspense } from "react";
 import Layout from "./Components/Layout.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Catalog from "./pages/Catalog.tsx";
+import Contacts from "./pages/Contacts.tsx";
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="contacts" element={<Contacts />} />
         </Route>
       </Routes>
     </>

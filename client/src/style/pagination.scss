@@ -23,3 +23,11 @@
     }
   }
 }
+@media (max-width: 640px) {
+  .pagination-btn--hide {
+    display: none;
+  }
+  .pagination-btn {
+    padding: 10px 12px;
+  }
+}

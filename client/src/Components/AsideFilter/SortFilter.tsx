@@ -24,6 +24,9 @@ const SortFilter = ({
   startIndex,
   setCountPages
 }: SortFilterProps) => {
+
+
+  
   const handleButtonClick = async (buttonName: number) => {
     if (buttonName < limit) {
       setProducts((prev) => prev.filter((item, id) => id < buttonName));

@@ -142,7 +142,7 @@ const Home = () => {
                 <MdKeyboardArrowRight className="home-about__btn-arrow" />
               </button>
             </div>
-            <div className="img"></div>
+            <img src="/images/image/home_description.png" alt="" />
           </div>
         </section>
         <section className="home-news">

@@ -1,7 +1,7 @@
 .catalog {
   &-inner {
     display: flex;
-    gap: 20px;
+    gap: 30px;
   }
   &-content {
     width: 100%;
@@ -14,3 +14,17 @@
     gap: 70px 20px;
   }
 }
+@media (max-width: 1200px) {
+  .catalog {
+    &-inner {
+      display: block;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .catalog-cards {
+    justify-content: space-around;
+    column-gap: 20px;
+  }
+}
+

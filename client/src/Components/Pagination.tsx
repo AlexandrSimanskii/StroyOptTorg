@@ -1,5 +1,5 @@
 import usePagination from "@mui/material/usePagination";
-import { PaginationItem } from "@mui/material/Pagination";
+
 import { styled } from "@mui/material/styles";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
@@ -72,13 +72,21 @@ const Pagination = ({
             );
           } else if (type === "previous") {
             children = (
-              <button className="pagination-btn" type="button" {...item}>
+              <button
+                className="pagination-btn pagination-btn--hide"
+                type="button"
+                {...item}
+              >
                 <FaArrowLeftLong /> Назад
               </button>
             );
           } else if (type === "next") {
             children = (
-              <button className="pagination-btn" type="button" {...item}>
+              <button
+                className="pagination-btn pagination-btn--hide"
+                type="button"
+                {...item}
+              >
                 Вперед <FaArrowRightLong />
               </button>
             );

@@ -22,7 +22,9 @@ const Header = () => {
               <li className="header-nav-list__element">Отзывы</li>
               <li className="header-nav-list__element">Вопрос-ответ</li>
               <li className="header-nav-list__element">Новости</li>
-              <li className="header-nav-list__element">Контакты</li>
+              <li className="header-nav-list__element">
+                <Link to={"/contacts"}>Контакты</Link>
+              </li>
             </ul>
           </nav>
           <div className="header-inform">

@@ -1,40 +1,37 @@
 import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { MdCurrencyRuble } from "react-icons/md";
+
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiBarChart2 } from "react-icons/fi";
 
-interface Product {
-  name: string;
-  image: string;
-  regularPrice: number;
-  discountPrice: number;
-  sale: number;
-  article: string;
-  label: string;
-  _id: string;
-  isLike: boolean;
-  isComparison: boolean;
+interface CardProductProps {
+  product: {
+    name: string;
+    image: string;
+    regularPrice: number;
+    discountPrice: number;
+    sale: number;
+    article: string;
+    label: string;
+    _id: string;
+    isLike: boolean;
+    isComparison: boolean;
+  };
 }
 
-const CardProduct: React.FC<{ product: Product }> = ({ product }) => {
+const CardProduct = ({ product }: CardProductProps) => {
   return (
     <div className="card">
       <img className="card__img" src={product.image} alt={product.name} />
       <p className="card__article">Брэнд {product.label}</p>
       <h3 className="card__title">{product.name}</h3>
       {!product.sale ? (
-        <p className="card-params">
-          {product.regularPrice}
-          <MdCurrencyRuble className="card-params-rub" />
-        </p>
+        <p className="card-params">{product.regularPrice}{" "}₽</p>
       ) : (
         <p className="card-params">
           <span className="card-params__old-price">
-            {product.regularPrice}
-            <MdCurrencyRuble className="card-params-rub" />
+            {product.regularPrice}{" "}₽
           </span>
-          {product.discountPrice}
-          <MdCurrencyRuble className="card-params-rub" />{" "}
+          {product.discountPrice}₽{" "}
           <span className="card-params__discount-quantity">
             {product.sale}%
           </span>
