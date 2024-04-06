@@ -1,4 +1,4 @@
-import { contactsOffice, contactsRegion } from "../utils/data/contactData";
+import { contactsOffice, contactsRegion } from "../assets/data/contactData";
 
 const Contacts = () => {
   return (

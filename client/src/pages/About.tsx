@@ -1,5 +1,5 @@
 import InfoBlock from "../Components/InfoBlock";
-import NewsComp from "../Components/NewsComp";
+import NewsComp from "../Components/News/NewsComp";
 
 const About = () => {
   return (

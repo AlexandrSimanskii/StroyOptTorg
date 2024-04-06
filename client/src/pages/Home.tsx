@@ -1,7 +1,7 @@
 import HomeSlider from "../Components/HomeComponents'/HomeSlider";
 import { assortiment, catalog } from "../assets/data/homeData";
 import AssortimentCard from "../Components/HomeComponents'/AssortimentCard";
-import HomeCatalogCard from "../Components/HomeComponents'/HomeCatalogCard.";
+import AdvertisingCard from "../Components/AdvertisingCards.tsx";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import HomeHitSaleSlider from "../Components/HomeComponents'/HomeHitSaleSlider";
 import CatalogList from "../Components/HomeComponents'/CatalogList";
@@ -10,7 +10,7 @@ import { Product } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct";
 
 import InfoBlock from "../Components/InfoBlock.tsx";
-import NewsComp from "../Components/NewsComp.tsx";
+import NewsComp from "../Components/News/NewsComp.tsx";
 
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<Product[]>([]);
@@ -43,9 +43,9 @@ const Home = () => {
               <p>Каталог</p>
             </li>
           </ul>
-          <ul className="home-catalog-bottom">
-            {catalog.map((item, idx) => HomeCatalogCard(item, idx))}
-          </ul>
+          <div className="home-catalog-bottom">
+            {catalog.map((item, idx) => AdvertisingCard(item, idx))}
+          </div>
         </section>
         <section className="home-sale">
           <h2 className="title">Хиты продаж</h2>

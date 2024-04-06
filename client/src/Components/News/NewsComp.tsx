@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { News } from "../types/types.ts";
-import NewsCard from "../Components/NewsCard.tsx";
+import { News } from "../../types/types.ts";
+import NewsCard from "./NewsCard.tsx";
 
 const NewsComp = () => {
   const [news, setNews] = useState<News[]>([]);

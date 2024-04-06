@@ -16,12 +16,24 @@ const Header = () => {
                 <Link to={"/about"}>О компании</Link>
               </li>
 
-              <li className="header-nav-list__element">Оплата</li>
-              <li className="header-nav-list__element">Доставка</li>
-              <li className="header-nav-list__element">Возврат</li>
-              <li className="header-nav-list__element">Отзывы</li>
-              <li className="header-nav-list__element">Вопрос-ответ</li>
-              <li className="header-nav-list__element">Новости</li>
+              <li className="header-nav-list__element">
+                <Link to={"/payment"}>Оплата</Link>
+              </li>
+              <li className="header-nav-list__element">
+                <Link to={"/delivery"}>Доставка</Link>
+              </li>
+              <li className="header-nav-list__element">
+                <Link to={"/return"}>Возврат</Link>
+              </li>
+              <li className="header-nav-list__element">
+                <Link to={"/reviews"}>Отзывы</Link>
+              </li>
+              <li className="header-nav-list__element">
+                <Link to={"/answear"}>Вопрос-ответ</Link>
+              </li>
+              <li className="header-nav-list__element">
+                <Link to={"/news"}>Новости</Link>
+              </li>
               <li className="header-nav-list__element">
                 <Link to={"/contacts"}>Контакты</Link>
               </li>

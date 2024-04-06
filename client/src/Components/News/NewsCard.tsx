@@ -1,4 +1,4 @@
-import { News } from "../types/types.js";
+import { News } from "../../types/types.js";
 
 const NewsCard: React.FC<{ data: News }> = ({ data }) => {
   return (
