@@ -2,7 +2,7 @@ import Product from "../models/product.model.js";
 import mongoose from "mongoose";
 
 export const getProducts = async (req, res, next) => {
-  console.log(req.query);
+
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -70,8 +70,6 @@ export const getMinMaxPrices = async (req, res) => {
 
     return res.status(200).json(data);
   } catch (error) {
-    console.log(console.error);
-    return res.status(500).json({ error: "Internal Server Error" });
+    next(error);
   }
 };
-

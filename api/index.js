@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import productRouter from "./routes/product.router.js";
 import newsRouter from "./routes/news.router.js";
+import reviewRouter from "./routes/review.router.js";
+
 
 const app = express();
 
@@ -22,6 +24,7 @@ app.listen(3004, () => {
 app.use(express.json());
 app.use("/api/products", productRouter);
 app.use("/api/news", newsRouter);
+app.use("/api/review", reviewRouter);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
