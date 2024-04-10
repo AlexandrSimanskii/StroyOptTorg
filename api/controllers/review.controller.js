@@ -7,9 +7,12 @@ export const getReview = async (req, res, next) => {
     const limit = req.query.limit || 10;
     const startIndex = req.query.startIndex || 0;
 
+    const totalReview = await Review.countDocuments();
+    const totalPages = Math.ceil(totalReview / limit);
+
     const review = await Review.find().sort(sort).limit(limit).skip(startIndex);
 
-    res.status(201).json(review);
+    res.status(201).json({ review, totalPages });
   } catch (error) {
     next(error);
   }

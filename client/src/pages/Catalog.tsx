@@ -48,6 +48,10 @@ const Catalog = () => {
   };
 
   useEffect(() => {
+    getProducts();
+  }, []);
+
+  useEffect(() => {
     getMinMaxPrices();
     getProducts();
   }, [startIndex]);

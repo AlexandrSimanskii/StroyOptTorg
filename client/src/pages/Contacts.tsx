@@ -69,22 +69,35 @@ const Contacts = () => {
             ))}
           </div>
         </section>
-        <section className="contact-form">
+        <section className="contact-form-section">
           <h3>У вас есть вопросы? С радостью ответим на них!</h3>
-          <form>
+          <form className="contact-form">
             <div className="contact-box">
               <label className="contact-label">
-                Ваше имя <span>*</span>:
-                <input type="text" placeholder="Введите ваше имя" />
+                Ваше имя <span className="contact-label__required">*</span>:
+                <input
+                  className="contact-input"
+                  type="text"
+                  placeholder="Введите ваше имя"
+                />
               </label>{" "}
               <label className="contact-label">
-                Номер телефона <span>*</span>:{" "}
-                <input type="text" placeholder="+7 (     )     -       -" />
+                Номер телефона{" "}
+                <span className="contact-label__required">*</span>:{" "}
+                <input
+                  className="contact-input"
+                  type="text"
+                  placeholder="+7 (     )     -       -"
+                />
               </label>
             </div>
             <label className="contact-label">
-              Текст сообщения <span>*</span>:{" "}
-              <textarea placeholder="Введите ваш вопрос"></textarea>
+              Текст сообщения <span className="contact-label__required">*</span>
+              :{" "}
+              <textarea
+                className="contact-textarea"
+                placeholder="Введите ваш вопрос"
+              ></textarea>
             </label>{" "}
             <div className="contact-box">
               <button className="contact-form__btn">отправить </button>
