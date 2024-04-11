@@ -39,8 +39,8 @@ const Return = () => {
 
             <h6>Обращение по гарантии</h6>
             <div className="return-accardion">
-              {returnData.map((data) => (
-                <Accardion data={data} />
+              {returnData.map((data, idx) => (
+                <Accardion key={idx} data={data} />
               ))}
             </div>
           </div>

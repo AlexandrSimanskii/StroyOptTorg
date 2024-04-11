@@ -73,7 +73,12 @@ main {
   flex-direction: column;
 }
 textarea {
+ 
   resize: none;
+  &::placeholder {
+    color: #adb1b7;
+    font-size: 16px;
+  }
 }
 .outlet {
   flex-grow: 1;

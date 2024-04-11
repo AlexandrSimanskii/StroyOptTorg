@@ -10,3 +10,4 @@ router.get("/get", getProducts);
 router.get("/prices", getMinMaxPrices);
 
 export default router;
+ 

@@ -13,7 +13,7 @@ const Catalog = () => {
   const [price, setPrice] = useState<number[]>([20, 20007]);
   const [category, setCategory] = useState("");
   const [label, setLabel] = useState<string[]>([]);
-  const [countPages, setCountPages] = useState(1);
+  const [countPages, setCountPages] = useState(0);
 
   const getProducts = async () => {
     try {
@@ -55,6 +55,7 @@ const Catalog = () => {
     getMinMaxPrices();
     getProducts();
   }, [startIndex]);
+  console.log(countPages);
 
   return (
     <div className="catalog">
@@ -92,12 +93,16 @@ const Catalog = () => {
                   <CardProduct key={product._id} product={product} />
                 ))}
             </div>
-            <Pagination
-              setStartIndex={setStartIndex}
-              limit={limit}
-              countPages={countPages}
-              setCountPages={setCountPages}
-            />
+            {countPages !== 0 ? (
+              <Pagination
+                setStartIndex={setStartIndex}
+                limit={limit}
+                countPages={countPages}
+                setCountPages={setCountPages}
+              />
+            ) : (
+              <p>Продукты с такими параметрами не найдено.</p>
+            )}
           </div>
         </div>
       </div>

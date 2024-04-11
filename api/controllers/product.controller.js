@@ -45,7 +45,7 @@ export const getProducts = async (req, res, next) => {
   }
 };
 
-export const getMinMaxPrices = async (req, res) => {
+export const getMinMaxPrices = async (req, res,next) => {
   try {
     const minMaxPrices = await Product.aggregate([
       {

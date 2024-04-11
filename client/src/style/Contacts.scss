@@ -176,17 +176,24 @@
     width: 100%;
     margin-top: 9px;
     display: block;
+    font-size: 16px;
   }
   &-textarea {
+    border-width: 2px;
     padding: 25px 20px;
     border-radius: 6px;
     outline: none;
     margin-top: 9px;
     width: 100%;
+    font-size: 16px;
+    color: $btn-color;
   }
   &-form__btn {
     background-color: $theme-color;
     color: white;
+    &--disabled {
+      background-color: #adb1b7;
+    }
   }
   &-checkbox-group {
     display: flex;

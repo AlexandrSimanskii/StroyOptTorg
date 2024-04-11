@@ -2,16 +2,20 @@ import mongoose from "mongoose";
 
 const Scheme = mongoose.Schema;
 
-const reviewSchema = new Scheme(
+const productsSchema = new Scheme(
   {
     name: { type: String, required: true },
-    email: { type: String, required: true },
-    text: { type: String, required: true },
-    image: { type: String },
+    image: { type: String, required: true },
+    category: { type: String, required: true },
+    label: { type: String, required: true },
+    article: { type: String, required: true },
+    regularPrice: { type: Number, required: true },
+    discountPrice: { type: Number, required: false },
+    sale: { type: Number, required: false },
   },
   { timestamps: true }
 );
 
-const Review = mongoose.model("Review", reviewSchema);
+const Products = mongoose.model("products", productsSchema);
 
-export default Review;
+export default Products;
