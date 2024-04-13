@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useLocation } from "react-router-dom";
 import { initializeApp } from "firebase/app";
-
+import { Review } from "../types/types";
+import { Inputs } from "../types/types";
 import {
   getDownloadURL,
   getStorage,
@@ -20,22 +21,19 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 
-type Inputs = {
-  imageUrls: string[];
-  name: string;
-  email: string;
-  text: string;
-  phone?: string;
+type formProps = {
+  setReviews: React.Dispatch<React.SetStateAction<Review[]>>;
 };
 
-const Form = () => {
-  const [files, setFiles] = useState<FileList | []>([]);
+const Form = ({ setReviews }: formProps) => {
+  const [files, setFiles] = useState<FileList | [] | null>([]);
   const [previewImg, setPreviewImg] = useState<string[]>([]);
   const [agreement, setAgreement] = useState(true);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [imageUploadError, setImageUploadError] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [endUpload, setEndUpload] = useState(false);
   const [formData, setFormData] = useState<Inputs>({
     imageUrls: [],
     name: "",
@@ -51,33 +49,60 @@ const Form = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const handleFileSubmit = () => {
-    if (files.length > 0 && files.length + formData.imageUrls.length < 7) {
-      setUploading(true);
-      setImageUploadError("");
-      const promises = [];
-      for (let i = 0; i < files.length; i++) {
-        promises.push(storeImage(files[i]));
+  const handleFileSubmit = async () => {
+    try {
+      if (files.length > 0 && files.length + formData.imageUrls.length < 4) {
+        setUploading(true);
+        setImageUploadError("");
+        const promises = [];
+        for (let i = 0; i < files.length; i++) {
+          promises.push(storeImage(files[i]));
+        }
 
-        Promise.all(promises)
-          .then((urls) => {
-            setFormData({
-              ...formData,
-              imageUrls: [...formData.imageUrls, ...urls],
-            });
-            setImageUploadError("");
-            setUploading(false);
-          })
-          .catch((err) => {
-            setImageUploadError(
-              "Загрузка не завершена!(максимальный размер картинки 2MB)"
-            );
-            setUploading(false);
-          });
+        const urls: string[] = (await Promise.all(promises)) as string[];
+        console.log(urls);
+
+        setFormData({
+          ...formData,
+          imageUrls: [...formData.imageUrls, ...urls],
+        });
+
+        handleFormSubmit(urls);
+
+        setImageUploadError("");
+        setUploading(false);
+        setAgreement(false);
+      } else {
+        setImageUploadError(`Вы можете загрузить от одной до 4 фотографий!`);
+        setUploading(false);
       }
-    } else {
-      setImageUploadError(`Вы можете загрузить от одной до шести фотографий!`);
+    } catch (error) {
+      console.log(error);
+
+      setImageUploadError(
+        "Загрузка не завершена!(максимальный размер картинки 2MB)"
+      );
       setUploading(false);
+    }
+  };
+
+  const handleFormSubmit = async (data: string[] | []) => {
+    try {
+      const res = await fetch("/api/review/post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...formData, imageUrls: data }),
+      });
+      const curentRes = await res.json();
+      setFormData({ imageUrls: [], name: "", email: "", text: "" });
+      setFiles([]);
+      setPreviewImg([]);
+      setReviews((prev) => [...prev, curentRes]);
+      setAgreement(false);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -94,6 +119,7 @@ const Form = () => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
           console.log(`загруженно ${progress}%`);
+          progress === 100 && setEndUpload(true);
         },
         (error) => {
           reject(error);
@@ -108,17 +134,9 @@ const Form = () => {
     });
   };
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    await handleFileSubmit();
-    console.log(formData);
-    
+  const onSubmit: SubmitHandler<Inputs> = async () => {
+    previewImg.length ? handleFileSubmit() : handleFormSubmit([]);
   };
-
-  useEffect(() => {
-    if (files !== null) {
-      setPreviewImg([...files].map((file) => URL.createObjectURL(file)));
-    }
-  }, [files]);
 
   const handleChange = (
     event:
@@ -137,6 +155,12 @@ const Form = () => {
     }
   };
 
+  useEffect(() => {
+    if (files !== null) {
+      setPreviewImg([...files].map((file) => URL.createObjectURL(file)));
+    }
+  }, [files]);
+
   return (
     <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <div className="contact-box">
@@ -146,6 +170,7 @@ const Form = () => {
             {...register("name", { required: true, minLength: 4 })}
             className="contact-input"
             type="text"
+            value={formData.name}
             placeholder="Введите ваше имя"
             id="name"
             onChange={handleChange}
@@ -163,6 +188,7 @@ const Form = () => {
               })}
               className="contact-input"
               type="text"
+              value={formData.email}
               placeholder="email"
               id="email"
               onChange={handleChange}
@@ -193,6 +219,7 @@ const Form = () => {
           {...register("text", { required: true })}
           className="contact-textarea"
           id="text"
+          value={formData.text}
           onChange={handleChange}
           placeholder={
             pathname === "/reviews"
@@ -213,11 +240,11 @@ const Form = () => {
             <input
               type="file"
               accept="image/*"
+              // value={previewImg}
               multiple
               hidden
               onChange={(e) => {
                 e.preventDefault();
-                console.log(e.target.files);
 
                 setFiles(e.target.files);
               }}

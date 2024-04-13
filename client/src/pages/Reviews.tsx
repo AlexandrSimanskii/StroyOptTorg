@@ -1,16 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "../Components/SideBar";
 import Pagination from "../Components/Pagination";
 import Form from "../Components/Form";
-
-type Review = {
-  _id: string;
-  createdAt: string;
-  name: string;
-  email: string;
-  text: string;
-  images?: string;
-};
+import { Review } from "../types/types";
 
 const Reviews = () => {
   const [isSortActive, setIsSortActive] = useState(false);
@@ -18,8 +10,6 @@ const Reviews = () => {
   const [limit, setLimit] = useState(10);
   const [startIndex, setStartIndex] = useState(0);
   const [countPages, setCountPages] = useState(1);
-
- 
 
   const getReviews = async () => {
     const res = await fetch("/api/review/get");
@@ -32,7 +22,6 @@ const Reviews = () => {
     getReviews();
   }, []);
 
- 
   return (
     <div className="reviews">
       <div className="container">
@@ -70,16 +59,29 @@ const Reviews = () => {
                         .join(".")}
                     </p>
                     <p className="review-card__comment">{item.text}</p>
+                    <div className="review-card__images">
+                      {item.imageUrls?.map((img) => (
+                        <img
+                          className="review-card__image"
+                          key={img}
+                          src={img}
+                          alt=""
+                        />
+                      ))}
+                    </div>
                   </div>
                 ))}
             </div>
-            <Pagination
-              setStartIndex={setStartIndex}
-              limit={limit}
-              countPages={countPages}
-              setCountPages={setCountPages}
-            />
-            <Form />
+            {reviews.length > 10 && (
+              <Pagination
+                setStartIndex={setStartIndex}
+                limit={limit}
+                countPages={countPages}
+                setCountPages={setCountPages}
+              />
+            )}
+            {!reviews.length && <p>Пока никто не оставил свой отзыв</p>}
+            <Form setReviews={setReviews} />
           </div>
           <SideBar />
         </div>

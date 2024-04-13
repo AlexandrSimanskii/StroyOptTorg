@@ -46,3 +46,18 @@ export type AsideFilterProps = {
   sort: string;
   setCountPages: React.Dispatch<React.SetStateAction<number>>;
 };
+export type Review = {
+  _id: string;
+  createdAt: string;
+  name: string;
+  email: string;
+  text: string;
+  imageUrls?: string[] | [];
+};
+export type Inputs = {
+  imageUrls: string[] | [];
+  name: string;
+  email: string;
+  text: string;
+  phone?: string;
+};

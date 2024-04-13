@@ -19,6 +19,7 @@ export const getReview = async (req, res, next) => {
 };
 
 export const createReview = async (req, res, next) => {
+  console.log(req.body);
   try {
     const review = await Review.create(req.body);
     return res.status(201).json(review);
