@@ -26,14 +26,12 @@ type formProps = {
 };
 
 const Form = ({ setReviews }: formProps) => {
-  const [files, setFiles] = useState<FileList | [] | null>([]);
+  const [files, setFiles] = useState<FileList | []>([]);
   const [previewImg, setPreviewImg] = useState<string[]>([]);
   const [agreement, setAgreement] = useState(true);
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
   const [imageUploadError, setImageUploadError] = useState("");
   const [uploading, setUploading] = useState(false);
-  const [endUpload, setEndUpload] = useState(false);
+  const [progress, setProgress] = useState("");
   const [formData, setFormData] = useState<Inputs>({
     imageUrls: [],
     name: "",
@@ -45,7 +43,7 @@ const Form = ({ setReviews }: formProps) => {
   const {
     register,
     handleSubmit,
-    watch,
+    
     formState: { errors },
   } = useForm<Inputs>();
 
@@ -71,7 +69,7 @@ const Form = ({ setReviews }: formProps) => {
 
         setImageUploadError("");
         setUploading(false);
-        setAgreement(false);
+        setAgreement(true);
       } else {
         setImageUploadError(`Вы можете загрузить от одной до 4 фотографий!`);
         setUploading(false);
@@ -100,7 +98,7 @@ const Form = ({ setReviews }: formProps) => {
       setFiles([]);
       setPreviewImg([]);
       setReviews((prev) => [...prev, curentRes]);
-      setAgreement(false);
+      setAgreement(true);
     } catch (error) {
       console.log(error);
     }
@@ -118,8 +116,8 @@ const Form = ({ setReviews }: formProps) => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log(`загруженно ${progress}%`);
-          progress === 100 && setEndUpload(true);
+          setProgress(`загруженно ${progress}%`);
+          progress === 100 && setProgress("");
         },
         (error) => {
           reject(error);
@@ -231,7 +229,9 @@ const Form = ({ setReviews }: formProps) => {
       </label>{" "}
       {pathname === "/reviews" && (
         <div className="reviews-files ">
-          <p> Прикрепить фото:</p>
+          <p className={imageUploadError && "reviews-files__error"}>
+            {imageUploadError ? `${imageUploadError}` : "Прикрепить фото:"}{" "}
+          </p>
           <label
             className={
               previewImg.length == 0 ? "reviews-file" : "reviews-file--active"
@@ -240,13 +240,11 @@ const Form = ({ setReviews }: formProps) => {
             <input
               type="file"
               accept="image/*"
-              // value={previewImg}
               multiple
               hidden
               onChange={(e) => {
                 e.preventDefault();
-
-                setFiles(e.target.files);
+                setFiles(e.target.files || []);
               }}
             />
             {previewImg.length !== 0 ? (
@@ -262,9 +260,8 @@ const Form = ({ setReviews }: formProps) => {
               ))
             ) : (
               <>
-                {" "}
                 <img width={20} src="/images/icons/icon_Image.svg" alt="" />
-                Нажмите для загрузки или перетащите файл в это поле
+                Нажмите для загрузки или перетащите файл в это поле.
               </>
             )}
           </label>
@@ -277,18 +274,21 @@ const Form = ({ setReviews }: formProps) => {
             agreement && "contact-form__btn--disabled"
           }`}
         >
-          отправить{" "}
+          {uploading ? "загрузка..." : "отправить"}
         </button>
-
-        <label className="contact-checkbox-group">
-          <input
-            checked={!agreement}
-            type="checkbox"
-            onChange={() => setAgreement(!agreement)}
-          />{" "}
-          Согласен с обработкой персональных данных в соответствии с политикой
-          конфиденциальности
-        </label>
+        {progress ? (
+          <p>{progress}</p>
+        ) : (
+          <label className="contact-checkbox-group">
+            <input
+              checked={!agreement}
+              type="checkbox"
+              onChange={() => setAgreement(!agreement)}
+            />{" "}
+            Согласен с обработкой персональных данных в соответствии с политикой
+            конфиденциальности
+          </label>
+        )}
       </div>
     </form>
   );

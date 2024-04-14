@@ -5,14 +5,35 @@ import Form from "../Components/Form";
 import { Review } from "../types/types";
 
 const Reviews = () => {
-  const [isSortActive, setIsSortActive] = useState(false);
+  const [isSortActive, setIsSortActive] = useState(true);
   const [reviews, setReviews] = useState<Review[]>([]);
+  const [order, setOrder] = useState("desc");
   const [limit, setLimit] = useState(10);
   const [startIndex, setStartIndex] = useState(0);
   const [countPages, setCountPages] = useState(1);
 
+  const sortReviews = (sort: string) => {
+    let sortedArray: Review[] = [];
+    if (sort === "desc") {
+      sortedArray = reviews.sort((a, b) =>
+        b.createdAt.localeCompare(a.createdAt)
+      );
+
+      setOrder("desc");
+    } else {
+      sortedArray = reviews.sort((a, b) =>
+        a.createdAt.localeCompare(b.createdAt)
+      );
+      setOrder("asc");
+    }
+
+    setReviews(sortedArray);
+  };
+
   const getReviews = async () => {
-    const res = await fetch("/api/review/get");
+    const res = await fetch(
+      `/api/review/get?order=${order}&startIndex=${startIndex}`
+    );
     const data = await res.json();
     setReviews(data.review);
     setCountPages(data.totalPages);
@@ -20,7 +41,10 @@ const Reviews = () => {
 
   useEffect(() => {
     getReviews();
-  }, []);
+  }, [startIndex]);
+
+
+
 
   return (
     <div className="reviews">
@@ -30,7 +54,9 @@ const Reviews = () => {
             <h2 className="delivery-title">Отзывы</h2>
             <div className="reviews-sort">
               <button
-                onClick={() => setIsSortActive(true)}
+                onClick={() => {
+                  setIsSortActive(true), sortReviews("desc");
+                }}
                 className={`reviews-sort__btn  ${
                   isSortActive && "reviews-sort__btn--active"
                 }`}
@@ -38,12 +64,15 @@ const Reviews = () => {
                 Сначала новые
               </button>
               <button
-                onClick={() => setIsSortActive(false)}
+                onClick={() => {
+                  setIsSortActive(false);
+                  sortReviews("asc");
+                }}
                 className={`reviews-sort__btn  ${
                   !isSortActive && "reviews-sort__btn--active"
                 }`}
               >
-                Сначала новые
+                Сначала старые
               </button>
             </div>
             <div className="reviews-cards">
@@ -72,7 +101,7 @@ const Reviews = () => {
                   </div>
                 ))}
             </div>
-            {reviews.length > 10 && (
+            {countPages > 1 && (
               <Pagination
                 setStartIndex={setStartIndex}
                 limit={limit}

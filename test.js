@@ -1,7 +1,12 @@
-const data = "2024-04-10T14:51:53.342+00:00";
+function humanReadable(seconds) {
+  const actualyNum = (num) => {
+    return num < 10 ? "0" + num : num;
+  };
+  let hours = actualyNum(Math.floor(seconds / 3600));
+  let minuts = actualyNum(Math.floor((seconds - hours * 3600) / 60));
+  let sec = actualyNum(seconds % 60);
 
-const result = data
-  .match(/\d{4}-\d{2}-\d{2}/g)[0]
-  .split("-")
-  .reverse()
-  .join(".");
+  return `${hours}:${minuts}:${sec}`;
+}
+
+console.log(humanReadable(35944));

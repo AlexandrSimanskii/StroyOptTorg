@@ -147,7 +147,8 @@
 .contact {
   &-form {
     padding: 53px 0;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
