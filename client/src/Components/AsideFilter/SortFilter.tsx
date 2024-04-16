@@ -8,7 +8,7 @@ import {
   ButtonGroup,
   SelectChangeEvent,
 } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 import { SortFilterProps, Product } from "../../types/types";
 
 const SortFilter = ({
@@ -22,34 +22,31 @@ const SortFilter = ({
   label,
   category,
   startIndex,
-  setCountPages
+  setCountPages,
 }: SortFilterProps) => {
+  const navigate = useNavigate();
 
-
-  
   const handleButtonClick = async (buttonName: number) => {
+    const params = new URLSearchParams(location.search);
+    params.set("limit", buttonName.toString());
+    const queryParams = params.toString();
+
     if (buttonName < limit) {
       setProducts((prev) => prev.filter((item, id) => id < buttonName));
+      setLimit(buttonName);
     } else if (buttonName > limit) {
       try {
-        const params = new URLSearchParams({
-          startIndex: startIndex.toString(),
-          price: price.join(","),
-          label: label.join(","),
-          sort: sort.split("_")[0],
-          order: sort.split("_")[1],
-          category: category,
-          limit: buttonName.toString(),
-        }).toString();
-
-        const res = await fetch(`/api/products/get?${params}`);
+        const res = await fetch(`/api/products/get?${queryParams}`);
         const data = await res.json();
+        navigate(`?${queryParams}`);
         setProducts(data.products);
-        setCountPages(data.totalPages)
+        setCountPages(data.totalPages);
       } catch (error) {
         console.log(error);
       }
     }
+
+    navigate(`?${queryParams}`);
     setLimit(buttonName);
   };
 

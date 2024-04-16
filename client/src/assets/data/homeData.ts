@@ -2,7 +2,7 @@ export const assortiment: { name: string; image: string }[] = [
   { name: "Сантехника", image: "/images/image/bath.png" },
   { name: "Отделочные материалы", image: "/images/image/material.png" },
   { name: "Электротовары", image: "/images/image/electro.png" },
-  { name: "Инструменты", image: "/images/image/tools.png" },
+  { name: "Инструменты", image: "/images/image/review (2).png" },
   { name: "Столярные изделия", image: "/images/image/joinery.png" },
   {
     name: "Общестроительные материалы",

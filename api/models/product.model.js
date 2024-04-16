@@ -12,6 +12,8 @@ const productsSchema = new Scheme(
     regularPrice: { type: Number, required: true },
     discountPrice: { type: Number, required: false },
     sale: { type: Number, required: false },
+    characteristics: { type: Object },
+    "additional photos": { type: Array },
   },
   { timestamps: true }
 );

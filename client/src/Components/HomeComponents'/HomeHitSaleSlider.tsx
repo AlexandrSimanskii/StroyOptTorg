@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import CardProduct from "../CardProduct";
-import { MdKeyboardArrowLeft } from "react-icons/md";
-import { MdKeyboardArrowRight } from "react-icons/md";
+
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 interface Product {
   name: string;
@@ -78,10 +78,10 @@ const HomeHitSaleSlider = () => {
           </div>
           <div className="slider-buttons">
             <button className="slider-button slider-button-next">
-              <MdKeyboardArrowLeft className="slider-button__arrow" />
+              <ArrowForwardIosIcon className="slider-button-next" />
             </button>
             <button className="slider-button slider-button-prev">
-              <MdKeyboardArrowRight className="slider-button__arrow" />
+              <ArrowForwardIosIcon />
             </button>
           </div>
         </div>

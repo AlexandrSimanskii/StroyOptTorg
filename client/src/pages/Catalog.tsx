@@ -4,6 +4,10 @@ import SortFilter from "../Components/AsideFilter/SortFilter";
 import CardProduct from "../Components/CardProduct";
 import { Product } from "../types/types";
 import Pagination from "../Components/Pagination";
+import { useNavigate } from "react-router-dom";
+
+import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
+import { getProducts } from "../store/products/productsSlice";
 
 const Catalog = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -15,23 +19,29 @@ const Catalog = () => {
   const [label, setLabel] = useState<string[]>([]);
   const [countPages, setCountPages] = useState(0);
 
-  const getProducts = async () => {
+  const urlSearchParams = new URLSearchParams();
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const currentProduct = useAppSelector((state) => state.products);
+
+  const fetchProducts = async () => {
     try {
-      const params = new URLSearchParams({
-        startIndex: startIndex.toString(),
-        price: price.join(","),
-        label: label.join(","),
-        sort: sort.split("_")[0],
-        order: sort.split("_")[1],
-        category: category,
-        limit: limit.toString(),
-      }).toString();
+      urlSearchParams.set("startIndex", startIndex.toString());
+      urlSearchParams.set("price", price.join(","));
+      urlSearchParams.set("label", label.join(","));
+      urlSearchParams.set("sort", sort.split("_")[0]);
+      urlSearchParams.set("order", sort.split("_")[1]);
+      urlSearchParams.set("category", category);
+      urlSearchParams.set("limit", limit.toString());
 
-      const res = await fetch(`/api/products/get?${params}`);
+      const searchQuery = urlSearchParams.toString();
+
+      const res = await fetch(`/api/products/get?${urlSearchParams}`);
       const data = await res.json();
-
+      dispatch(getProducts(data.products));
       setProducts(data.products);
       setCountPages(data.totalPages);
+      navigate(`?${searchQuery}`);
     } catch (error) {
       console.log(error);
     }
@@ -47,15 +57,12 @@ const Catalog = () => {
     }
   };
 
-  useEffect(() => {
-    getProducts();
-  }, []);
+
 
   useEffect(() => {
     getMinMaxPrices();
-    getProducts();
+    fetchProducts();
   }, [startIndex]);
-  console.log(countPages);
 
   return (
     <div className="catalog">

@@ -1,7 +1,7 @@
 import Accardion from "../Components/Accardion";
 import SideBar from "../Components/SideBar";
 
-import { returnData } from "../assets/data/accardionData";
+import { returnData } from "../assets/data/returnData";
 
 const Return = () => {
   return (

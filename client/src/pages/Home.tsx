@@ -8,7 +8,7 @@ import CatalogList from "../Components/HomeComponents'/CatalogList";
 import { useEffect, useState } from "react";
 import { Product } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct";
-
+import { Link } from "react-router-dom";
 import InfoBlock from "../Components/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
 
@@ -39,8 +39,11 @@ const Home = () => {
           <ul className="home-catalog-assortment ">
             {assortiment.map((item, idx) => AssortimentCard(item, idx))}
             <li className="home-catalog-assortment-item">
-              <img src="/images/image/card_arrow.png" alt="image" />
-              <p>Каталог</p>
+              <Link to={"/catalog"}>
+                {" "}
+                <img src="/images/image/card_arrow.png" alt="image" />
+                <p>Каталог</p>
+              </Link>
             </li>
           </ul>
           <div className="home-catalog-bottom">

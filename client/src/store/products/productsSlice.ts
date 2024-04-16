@@ -1,37 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
+import { Product } from "../../types/types";
 
-interface Form {
-  price: number[];
-  category: string;
-  brand: string[];
-  limit: number;
-  sort: string;
-}
+type Products = Product[];
 
-const initialState: Form = {
-  price: [0, Infinity],
-  category: "",
-  brand: [""],
-  limit: 12,
-  sort: "price_asc",
-};
+const initialState: Products = [];
 
-export const counterSlice = createSlice({
-  name: "form",
+export const productSlice = createSlice({
+  name: "products",
 
   initialState,
+
   reducers: {
-    change: (state) => {
-      state;
+    // getProducts: (state, action: PayloadAction<Products>) => {
+    //   state = [...action.payload];
+      getProducts: (state, action: PayloadAction<Products>) => {
+        return action.payload; // Corrected to return new state
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-
-
+export const { getProducts } = productSlice.actions;
 export const selectCount = (state: RootState) => state.counter.value;
 
-export default counterSlice.reducer;
+export default productSlice.reducer;

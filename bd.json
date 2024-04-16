@@ -9,7 +9,36 @@
         "category": "Инструменты",
         "label": "Makita",
         "article": "XJ89YHGO",
-        "sale": 20
+        "sale": 20,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Перфоратор",
@@ -19,7 +48,36 @@
         "category": "Инструменты",
         "label": "Makita",
         "article": "XJ89YHGO",
-        "sale": 0
+        "sale": 0,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Фен строительный",
@@ -29,7 +87,36 @@
         "category": "Инструменты",
         "label": "Makita",
         "article": "XJ89YHGO",
-        "sale": 10
+        "sale": 10,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Турбинка",
@@ -39,7 +126,36 @@
         "category": "Инструменты",
         "label": "Makita",
         "article": "XJ89YHGO",
-        "sale": 20
+        "sale": 20,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Миксер строительный",
@@ -49,7 +165,36 @@
         "category": "Инструменты",
         "label": "Makita",
         "article": "XJ89YHGO",
-        "sale": 3
+        "sale": 3,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Шуруповерт",
@@ -59,7 +204,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 20
+        "sale": 20,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Перфоратор",
@@ -69,7 +243,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 0
+        "sale": 0,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Фен строительный",
@@ -79,7 +282,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 10
+        "sale": 10,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Турбинка",
@@ -89,7 +321,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 20
+        "sale": 20,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Миксер строительный",
@@ -99,7 +360,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 3
+        "sale": 3,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Лобзик",
@@ -109,7 +399,36 @@
         "category": "Инструменты",
         "label": "Bosch",
         "article": "XJ89YHGO",
-        "sale": 3
+        "sale": 3,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Дрель",
@@ -119,7 +438,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 11
+        "sale": 11,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Перфоратор",
@@ -129,7 +477,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 4
+        "sale": 4,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Угловая шлифмашина",
@@ -139,7 +516,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 7
+        "sale": 7,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Фрезер",
@@ -149,7 +555,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 10
+        "sale": 10,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Болгарка",
@@ -159,7 +594,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 8
+        "sale": 8,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Гайковерт",
@@ -169,7 +633,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 8
+        "sale": 8,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Строительный фен",
@@ -179,7 +672,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 8
+        "sale": 8,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Перфоратор",
@@ -189,7 +711,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 5
+        "sale": 5,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Шлифмашинка",
@@ -199,7 +750,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 12
+        "sale": 12,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Отбойный молоток",
@@ -209,7 +789,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 12
+        "sale": 12,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Болгарка",
@@ -219,7 +828,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 10
+        "sale": 10,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Круг пильный",
@@ -229,7 +867,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 16.67
+        "sale": 16.67,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Дрель-шуруповерт",
@@ -239,7 +906,36 @@
         "category": "Инструменты",
         "label": "DEWALT",
         "article": "XJ89YHGO",
-        "sale": 10.34
+        "sale": 10.34,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Угловая шлифмашина",
@@ -249,7 +945,36 @@
         "category": "Инструменты",
         "label": "Metabo",
         "article": "XJ89YHGO",
-        "sale": 12.36
+        "sale": 12.36,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Круглая пила",
@@ -259,7 +984,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 6
+        "sale": 6,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Электродрель",
@@ -269,7 +1023,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 11
+        "sale": 11,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Угловая шлифмашина",
@@ -279,7 +1062,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 14
+        "sale": 14,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Дрель-шуруповерт",
@@ -289,7 +1101,36 @@
         "category": "Инструменты",
         "label": "Dexp",
         "article": "XJ89YHGO",
-        "sale": 9
+        "sale": 9,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Перфоратор",
@@ -299,7 +1140,36 @@
         "category": "Инструменты",
         "label": "Metabo",
         "article": "XJ89YHGO",
-        "sale": 9
+        "sale": 9,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       },
       {
         "name": "Циркулярная пила",
@@ -309,7 +1179,36 @@
         "category": "Инструменты",
         "label": "Metabo",
         "article": "XJ89YHGO",
-        "sale": 8
+        "sale": 8,
+        "characteristics": {
+          "Тип товара": "Дрель-шуруповерт",
+          "Мощность (Вт)": "18",
+          "Емкость АКБ (А/ч)": "1,5",
+          "Крутящий момент макс. (Н/м)": "30",
+          "Напряжение аккумулятора (В)": "14,4",
+          "Цвет": "синий",
+          "Диаметр патрона мин. (мм)": "1,5 ",
+          "Диаметр патрона макс. (мм)": "10",
+          "Скорость вращения I (об/мин)": "400",
+          "Скорость вращения II (об/мин)": "1400",
+          "Диаметр сверления дерева макс. (мм)": "15",
+          "Диаметр сверления металла макс. (мм)": "25",
+          "Тип двигателя": "щеточный",
+          "Вес (кг)": "1.4",
+          "Тип патрона": "быстрозажимной",
+          "Тип аккумулятора": "Li-Ion "
+        },
+        "additional photos": [
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2040.png?alt=media&token=5e053372-c216-45ee-98f4-e1205094464e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2041.png?alt=media&token=ed8fe796-744f-4ec4-b52c-12cf68fccace",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2042.png?alt=media&token=b87a0d8f-9a46-4e4a-8356-820978bcfb64",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2043.png?alt=media&token=7c6f3dbb-e42c-4d35-aa74-c6383276ae11",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2044.png?alt=media&token=d0a0d330-affe-4f2d-b205-06b4154f032e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(1).jpeg?alt=media&token=bee951c9-8de9-43ab-9e14-2b47c57cc02e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images%20(2).jpeg?alt=media&token=7aa98c91-8aca-4da7-96ad-5c4bcec361ff",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/images.jpeg?alt=media&token=84232390-296a-49a2-82ef-f9c851c0e40e",
+          "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F.jpeg?alt=media&token=8d77a615-db11-4c5f-8550-fd16704eb253"
+        ]
       }
     ]
   },
@@ -319,7 +1218,7 @@
         "title": "Масштабное обновление каталога инструментов",
         "category": "Новости",
         "information": "С радостью сообщаем вам о крупном пополнении нашего каталога инструментов.",
-        "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2013-1.png?alt=media&token=7929fe31-0bfb-4e3c-8165-44470d56cd74",
+        "image": "https://firebasestorage.googleapis.com/v0/b/stroyopttorg-cff79.appspot.com/o/Rectangle%2013.png?alt=media&token=15808c78-24bc-460f-81b4-ba61c7e30841",
         "date": "5 августа 2023"
       },
       {

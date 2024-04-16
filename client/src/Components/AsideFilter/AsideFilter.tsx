@@ -5,6 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 import AsideCategory from "./AsideCategory";
 import AsideBrand from "./AsideBrand";
 import { AsideFilterProps } from "../../types/types";
+import { useNavigate } from "react-router-dom";
 import {
   Accordion,
   AccordionSummary,
@@ -27,6 +28,8 @@ const AsideFilter = ({
 }: AsideFilterProps) => {
   const [asideOpen, setAsideOpen] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
@@ -41,7 +44,7 @@ const AsideFilter = ({
 
       const res = await fetch(`/api/products/get?${params}`);
       const data = await res.json();
-
+      navigate(`?${params}`);
       setProducts(data.products);
       setCountPages(data.totalPages);
       setAsideOpen(false);
@@ -56,14 +59,15 @@ const AsideFilter = ({
         <IoMenu className="aside-menu__icons" /> Показать фильтры
       </button>
       <aside
-        className={` ${asideOpen ? "aside aside--open " : "aside aside--closed"}`}
+        className={` ${
+          asideOpen ? "aside aside--open " : "aside aside--closed"
+        }`}
       >
         <form className="form" onSubmit={handleSubmit}>
-         
-            <h3>
-              Фильтры <RxCross2 onClick={() => setAsideOpen(false)} />
-            </h3>
-        
+          <h3>
+            Фильтры <RxCross2 onClick={() => setAsideOpen(false)} />
+          </h3>
+
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}

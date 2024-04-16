@@ -59,13 +59,13 @@ const About = () => {
               <li className="history-list__item">
                 Общая площадь земельного участка составляла {}
                 <strong>10 000 м² .</strong>
-                <li className="history-list__item">
-                  площадь складских помещений <strong>850 м² .</strong>
-                </li>
-                <li className="history-list__item">
-                  численность сотрудников {}
-                  <strong>10 человек.</strong>
-                </li>
+              </li>
+              <li className="history-list__item">
+                площадь складских помещений <strong>850 м² .</strong>
+              </li>
+              <li className="history-list__item">
+                численность сотрудников {}
+                <strong>10 человек.</strong>
               </li>
             </ul>{" "}
             <ul className="history-list">
@@ -76,14 +76,14 @@ const About = () => {
               </h4>
               <li className="history-list__item">
                 общая площадь базы составила {}
-                <strong>58 000 м² .</strong>
-                <li className="history-list__item">
-                  площадь складских помещений <strong> 5 200 м².</strong>
-                </li>
-                <li className="history-list__item">
-                  численность коллектива возросла до {}
-                  <strong>300 человек.</strong>
-                </li>
+                <strong>58 000 м² .</strong>{" "}
+              </li>
+              <li className="history-list__item">
+                площадь складских помещений <strong> 5 200 м².</strong>
+              </li>
+              <li className="history-list__item">
+                численность коллектива возросла до {}
+                <strong>300 человек.</strong>
               </li>
             </ul>{" "}
             <ul className="history-list">
@@ -94,14 +94,14 @@ const About = () => {
               </h4>
               <li className="history-list__item">
                 Торговый центр №1 - {}
-                <strong>5 545 м² .</strong>
-                <li className="history-list__item">
-                  Торговый центр№2- <strong> 3 951,2 м² .</strong>
-                </li>
-                <li className="history-list__item">
-                  Складские помещения - {}
-                  <strong>8 308,6 м².</strong>
-                </li>
+                <strong>5 545 м² .</strong>{" "}
+              </li>
+              <li className="history-list__item">
+                Торговый центр№2- <strong> 3 951,2 м² .</strong>
+              </li>
+              <li className="history-list__item">
+                Складские помещения - {}
+                <strong>8 308,6 м².</strong>
               </li>
             </ul>{" "}
             <ul className="history-list">
@@ -111,14 +111,14 @@ const About = () => {
               </h4>
               <li className="history-list__item">
                 Общая площадь земельного участка составляла {}
-                <strong>10 000 м² .</strong>
-                <li className="history-list__item">
-                  площадь складских помещений <strong>850 м² .</strong>
-                </li>
-                <li className="history-list__item">
-                  численность сотрудников {}
-                  <strong>10 человек.</strong>
-                </li>
+                <strong>10 000 м² .</strong>{" "}
+              </li>
+              <li className="history-list__item">
+                площадь складских помещений <strong>850 м² .</strong>
+              </li>
+              <li className="history-list__item">
+                численность сотрудников {}
+                <strong>10 человек.</strong>
               </li>
             </ul>{" "}
           </div>

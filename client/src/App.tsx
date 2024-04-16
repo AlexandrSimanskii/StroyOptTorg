@@ -15,6 +15,7 @@ import Answear from "./pages/Answear.tsx";
 import Blog from "./pages/Blog.tsx";
 import Cart from "./pages/Cart.tsx";
 import NewsPage from "./pages/NewsPage.tsx";
+import Product from "./pages/Product.tsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/return" element={<Return />} />
           <Route path="/payment" element={<PaymentPage />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route path="/answear" element={<Answear />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cart" element={<Cart />} />

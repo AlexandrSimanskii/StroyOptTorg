@@ -2,7 +2,7 @@ import Product from "../models/product.model.js";
 import mongoose from "mongoose";
 
 export const getProducts = async (req, res, next) => {
-
+  console.log(req.query.limit);
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -10,7 +10,7 @@ export const getProducts = async (req, res, next) => {
     const sort = req.query.sort || "createdAt";
     const order = req.query.order || "desc";
     const category = req.query.category || "";
-
+    const searchTerm = req.query.searchTerm || "";
     const price = req.query.price?.split(",") || [0, Infinity];
     let priceGte = price[0];
     let priceLte = price[1];
@@ -24,6 +24,8 @@ export const getProducts = async (req, res, next) => {
     }
 
     let query = {
+      name: { $regex: searchTerm, $options: "i" },
+
       category: { $regex: category, $options: "i" },
       regularPrice: { $gte: priceGte, $lte: priceLte },
     };
@@ -45,7 +47,7 @@ export const getProducts = async (req, res, next) => {
   }
 };
 
-export const getMinMaxPrices = async (req, res,next) => {
+export const getMinMaxPrices = async (req, res, next) => {
   try {
     const minMaxPrices = await Product.aggregate([
       {

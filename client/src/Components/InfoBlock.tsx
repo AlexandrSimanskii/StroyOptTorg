@@ -2,7 +2,6 @@ import { useLocation } from "react-router-dom";
 
 const InfoBlock = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
 
   return (
     <div className="info">

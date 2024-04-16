@@ -1,3 +1,37 @@
+export type Characteristics = {
+  "Тип товара"?: string;
+
+  "Мощность (Вт)"?: string;
+
+  "Емкость АКБ (А/ч)"?: string;
+
+  "Крутящий момент макс. (Н/м)"?: string;
+
+  "Напряжение аккумулятора (В)"?: string;
+
+  Цвет?: string;
+
+  "Диаметр патрона мин. (мм)"?: string;
+
+  "Диаметр патрона макс. (мм)"?: string;
+
+  "Скорость вращения I (об/мин)"?: string;
+
+  "Скорость вращения II (об/мин)"?: string;
+
+  "Диаметр сверления дерева макс. (мм)"?: string;
+
+  "Диаметр сверления металла макс. (мм)"?: string;
+
+  "Тип двигателя"?: string;
+
+  "Вес (кг)"?: string;
+
+  "Тип патрона"?: string;
+
+  "Тип аккумулятора"?: string;
+};
+
 export type Product = {
   name: string;
   label: string;
@@ -9,6 +43,8 @@ export type Product = {
   _id: string;
   isLike: boolean;
   isComparison: boolean;
+  "additional photos": string[];
+  characteristics: Characteristics;
 };
 
 export type News = {

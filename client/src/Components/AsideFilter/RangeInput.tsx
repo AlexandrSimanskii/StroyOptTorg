@@ -1,4 +1,4 @@
-import { debounce, Slider, Box, styled } from "@mui/material";
+import {  Slider, Box, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 const Range = styled(Slider)({
   color: " rgb(24, 111, 212)",
@@ -32,7 +32,7 @@ const RangeInput = ({ price, setPrice }: RangeInputProps) => {
 
   return (
     <div>
-      <Box sx={{ width: 300 }}>
+      <Box sx={{ width: "100%" }}>
         <Range
           getAriaLabel={() => "Temperature range"}
           value={price}
