@@ -1,4 +1,4 @@
-export type Characteristics = {
+export type CharacteristicsType = {
   "Тип товара"?: string;
 
   "Мощность (Вт)"?: string;
@@ -32,7 +32,7 @@ export type Characteristics = {
   "Тип аккумулятора"?: string;
 };
 
-export type Product = {
+export type ProductType = {
   name: string;
   label: string;
   image: string;
@@ -44,10 +44,10 @@ export type Product = {
   isLike: boolean;
   isComparison: boolean;
   "additional photos": string[];
-  characteristics: Characteristics;
+  characteristics: CharacteristicsType;
 };
 
-export type News = {
+export type NewsType = {
   _id: string;
   image: string;
   title: string;
@@ -56,7 +56,7 @@ export type News = {
   date: string;
 };
 
-export type SortFilterProps = {
+export type SortFilterPropsType = {
   startIndex: number;
   category: string;
   label: string[];
@@ -65,24 +65,24 @@ export type SortFilterProps = {
   setLimit: React.Dispatch<React.SetStateAction<number>>;
   sort: string;
   setSort: React.Dispatch<React.SetStateAction<string>>;
-  products: Product[];
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+  products: ProductType[];
+  setProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
   setCountPages: React.Dispatch<React.SetStateAction<number>>;
 };
 
-export type AsideFilterProps = {
+export type AsideFilterPropsType = {
   price: number[];
   setPrice: React.Dispatch<React.SetStateAction<number[]>>;
   label: string[];
   setLabel: React.Dispatch<React.SetStateAction<string[]>>;
   category: string;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>;
+  setProducts: React.Dispatch<React.SetStateAction<ProductType[]>>;
   limit: number;
   sort: string;
   setCountPages: React.Dispatch<React.SetStateAction<number>>;
 };
-export type Review = {
+export type ReviewType = {
   _id: string;
   createdAt: string;
   name: string;
@@ -90,7 +90,7 @@ export type Review = {
   text: string;
   imageUrls?: string[] | [];
 };
-export type Inputs = {
+export type InputsType = {
   imageUrls: string[] | [];
   name: string;
   email: string;

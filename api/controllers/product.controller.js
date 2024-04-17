@@ -1,5 +1,6 @@
 import Product from "../models/product.model.js";
 import mongoose from "mongoose";
+import { errorHandler } from "../utils/error.js";
 
 export const getProducts = async (req, res, next) => {
   console.log(req.query.limit);
@@ -41,7 +42,26 @@ export const getProducts = async (req, res, next) => {
       .limit(limit)
       .skip(startIndex);
 
+    if (!products) {
+      return next(
+        errorHandler(404, "Продуктов с такими параметрамине найдено!")
+      );
+    }
+
     return res.status(200).json({ products, totalPages });
+  } catch (error) {
+    next(error);
+  }
+};
+export const getProduct = async (req, res, next) => {
+  console.log(req.params.id);
+  try {
+    const product = await Product.findById(req.params.id);
+
+    if (!product) {
+      return next(errorHandler(404, "Такого обьявления не существует!"));
+    }
+    res.status(200).json(product);
   } catch (error) {
     next(error);
   }
