@@ -107,7 +107,7 @@ const Header = () => {
             <li className="header-bottom__list-element">
               <img
                 className="header-bottom__list-img"
-                src="images/icons/cart.svg"
+                src="/images/icons/cart.svg"
                 alt="search"
               />
               <p className="header-bottom__list-text">Корзина</p>

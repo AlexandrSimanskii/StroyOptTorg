@@ -17,7 +17,9 @@ $second-theme-color: rgb(238, 9, 6);
 $btn-color: rgb(1, 17, 32);
 $card-color: rgb(143, 146, 150);
 $border-color: rgb(223, 224, 226);
+$light-border-color: #edf0f2;
 $font-color: rgb(255, 255, 255);
+$sale-color: rgb(27, 150, 101);
 main {
   position: relative;
 }
@@ -73,7 +75,6 @@ main {
   flex-direction: column;
 }
 textarea {
- 
   resize: none;
   &::placeholder {
     color: #adb1b7;
@@ -104,6 +105,9 @@ input::placeholder {
 @import "newsCard";
 @import "notFound";
 @import "paymentPage";
+@import "product";
+
+
 @import "return";
 @import "reviews";
 

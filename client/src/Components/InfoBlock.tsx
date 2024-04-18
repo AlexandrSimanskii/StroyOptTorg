@@ -8,7 +8,7 @@ const InfoBlock = () => {
       {pathname === "/about" && <h2>Почему именно мы </h2>}
       <ul className="info__inner">
         <li className="info-item">
-          <img src="images/icons/wallet.svg" alt="wallet" />{" "}
+          <img src="/images/icons/wallet.svg" alt="wallet" />{" "}
           <p className="info-item__group">
             Оплата любым удобным способом
             {pathname === "/about" && (
