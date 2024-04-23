@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 import productRouter from "./routes/product.router.js";
 import newsRouter from "./routes/news.router.js";
 import reviewRouter from "./routes/review.router.js";
-
+import authRouter from "./routes/auth.router.js";
 
 const app = express();
- 
+
 dotenv.config();
 
 mongoose
@@ -22,6 +22,8 @@ app.listen(3004, () => {
 });
 
 app.use(express.json());
+app.use("/api", authRouter);
+// app.use("/api/users", usersRouter);
 app.use("/api/products", productRouter);
 app.use("/api/news", newsRouter);
 app.use("/api/review", reviewRouter);
