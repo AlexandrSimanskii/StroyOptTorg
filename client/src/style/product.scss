@@ -9,11 +9,12 @@
     gap: 10px;
     justify-content: space-between;
     height: 544px;
+    margin-bottom: 50px;
   }
   &-params {
     border-radius: 6px;
     background-color: hsl(0, 0%, 100%);
-    dd {
+    &__dd {
       color: $card-color;
     }
     &__group {
@@ -207,4 +208,13 @@
     z-index: 3;
     font-size: 20px;
   }
+}
+.tab-params {
+  height: 280px;
+  margin-bottom: 40px !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 90px;
+  row-gap: 8px;
 }

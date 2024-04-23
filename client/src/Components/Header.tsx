@@ -81,12 +81,14 @@ const Header = () => {
               <p className="header-bottom__list-text">Все акции</p>
             </li>
             <li className="header-bottom__list-element">
-              <img
-                className="header-bottom__list-img"
-                src="/images/icons/user.svg"
-                alt="search"
-              />
-              <p className="header-bottom__list-text">Войти</p>
+              <Link to={"/register"}>
+                <img
+                  className="header-bottom__list-img"
+                  src="/images/icons/user.svg"
+                  alt="search"
+                />
+                <p className="header-bottom__list-text">Войти</p>
+              </Link>
             </li>
             <li className="header-bottom__list-element">
               <img

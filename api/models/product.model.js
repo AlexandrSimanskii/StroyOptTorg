@@ -5,7 +5,7 @@ const Scheme = mongoose.Schema;
 const productsSchema = new Scheme(
   {
     name: { type: String, required: true },
-    image: { type: String, required: true },
+    type: { type: String, required: false },
     category: { type: String, required: true },
     label: { type: String, required: true },
     article: { type: String, required: true },
@@ -13,7 +13,9 @@ const productsSchema = new Scheme(
     discountPrice: { type: Number, required: false },
     sale: { type: Number, required: false },
     characteristics: { type: Object },
-    "additional photos": { type: Array },
+    images: { type: Array, required: true },
+    description: { type: String, required: false },
+    isLike: { type: Boolean, required: false },
   },
   { timestamps: true }
 );

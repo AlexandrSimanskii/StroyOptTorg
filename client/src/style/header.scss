@@ -93,14 +93,15 @@
       background-color: $theme-color;
       border-radius: 8px;
       flex-grow: 1;
-      // max-width: 660px;
-      // width: 100%;
+      flex-direction: row;
     }
     &-input {
       border-radius: 8px;
-      height: 100%;
+      margin: 0;
       width: 100%;
       border: none;
+      outline: none;
+      padding: 16px;
     }
     &-img {
       width: 14px;

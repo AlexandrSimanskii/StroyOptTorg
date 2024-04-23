@@ -32,10 +32,13 @@ export type CharacteristicsType = {
   "Тип аккумулятора"?: string;
 };
 
+
 export type ProductType = {
   name: string;
+  type: string;
+
   label: string;
-  image: string;
+  category: string;
   regularPrice: number;
   discountPrice: number;
   sale: number;
@@ -43,8 +46,9 @@ export type ProductType = {
   _id: string;
   isLike: boolean;
   isComparison: boolean;
-  "additional photos": string[];
+  images: string[];
   characteristics: CharacteristicsType;
+  description: string;
 };
 
 export type NewsType = {

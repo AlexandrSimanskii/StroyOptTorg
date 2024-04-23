@@ -1,20 +1,19 @@
 import { useEffect, useState } from "react";
 import SideBar from "../Components/SideBar";
 import Pagination from "../Components/Pagination";
-import Form from "../Components/Form";
-import { Review } from "../types/types";
-
+import Form from "../Components/Contacts/ContactsForm";
+import { ReviewType } from "../types/types";
 
 const Reviews = () => {
   const [isSortActive, setIsSortActive] = useState(true);
-  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviews, setReviews] = useState<ReviewType[]>([]);
   const [order, setOrder] = useState("desc");
   const [limit, setLimit] = useState(10);
   const [startIndex, setStartIndex] = useState(0);
   const [countPages, setCountPages] = useState(1);
 
   const sortReviews = (sort: string) => {
-    let sortedArray: Review[] = [];
+    let sortedArray: ReviewType[] = [];
     if (sort === "desc") {
       sortedArray = reviews.sort((a, b) =>
         b.createdAt.localeCompare(a.createdAt)
@@ -43,9 +42,6 @@ const Reviews = () => {
   useEffect(() => {
     getReviews();
   }, [startIndex]);
-
-
-
 
   return (
     <div className="reviews">

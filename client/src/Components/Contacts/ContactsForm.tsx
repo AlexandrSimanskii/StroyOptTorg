@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
 import { useLocation } from "react-router-dom";
+import { useForm, SubmitHandler } from "react-hook-form";
+
 import { initializeApp } from "firebase/app";
-import { Review } from "../types/types";
-import { Inputs } from "../types/types";
+import { ReviewType } from "../../types/types";
+import { InputsType } from "../../types/types";
 import {
   getDownloadURL,
   getStorage,
@@ -11,28 +12,22 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCGu03ZGjhTbnMG1I72hJ-gsJJ1VmCHxDE",
-  authDomain: "stroyopttorg-cff79.firebaseapp.com",
-  projectId: "stroyopttorg-cff79",
-  storageBucket: "stroyopttorg-cff79.appspot.com",
-  messagingSenderId: "813131839194",
-  appId: "1:813131839194:web:8a23e6084989efd67e57e3",
-};
+const config = import.meta.env.VITE_FIREBASE;
+const firebaseConfig = config;
 const app = initializeApp(firebaseConfig);
 
 type formProps = {
-  setReviews: React.Dispatch<React.SetStateAction<Review[]>>;
+  setReviews?: React.Dispatch<React.SetStateAction<ReviewType[]>>;
 };
 
-const Form = ({ setReviews }: formProps) => {
+const ContactsForm = ({ setReviews }: formProps) => {
   const [files, setFiles] = useState<FileList | []>([]);
   const [previewImg, setPreviewImg] = useState<string[]>([]);
-  const [agreement, setAgreement] = useState(true);
+  const [agreement, setAgreement] = useState(false);
   const [imageUploadError, setImageUploadError] = useState("");
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState("");
-  const [formData, setFormData] = useState<Inputs>({
+  const [formData, setFormData] = useState<InputsType>({
     imageUrls: [],
     name: "",
     email: "",
@@ -43,9 +38,9 @@ const Form = ({ setReviews }: formProps) => {
   const {
     register,
     handleSubmit,
-    
+
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<InputsType>();
 
   const handleFileSubmit = async () => {
     try {
@@ -69,7 +64,7 @@ const Form = ({ setReviews }: formProps) => {
 
         setImageUploadError("");
         setUploading(false);
-        setAgreement(true);
+        setAgreement(false);
       } else {
         setImageUploadError(`Вы можете загрузить от одной до 4 фотографий!`);
         setUploading(false);
@@ -97,8 +92,10 @@ const Form = ({ setReviews }: formProps) => {
       setFormData({ imageUrls: [], name: "", email: "", text: "" });
       setFiles([]);
       setPreviewImg([]);
-      setReviews((prev) => [...prev, curentRes]);
-      setAgreement(true);
+
+      setReviews && setReviews((prev) => [...prev, curentRes]);
+
+      setAgreement(false);
     } catch (error) {
       console.log(error);
     }
@@ -132,7 +129,7 @@ const Form = ({ setReviews }: formProps) => {
     });
   };
 
-  const onSubmit: SubmitHandler<Inputs> = async () => {
+  const onSubmit: SubmitHandler<InputsType> = async () => {
     previewImg.length ? handleFileSubmit() : handleFormSubmit([]);
   };
 
@@ -142,14 +139,14 @@ const Form = ({ setReviews }: formProps) => {
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     if (event.target.id === "name") {
-      setFormData((prev) => ({ ...prev, name: event.target.value }));
+      setFormData(() => ({ ...formData, name: event.target.value }));
     }
     if (event.target.id === "email") {
-      setFormData((prev) => ({ ...prev, email: event.target.value }));
+      setFormData(() => ({ ...formData, email: event.target.value }));
     }
 
     if (event.target.id === "text") {
-      setFormData((prev) => ({ ...prev, text: event.target.value }));
+      setFormData(() => ({ ...formData, text: event.target.value }));
     }
   };
 
@@ -160,13 +157,13 @@ const Form = ({ setReviews }: formProps) => {
   }, [files]);
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
-      <div className="contact-box">
-        <label className="contact-label">
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-box">
+        <label className="label">
           Ваше имя <span className="contact-label__required">*</span>:
           <input
             {...register("name", { required: true, minLength: 4 })}
-            className="contact-input"
+            className="input"
             type="text"
             value={formData.name}
             placeholder="Введите ваше имя"
@@ -176,7 +173,7 @@ const Form = ({ setReviews }: formProps) => {
           {errors.name && <span>Поле обязательно к заполнению</span>}
         </label>{" "}
         {pathname === "/reviews" ? (
-          <label className="contact-label">
+          <label className="label">
             Email <span className="contact-label__required">*</span>:{" "}
             <input
               {...register("email", {
@@ -184,7 +181,7 @@ const Form = ({ setReviews }: formProps) => {
                 pattern:
                   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
               })}
-              className="contact-input"
+              className="input"
               type="text"
               value={formData.email}
               placeholder="email"
@@ -194,7 +191,7 @@ const Form = ({ setReviews }: formProps) => {
             {errors.email && <span>Поле заполненно не верно</span>}
           </label>
         ) : (
-          <label className="contact-label">
+          <label className="label">
             Email <span className="contact-label__required">*</span>:{" "}
             <input
               {...register("phone", {
@@ -202,7 +199,7 @@ const Form = ({ setReviews }: formProps) => {
                 pattern:
                   /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
               })}
-              className="contact-input"
+              className="input"
               type="text"
               placeholder="email"
             />
@@ -210,7 +207,7 @@ const Form = ({ setReviews }: formProps) => {
           </label>
         )}
       </div>
-      <label className="contact-label">
+      <label className="label">
         {pathname === "/reviews" ? "Текст отзыва" : "Teкст сообщения"}
         <span className="contact-label__required">*</span>:{" "}
         <textarea
@@ -267,21 +264,19 @@ const Form = ({ setReviews }: formProps) => {
           </label>
         </div>
       )}
-      <div className="contact-box">
+      <div className="form-box">
         <button
-          disabled={agreement}
-          className={`contact-form__btn ${
-            agreement && "contact-form__btn--disabled"
-          }`}
+          disabled={!agreement}
+          className={`form-btn ${!agreement && "form-btn--disabled"}`}
         >
           {uploading ? "загрузка..." : "отправить"}
         </button>
         {progress ? (
           <p>{progress}</p>
         ) : (
-          <label className="contact-checkbox-group">
+          <label className="checkbox-group">
             <input
-              checked={!agreement}
+              checked={agreement}
               type="checkbox"
               onChange={() => setAgreement(!agreement)}
             />{" "}
@@ -294,4 +289,4 @@ const Form = ({ setReviews }: formProps) => {
   );
 };
 
-export default Form;
+export default ContactsForm;

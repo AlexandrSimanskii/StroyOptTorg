@@ -1,6 +1,5 @@
 import { contactsOffice, contactsRegion } from "../assets/data/contactData";
-import Form from "../Components/Form";
-
+import Form from "../Components/Contacts/ContactsForm";
 
 const Contacts = () => {
   return (

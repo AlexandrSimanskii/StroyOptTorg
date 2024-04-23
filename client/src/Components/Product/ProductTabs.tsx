@@ -1,12 +1,10 @@
 import { useState } from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { CharacteristicsType } from "../../types/types";
+import { Tabs, Tab, Typography, Box } from "@mui/material";
+
+import { ProductType } from "../../types/types";
 
 type TabsType = {
-  params: CharacteristicsType;
+  product: ProductType;
 };
 
 interface TabPanelProps {
@@ -28,7 +26,7 @@ function CustomTabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Box>{children}</Box>
         </Box>
       )}
     </div>
@@ -42,7 +40,7 @@ function a11yProps(index: number) {
   };
 }
 
-const ProductTabs = ({ params }: TabsType) => {
+const ProductTabs = ({ product }: TabsType) => {
   const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -50,35 +48,80 @@ const ProductTabs = ({ params }: TabsType) => {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+    <Box id="tabs" sx={{ width: "100%", marginBottom: "40px" }}>
+      <Box
+        sx={{ borderBottom: 1, borderColor: "divider", marginBottom: "30px" }}
+      >
         <Tabs
+          sx={{
+            "& .MuiTabs-indicator": {
+              transform: "translateY(1px)",
+              zIndex: "4",
+              backgroundColor: "rgb(238, 9, 6)",
+            },
+            "& .Mui-selected": {
+              color: "black !important",
+            },
+          }}
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          <Tab label="Характеристики" {...a11yProps(0)} />
-          <Tab label="О товаре" {...a11yProps(1)} />
-          <Tab label="Доставка и оплата" {...a11yProps(2)} />
+          <Tab
+            sx={{
+              color: "rgb(143, 146, 150)",
+              fontWeight: "550",
+              fontSize: "19px",
+            }}
+            label="Характеристики"
+            {...a11yProps(0)}
+          />
+          <Tab
+            sx={{
+              color: "rgb(143, 146, 150)",
+              fontWeight: "550",
+              fontSize: "19px",
+            }}
+            label="О товаре"
+            {...a11yProps(1)}
+          />
+          <Tab
+            sx={{
+              color: "rgb(143, 146, 150)",
+              fontWeight: "550",
+              fontSize: "19px",
+            }}
+            label="Доставка и оплата"
+            {...a11yProps(2)}
+          />
         </Tabs>
       </Box>
-      <Typography></Typography>
+      <Typography sx={{ fontSize: "20px", fontWeight: 550 }}>
+        Характеристики товара {`"${product.name}"`}
+      </Typography>
       <CustomTabPanel value={value} index={0}>
         <div className="tab-params">
-          {Object.entries(params).map(([key, value]) => (
+          {Object.entries(product.characteristics).map(([key, value]) => (
             <div key={key} className="product-params__group">
               <dt>{key}</dt>
               <div className="product-params__doted"></div>
-              <dd>{value}</dd>
+              <dd className="product-params__dd">{value}</dd>
             </div>
           ))}
         </div>
+        <span>
+          Производитель оставляет за собой право без уведомления продавца менять
+          характеристики, внешний вид, комплектацию товара и место его
+          производства. Указанная информация не является публичной офертой.
+        </span>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        <p>{product.description}</p>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <p>
+          C условиями доставки и оплаты можете ознакомиться в личном кабинете
+        </p>
       </CustomTabPanel>
     </Box>
   );

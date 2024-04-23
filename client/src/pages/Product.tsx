@@ -8,27 +8,40 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { FiBarChart2 } from "react-icons/fi";
 import ProductSlider from "../Components/Product/ProductSlider";
 import ProductTabs from "../Components/Product/ProductTabs";
+import SimilarProductSlider from "../Components/Product/SimilarProductSlider";
 
 const Product = () => {
   const [count, setCount] = useState(1);
   const params = useParams();
   const [product, setProduct] = useState<ProductType>();
+  const [similarProduct, setSimilarProduct] = useState<ProductType[]>([]);
 
-  const productImages = product?.["additional photos"];
+  const productImages = product?.images;
 
+  const getSimilarProduct = async (el: string) => {
+    try {
+      const res = await fetch(`/api/products/get?type=${el}`);
+      const data = await res.json();
+      setSimilarProduct(data.products);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const getProduct = async () => {
     try {
       const res = await fetch(`/api/products/get/${params.id}`);
       const data = await res.json();
-
       setProduct(data);
+
+      getSimilarProduct(data.type);
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
     getProduct();
-  }, []);
+  }, [params]);
 
   return (
     <div className="product">
@@ -36,7 +49,7 @@ const Product = () => {
         {product && (
           <div className="product-inner">
             <section className="product-inform">
-              <ProductSlider productImages={product?.["additional photos"]} />
+              <ProductSlider productImages={productImages} />
               <div className="product-params-block">
                 <dl className="product-params">
                   {Object.entries(product.characteristics)
@@ -45,11 +58,13 @@ const Product = () => {
                       <div key={key} className="product-params__group">
                         <dt>{key}</dt>
                         <div className="product-params__doted"></div>
-                        <dd>{value}</dd>
+                        <dd className="product-params__dd">{value}</dd>
                       </div>
                     ))}
                 </dl>
-                <button className="product-params__btn">Показать больше</button>
+               
+                  <a className="product-params__btn"  href="#tabs">Показать больше</a>
+                
 
                 <InfoBlock />
               </div>
@@ -92,7 +107,8 @@ const Product = () => {
                 </div>
               </div>
             </section>
-            <ProductTabs params={product?.characteristics} />
+            <ProductTabs  product={product} />
+            <SimilarProductSlider similarProduct={similarProduct} />
           </div>
         )}
       </div>

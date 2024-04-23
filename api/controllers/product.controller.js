@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { errorHandler } from "../utils/error.js";
 
 export const getProducts = async (req, res, next) => {
-  console.log(req.query.limit);
+  console.log(req.query);
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -13,6 +13,7 @@ export const getProducts = async (req, res, next) => {
     const category = req.query.category || "";
     const searchTerm = req.query.searchTerm || "";
     const price = req.query.price?.split(",") || [0, Infinity];
+    const type = req.query.type || "";
     let priceGte = price[0];
     let priceLte = price[1];
 
@@ -26,7 +27,7 @@ export const getProducts = async (req, res, next) => {
 
     let query = {
       name: { $regex: searchTerm, $options: "i" },
-
+      type: { $regex: type, $options: "i" },
       category: { $regex: category, $options: "i" },
       regularPrice: { $gte: priceGte, $lte: priceLte },
     };

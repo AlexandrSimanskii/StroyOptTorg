@@ -63,7 +63,7 @@ const AsideFilter = ({
           asideOpen ? "aside aside--open " : "aside aside--closed"
         }`}
       >
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="aside-form" onSubmit={handleSubmit}>
           <h3>
             Фильтры <RxCross2 onClick={() => setAsideOpen(false)} />
           </h3>

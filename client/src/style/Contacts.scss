@@ -145,40 +145,8 @@
 }
 
 .contact {
-  &-form {
-    padding: 53px 0;
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  &-box {
-    display: flex;
-    column-gap: 30px;
-    justify-content: space-between;
-    text-align: center;
-  }
-  &-label {
-    width: 100%;
-    display: block;
-    gap: 6px;
-    text-align: left;
+ 
 
-    & span {
-      color: $second-theme-color;
-    }
-  }
-  &-input {
-    padding: 25px 20px;
-    border-radius: 6px;
-    outline: none;
-    width: 100%;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
   &-textarea {
     border-width: 2px;
     padding: 25px 20px;
@@ -189,22 +157,8 @@
     font-size: 16px;
     color: $btn-color;
   }
-  &-form__btn {
-    background-color: $theme-color;
-    color: white;
-    &--disabled {
-      background-color: #adb1b7;
-    }
-  }
-  &-checkbox-group {
-    display: flex;
-    text-align: left;
-    gap: 10px;
-    align-items: center;
-    input {
-      transform: translateY(-6px);
-    }
-  }
+  
+  
 }
 @media (max-width: 1124px) {
   .office {

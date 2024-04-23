@@ -1,8 +1,12 @@
 import { useState } from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+
+import {
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  Accordion,
+} from "@mui/material";
+
 import { IoRemoveSharp } from "react-icons/io5";
 
 import { IoAddSharp } from "react-icons/io5";

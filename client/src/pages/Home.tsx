@@ -1,10 +1,10 @@
-import HomeSlider from "../Components/HomeComponents'/HomeSlider";
+import HomeSlider from "../Components/HomeComponents/HomeSlider.tsx";
 import { assortiment, catalog } from "../assets/data/homeData";
-import AssortimentCard from "../Components/HomeComponents'/AssortimentCard";
+import AssortimentCard from "../Components/HomeComponents/AssortimentCard.tsx";
 import AdvertisingCard from "../Components/AdvertisingCards.tsx";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import HomeHitSaleSlider from "../Components/HomeComponents'/HomeHitSaleSlider";
-import CatalogList from "../Components/HomeComponents'/CatalogList";
+import HomeHitSaleSlider from "../Components/HomeComponents/HomeHitSaleSlider.tsx";
+import CatalogList from "../Components/HomeComponents/CatalogList.tsx";
 import { useEffect, useState } from "react";
 import { Product } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct";

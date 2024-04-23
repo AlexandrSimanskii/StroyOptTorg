@@ -3,27 +3,17 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FiBarChart2 } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { ProductType } from "../types/types";
 
 interface CardProductProps {
-  product: {
-    name: string;
-    image: string;
-    regularPrice: number;
-    discountPrice: number;
-    sale: number;
-    article: string;
-    label?: string;
-    _id: string;
-    isLike: boolean;
-    isComparison: boolean;
-  };
+  product: ProductType
 }
 
 const CardProduct = ({ product }: CardProductProps) => {
   return (
     <div className="card">
       <Link to={`/product/${product._id}`}>
-        <img className="card__img" src={product.image} alt={product.name} />
+        <img className="card__img" src={product.images[0]} alt={product.name} />
       </Link>
 
       <p className="card__article">Брэнд {product.label}</p>

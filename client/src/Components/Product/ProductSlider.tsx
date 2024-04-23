@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import "swiper/css/bundle";
 
 type ProductSliderType = {
-  productImages: string[];
+  productImages: string[] | undefined;
 };
 const ProductSlider = ({ productImages }: ProductSliderType) => {
   useEffect(() => {
@@ -32,21 +32,23 @@ const ProductSlider = ({ productImages }: ProductSliderType) => {
     <div className="product-swiper">
       <div className="product-thumbs">
         <div className="swiper-wrapper">
-          {productImages.map((item) => (
+          {productImages?.map((item, id) => (
             <div
+              key={id}
               style={{ backgroundImage: `url(${item})` }}
               className="swiper-slide product-thumbs-img"
             ></div>
           ))}
         </div>
 
-        <IoIosArrowDown className=" product-thumbs-btn" />
+        <IoIosArrowDown className=" swiper-btn-button product-thumbs-btn" />
         <span className="product-thumbs__gradient"></span>
       </div>
       <div className="product-slider">
         <div className="swiper-wrapper">
-          {productImages.map((item) => (
+          {productImages?.map((item, idx) => (
             <div
+              key={idx}
               style={{ backgroundImage: `url(${item})` }}
               className="swiper-slide product-slider-img"
             ></div>
