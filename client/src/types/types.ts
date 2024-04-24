@@ -31,7 +31,16 @@ export type CharacteristicsType = {
 
   "Тип аккумулятора"?: string;
 };
-
+export type UserType = {
+  _id: string;
+  email: string;
+  phone: string;
+  username: string;
+  region: string;
+  cart: [];
+  order: [];
+  favorite: [];
+};
 
 export type ProductType = {
   name: string;

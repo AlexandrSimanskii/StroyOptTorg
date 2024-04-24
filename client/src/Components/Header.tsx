@@ -1,7 +1,21 @@
 import { LuMenu } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
+import { logOut } from "../store/users/userSlise";
 
 const Header = () => {
+  const dispath = useAppDispatch();
+  const user = useAppSelector((state) => state.user);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    if (!user) {
+      navigate("/signup");
+    } else {
+      dispath(logOut());
+      navigate("/");
+    }
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -80,15 +94,15 @@ const Header = () => {
               />
               <p className="header-bottom__list-text">Все акции</p>
             </li>
-            <li className="header-bottom__list-element">
-              <Link to={"/register"}>
-                <img
-                  className="header-bottom__list-img"
-                  src="/images/icons/user.svg"
-                  alt="search"
-                />
-                <p className="header-bottom__list-text">Войти</p>
-              </Link>
+            <li onClick={handleClick} className="header-bottom__list-element">
+              <img
+                className="header-bottom__list-img"
+                src="/images/icons/user.svg"
+                alt="search"
+              />
+              <p className="header-bottom__list-text">
+                {user ? "Выйти" : "Войти"}
+              </p>
             </li>
             <li className="header-bottom__list-element">
               <img

@@ -1,18 +1,24 @@
 import { useState, useRef } from "react";
 import InputMask from "react-input-mask";
-import { IoMdEye } from "react-icons/io";
-import { IoMdEyeOff } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 import { useForm, SubmitHandler } from "react-hook-form";
+import { signInSuccess } from "../../store/users/userSlise";
+import { useAppDispatch } from "../../store/redux_hooks/reduxHook";
 type Inputs = {
   email: string;
   phone: string;
-  name: string;
+  username: string;
   region: string;
   password: string;
   confirmPassword: string;
 };
 
 const RegisterForm = () => {
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmVisible, setConfirmVisible] = useState(false);
   const [agreement, setAgreement] = useState(false);
@@ -25,10 +31,38 @@ const RegisterForm = () => {
     watch,
     formState: { errors },
   } = useForm<Inputs>({ mode: "onSubmit" });
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setLoading(true);
+    try {
+      const { confirmPassword, ...rest } = data;
+
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(rest),
+      });
+      const user = await res.json();
+      if (user.success === false) {
+        setError("Пользователь с таким Email или номером уже существует");
+        setLoading(false);
+        return;
+      }
+      setLoading(false);
+      dispatch(signInSuccess(user));
+
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      setError("Ошибка при регестрации");
+      setLoading(false);
+    }
+  };
+
   const password = useRef({});
   password.current = watch("password", "");
-  console.log(password);
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -73,11 +107,11 @@ const RegisterForm = () => {
         <input
           className="input"
           placeholder="Ваше полное имя"
-          {...register("name", {
+          {...register("username", {
             required: { value: true, message: requiredMessage },
           })}
         />
-        {errors.name && <span>{errors.name.message}</span>}
+        {errors.username && <span>{errors.username.message}</span>}
       </label>
       <label className="label">
         Регион<span className="contact-label__required">*</span>:
@@ -164,9 +198,9 @@ const RegisterForm = () => {
         }
         type="submit"
       >
-        {" "}
-        Зарегистрироваться
+        {loading ? "Регистрация..." : "Зарегистрироваться"}
       </button>
+      <p>{error}</p>
     </form>
   );
 };

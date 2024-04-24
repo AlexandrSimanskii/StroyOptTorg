@@ -25,6 +25,9 @@ const userScheme = new Schema(
       type: String,
       required: true,
     },
+    cart: { type: Array, required: true },
+    favorite: { type: Array, required: true },
+    order: { type: Array, required: true }, 
   },
   { timestamps: true }
 );

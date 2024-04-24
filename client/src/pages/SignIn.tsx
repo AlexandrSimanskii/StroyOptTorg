@@ -10,7 +10,7 @@ type Inputs = {
   password: string;
 };
 
-const Login = () => {
+const SignIn = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const requiredMessage = "Обязательно к заполнению";
   const {
@@ -78,7 +78,7 @@ const Login = () => {
               {errors.password && <span>{errors.password.message}</span>}
             </label>
             <button>Восстановить пароль</button>
-            <button>Авторизоваться</button>
+            <button onClick={handleSignIn}>Авторизоваться</button>
           </form>
           <Account />
         </div>
@@ -87,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;

@@ -1,7 +1,7 @@
 import Account from "../Components/Register/Account";
 import RegisterForm from "../Components/Register/Form";
 
-const Register = () => {
+const SignUp = () => {
 
   return (
     <div className="register">
@@ -16,4 +16,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default SignUp;

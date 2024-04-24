@@ -6,20 +6,21 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import HomeHitSaleSlider from "../Components/HomeComponents/HomeHitSaleSlider.tsx";
 import CatalogList from "../Components/HomeComponents/CatalogList.tsx";
 import { useEffect, useState } from "react";
-import { Product } from "../types/types.ts";
+import { ProductType } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct";
 import { Link } from "react-router-dom";
 import InfoBlock from "../Components/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
+import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
 
 const Home = () => {
-  const [betterProducts, setBetterProducts] = useState<Product[]>([]);
-
+  const [betterProducts, setBetterProducts] = useState<ProductType[]>([]);
+  const user = useAppSelector((state) => state.user);
   const getBetterProducts = async () => {
     try {
-      const res = await fetch("/api/products/get?limit=6&startIndex=12");
+      const res = await fetch("/api/products/get?limit=6&startIndex=15");
       const data = await res.json();
-      setBetterProducts(data);
+      setBetterProducts(data.products);
     } catch (error) {
       console.log(error);
     }
@@ -28,6 +29,7 @@ const Home = () => {
   useEffect(() => {
     getBetterProducts();
   }, []);
+  console.log(betterProducts);
 
   return (
     <main>

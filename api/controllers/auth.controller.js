@@ -4,7 +4,6 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 export const signUp = async (req, res, next) => {
-  console.log(req.body);
   const { username, email, password, phone, region } = req.body;
   const hashedPassword = bcrypt.hashSync(password, 10);
   const newUser = new User({
@@ -13,6 +12,9 @@ export const signUp = async (req, res, next) => {
     phone,
     region,
     password: hashedPassword,
+    cart: [],
+    favorite: [],
+    order: [],
   });
 
   try {
@@ -24,7 +26,6 @@ export const signUp = async (req, res, next) => {
       .status(201)
       .json(rest);
   } catch (error) {
-    res.json("сломался")
     next(error);
   }
 };

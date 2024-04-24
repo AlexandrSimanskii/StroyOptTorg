@@ -7,9 +7,9 @@ const Account = () => {
   return (
     <div className="register-account">
       <h4 className="register-account__title">
-        {pathname === "/register" ? "Уже есть аккаунт?" : "Еще нет аккаунта?"}
+        {pathname === "/signup" ? "Уже есть аккаунт?" : "Еще нет аккаунта?"}
       </h4>
-      {pathname === "/register" ? (
+      {pathname === "/signup" ? (
         <p className="register-account__text">
           <span>
             {" "}
@@ -35,11 +35,11 @@ const Account = () => {
       <button
         className="register-account__btn"
         onClick={() =>
-          navigate(pathname === "/register" ? "/login" : "/register")
+          navigate(pathname === "/signup" ? "//signin" : "/signup")
         }
       >
         {" "}
-        {pathname === "/register" ? "Авторизоваться" : "Зарегистрироваться"}
+        {pathname === "/signup" ? "Авторизоваться" : "Зарегистрироваться"}
       </button>
     </div>
   );

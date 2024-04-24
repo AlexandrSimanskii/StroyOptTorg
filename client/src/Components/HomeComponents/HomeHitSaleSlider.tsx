@@ -22,7 +22,7 @@ const HomeHitSaleSlider = () => {
 
   const getBestsellerProduct = async () => {
     try {
-      const res = await fetch("/api/products/get?limit=12");
+      const res = await fetch("/api/products/get?limit=12&startIndex=8");
       const data = await res.json();
       setBestseller(data.products);
     } catch (error) {

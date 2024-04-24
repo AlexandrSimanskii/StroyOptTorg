@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound.tsx";
 import Catalog from "./pages/Catalog.tsx";
 import Contacts from "./pages/Contacts.tsx";
 import Reviews from "./pages/Reviews.tsx";
-import Register from "./pages/Register.tsx";
+
 import Return from "./pages/Return.tsx";
 import PaymentPage from "./pages/PaymentPage.tsx";
 import Delivery from "./pages/Delivery.tsx";
@@ -18,7 +18,9 @@ import Blog from "./pages/Blog.tsx";
 import Cart from "./pages/Cart.tsx";
 import NewsPage from "./pages/NewsPage.tsx";
 import Product from "./pages/Product.tsx";
-import Login from "./pages/Login.tsx";
+
+import SignUp from "./pages/SignUp.tsx";
+import SignIn from "./pages/SignIn.tsx";
 
 function App() {
   return (
@@ -33,14 +35,14 @@ function App() {
           }
         >
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/return" element={<Return />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/product/:id" element={<Product />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/answear" element={<Answear />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cart" element={<Cart />} />
