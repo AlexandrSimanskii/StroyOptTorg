@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { useEffect } from "react";
 import { ProductType } from "../../types/types";
-import CardProduct from "../CardProduct";
+import CardProduct from "../CardProduct/ProductCard";
 type PropsType = {
   similarProduct: ProductType[];
 };
@@ -40,12 +40,8 @@ const SimilarProductSlider = ({ similarProduct }: PropsType) => {
               ))}{" "}
             </div>
 
-           
-
             <div className="swiper-button-prev similar-swiper-btn"></div>
             <div className="swiper-button-next similar-swiper-btn"></div>
-
-           
           </div>
         </>
       )}

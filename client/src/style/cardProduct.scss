@@ -27,8 +27,6 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     display: -webkit-box;
-
-
   }
   &-params {
     display: flex;
@@ -83,6 +81,10 @@
 
         border: 1px solid rgb(227, 223, 223);
         border-radius: 5px;
+        &--active {
+          color: red;
+          padding: 2px;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import CardProduct from "../CardProduct";
+import CardProduct from "../CardProduct/ProductCard";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 

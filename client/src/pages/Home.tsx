@@ -7,18 +7,19 @@ import HomeHitSaleSlider from "../Components/HomeComponents/HomeHitSaleSlider.ts
 import CatalogList from "../Components/HomeComponents/CatalogList.tsx";
 import { useEffect, useState } from "react";
 import { ProductType } from "../types/types.ts";
-import CardProduct from "../Components/CardProduct";
+import CardProduct from "../Components/CardProduct/ProductCard.tsx";
 import { Link } from "react-router-dom";
 import InfoBlock from "../Components/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
 import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
+import { Alert } from "@mui/material";
 
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<ProductType[]>([]);
   const user = useAppSelector((state) => state.user);
   const getBetterProducts = async () => {
     try {
-      const res = await fetch("/api/products/get?limit=6&startIndex=15");
+      const res = await fetch("/api/products/get?limit=5&startIndex=15");
       const data = await res.json();
       setBetterProducts(data.products);
     } catch (error) {
@@ -29,7 +30,8 @@ const Home = () => {
   useEffect(() => {
     getBetterProducts();
   }, []);
-  console.log(betterProducts);
+
+  console.log(user);
 
   return (
     <main>

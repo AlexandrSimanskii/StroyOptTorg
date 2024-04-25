@@ -38,7 +38,7 @@ const AsideFilter = ({
         label: label.join(","),
         sort: sort.split("_")[0],
         order: sort.split("_")[1],
-        category: category,
+        category: category || "Инструменты",
         limit: limit.toString(),
       }).toString();
 
@@ -91,7 +91,7 @@ const AsideFilter = ({
               <RangeInput price={price} setPrice={setPrice} />
             </AccordionDetails>
           </Accordion>
-          <AsideCategory category={category} setCategory={setCategory} />
+          {/* <AsideCategory category={category} setCategory={setCategory} /> */}
 
           <AsideBrand label={label} setLabel={setLabel} />
 

@@ -50,9 +50,9 @@ const RegisterForm = () => {
         setLoading(false);
         return;
       }
-      setLoading(false);
-      dispatch(signInSuccess(user));
 
+      dispatch(signInSuccess(user));
+      setLoading(false);
       navigate("/");
     } catch (error) {
       console.log(error);

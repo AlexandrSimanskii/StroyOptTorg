@@ -1,6 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { UserType } from "../../types/types";
 
-const initialState = null;
+const initialState: UserType = {
+  _id: "",
+  email: "",
+  phone: "",
+  username: "",
+  region: "",
+  cart: [],
+  favorite: [],
+  order: [],
+};
 
 export const userSlice = createSlice({
   name: "user",
@@ -12,27 +23,21 @@ export const userSlice = createSlice({
       return action.payload;
     },
     logOut: (state) => {
-      state = null;
+      state = initialState;
       return state;
     },
-
-    //
+    addFavorite: (state, action: PayloadAction<string>) => {
+      state.favorite.push(action.payload);
+      return state;
+    },
+    deleteFavorite: (state, action: PayloadAction<string>) => {
+      state.favorite = state.favorite.filter((item) => item !== action.payload);
+    },
   },
 });
 
-export const {
-  signInSuccess,
-  logOut,
-  // updateUserStart,
-  // updateUserSuccess,
-  // updateUserFailure,
-  // deleteUserStart,
-  // deleteUserSuccess,
-  // deleteUserFailure,
-  // logOutUserStart,
-  // logOutUserSuccess,
-  // logOutUserFailure,
-} = userSlice.actions;
+export const { signInSuccess, logOut, addFavorite, deleteFavorite } =
+  userSlice.actions;
 
 export default userSlice.reducer;
 

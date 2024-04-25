@@ -37,15 +37,14 @@ export type UserType = {
   phone: string;
   username: string;
   region: string;
-  cart: [];
-  order: [];
-  favorite: [];
+  cart: string[];
+  order: string[];
+  favorite: string[];
 };
 
 export type ProductType = {
   name: string;
   type: string;
-
   label: string;
   category: string;
   regularPrice: number;

@@ -21,6 +21,7 @@ import Product from "./pages/Product.tsx";
 
 import SignUp from "./pages/SignUp.tsx";
 import SignIn from "./pages/SignIn.tsx";
+import Favorite from "./pages/Favorite.tsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/" element={<Home />} />
+          <Route path="/favorite" element={<Favorite />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/return" element={<Return />} />

@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import { errorHandler } from "../utils/error.js";
 
 export const getProducts = async (req, res, next) => {
- 
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -94,5 +93,15 @@ export const getMinMaxPrices = async (req, res, next) => {
     return res.status(200).json(data);
   } catch (error) {
     next(error);
+  }
+};
+
+export const getFavorite = async (req, res, next) => {
+  const productIds = req.body;
+  try {
+    const products = await Product.find({ _id: { $in: productIds } }); 
+    res.json(products);
+  } catch (error) {
+    next(error); 
   }
 };

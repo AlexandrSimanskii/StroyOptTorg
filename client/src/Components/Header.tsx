@@ -7,12 +7,20 @@ const Header = () => {
   const dispath = useAppDispatch();
   const user = useAppSelector((state) => state.user);
   const navigate = useNavigate();
-  const handleClick = () => {
-    if (!user) {
+  const handleClick = async () => {
+    if (!user._id) {
       navigate("/signup");
     } else {
-      dispath(logOut());
-      navigate("/");
+      try {
+        const res = await fetch("/api/signout");
+        const data = await res.json();
+        if (data === "Пользователь вышел с аккаунта") {
+          dispath(logOut());
+          navigate("/signin");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -101,7 +109,7 @@ const Header = () => {
                 alt="search"
               />
               <p className="header-bottom__list-text">
-                {user ? "Выйти" : "Войти"}
+                {user._id ? "Выйти" : "Войти"}
               </p>
             </li>
             <li className="header-bottom__list-element">
@@ -113,12 +121,15 @@ const Header = () => {
               <p className="header-bottom__list-text">Сравнение</p>
             </li>
             <li className="header-bottom__list-element">
-              <img
-                className="header-bottom__list-img"
-                src="/images/icons/heart.svg"
-                alt="search"
-              />
-              <p className="header-bottom__list-text">Избранное</p>
+              <Link to={"/favorite"} className="header-bottom__list-element">
+              
+                <img
+                  className="header-bottom__list-img"
+                  src="/images/icons/heart.svg"
+                  alt="search"
+                />
+                <p className="header-bottom__list-text">Избранное</p>
+              </Link>
             </li>
             <li className="header-bottom__list-element">
               <img

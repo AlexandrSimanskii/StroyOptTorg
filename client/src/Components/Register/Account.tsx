@@ -35,7 +35,7 @@ const Account = () => {
       <button
         className="register-account__btn"
         onClick={() =>
-          navigate(pathname === "/signup" ? "//signin" : "/signup")
+          navigate(pathname === "/signup" ? "/signin" : "/signup")
         }
       >
         {" "}

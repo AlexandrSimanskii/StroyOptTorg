@@ -1,5 +1,8 @@
 import Account from "../Components/Register/Account";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAppDispatch } from "../store/redux_hooks/reduxHook";
+import { signInSuccess } from "../store/users/userSlise";
 
 import { IoMdEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
@@ -11,7 +14,11 @@ type Inputs = {
 };
 
 const SignIn = () => {
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const requiredMessage = "Обязательно к заполнению";
   const {
     register,
@@ -20,7 +27,33 @@ const SignIn = () => {
     formState: { errors },
   } = useForm<Inputs>({ mode: "onSubmit" });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const user = await res.json();
+
+      if (user.success === false) {
+        setError(user.message);
+        setLoading(false);
+        return;
+      }
+
+      console.log(user);
+      dispatch(signInSuccess(user));
+      navigate("/");
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="register">
@@ -47,6 +80,7 @@ const SignIn = () => {
                 })}
               />
               {errors.email && <span>{errors.email.message}</span>}
+              {error && <p>{error}</p>}
             </label>{" "}
             <label className="label">
               Пароль<span className="contact-label__required">*</span>:
@@ -57,11 +91,7 @@ const SignIn = () => {
                 placeholder="Введите пароль"
                 {...register("password", {
                   required: { value: true, message: requiredMessage },
-                  pattern: {
-                    value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])/,
-                    message:
-                      "Пароль должен содержать латинские буквы в разных регистрах и содержать минимум одну цифру ",
-                  },
+
                   minLength: {
                     value: 6,
                     message: "Длинна должна быть не менее 6 символов",
@@ -75,10 +105,10 @@ const SignIn = () => {
                 {passwordVisible ? "Скрыть" : "Показать"}
               </p>
               <p />
+              {error && <p>{error}</p>}
               {errors.password && <span>{errors.password.message}</span>}
             </label>
-            <button>Восстановить пароль</button>
-            <button onClick={handleSignIn}>Авторизоваться</button>
+            <button>Авторизоваться</button>
           </form>
           <Account />
         </div>

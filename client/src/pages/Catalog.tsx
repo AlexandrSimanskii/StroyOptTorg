@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AsideFilter from "../Components/AsideFilter/AsideFilter";
 import SortFilter from "../Components/AsideFilter/SortFilter";
-import CardProduct from "../Components/CardProduct";
+import CardProduct from "../Components/CardProduct/ProductCard";
 import { Product } from "../types/types";
 import Pagination from "../Components/Pagination";
 import { useNavigate } from "react-router-dom";
@@ -56,8 +56,6 @@ const Catalog = () => {
       console.log(error);
     }
   };
-
-
 
   useEffect(() => {
     getMinMaxPrices();
