@@ -3,7 +3,7 @@ import InputMask from "react-input-mask";
 import { useNavigate } from "react-router-dom";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { signInSuccess } from "../../store/users/userSlise";
+import { signInSuccessSlice } from "../../store/users/userSlise";
 import { useAppDispatch } from "../../store/redux_hooks/reduxHook";
 type Inputs = {
   email: string;
@@ -51,7 +51,7 @@ const RegisterForm = () => {
         return;
       }
 
-      dispatch(signInSuccess(user));
+      dispatch(signInSuccessSlice(user));
       setLoading(false);
       navigate("/");
     } catch (error) {

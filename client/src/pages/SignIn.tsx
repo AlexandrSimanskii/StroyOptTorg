@@ -2,10 +2,9 @@ import Account from "../Components/Register/Account";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useAppDispatch } from "../store/redux_hooks/reduxHook";
-import { signInSuccess } from "../store/users/userSlise";
+import { signInSuccessSlice } from "../store/users/userSlise";
 
-import { IoMdEye } from "react-icons/io";
-import { IoMdEyeOff } from "react-icons/io";
+
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -46,7 +45,7 @@ const SignIn = () => {
       }
 
       console.log(user);
-      dispatch(signInSuccess(user));
+      dispatch(signInSuccessSlice(user));
       navigate("/");
       setLoading(false);
     } catch (error) {

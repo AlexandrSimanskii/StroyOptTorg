@@ -31,17 +31,11 @@ export type CharacteristicsType = {
 
   "Тип аккумулятора"?: string;
 };
-export type UserType = {
-  _id: string;
-  email: string;
-  phone: string;
-  username: string;
-  region: string;
-  cart: string[];
-  order: string[];
-  favorite: string[];
-};
 
+export type UserCartType = {
+  _id: string;
+  count: number;
+};
 export type ProductType = {
   name: string;
   type: string;
@@ -52,11 +46,21 @@ export type ProductType = {
   sale: number;
   article: string;
   _id: string;
-  isLike: boolean;
-  isComparison: boolean;
+  count: number;
   images: string[];
   characteristics: CharacteristicsType;
   description: string;
+};
+
+export type UserType = {
+  _id: string;
+  email: string;
+  phone: string;
+  username: string;
+  region: string;
+  cart: UserCartType[];
+  order: string[];
+  favorite: string[];
 };
 
 export type NewsType = {

@@ -1,7 +1,7 @@
 import { LuMenu } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
-import { logOut } from "../store/users/userSlise";
+import { logOutSlise } from "../store/users/userSlise";
 
 const Header = () => {
   const dispath = useAppDispatch();
@@ -15,7 +15,7 @@ const Header = () => {
         const res = await fetch("/api/signout");
         const data = await res.json();
         if (data === "Пользователь вышел с аккаунта") {
-          dispath(logOut());
+          dispath(logOutSlise());
           navigate("/signin");
         }
       } catch (error) {
@@ -53,9 +53,7 @@ const Header = () => {
               <li className="header-nav-list__element">
                 <Link to={"/answear"}>Вопрос-ответ</Link>
               </li>
-              <li className="header-nav-list__element">
-                <Link to={"/news"}>Новости</Link>
-              </li>
+
               <li className="header-nav-list__element">
                 <Link to={"/contacts"}>Контакты</Link>
               </li>
@@ -109,35 +107,39 @@ const Header = () => {
                 alt="search"
               />
               <p className="header-bottom__list-text">
-                {user._id ? "Выйти" : "Войти"}
+                {user._id ? user.username : "Войти"}
               </p>
             </li>
-            <li className="header-bottom__list-element">
-              <img
-                className="header-bottom__list-img"
-                src="/images/icons/comparison.svg"
-                alt="search"
-              />
-              <p className="header-bottom__list-text">Сравнение</p>
-            </li>
+
             <li className="header-bottom__list-element">
               <Link to={"/favorite"} className="header-bottom__list-element">
-              
-                <img
-                  className="header-bottom__list-img"
-                  src="/images/icons/heart.svg"
-                  alt="search"
-                />
+                <div className="header-img__box">
+                  <img
+                    className="header-bottom__list-img"
+                    src="/images/icons/heart.svg"
+                    alt="search"
+                  />{" "}
+                  {user.favorite.length > 0 && (
+                    <span className="quantity">{user?.favorite.length}</span>
+                  )}
+                </div>
                 <p className="header-bottom__list-text">Избранное</p>
               </Link>
             </li>
             <li className="header-bottom__list-element">
-              <img
-                className="header-bottom__list-img"
-                src="/images/icons/cart.svg"
-                alt="search"
-              />
-              <p className="header-bottom__list-text">Корзина</p>
+              <Link className="header-bottom__list-element" to={"/cart"}>
+                <div className="header-img__box">
+                  <img
+                    className="header-bottom__list-img"
+                    src="/images/icons/cart.svg"
+                    alt="search"
+                  />
+
+                  <span className="quantity">{user?.cart.length}</span>
+                </div>
+
+                <p className="header-bottom__list-text">Корзина</p>
+              </Link>
             </li>
           </ul>
         </div>

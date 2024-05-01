@@ -16,14 +16,14 @@ type PaginationProps = {
   setStartIndex: React.Dispatch<React.SetStateAction<number>>;
   limit: number;
   countPages: number;
-  setCountPages: React.Dispatch<React.SetStateAction<number>>;
+  
 };
 
 const Pagination = ({
   setStartIndex,
   limit,
   countPages,
-  setCountPages,
+  
 }: PaginationProps) => {
   const handleChange = (event: ChangeEvent<unknown>, page: number) => {
     if (page >= 1) {

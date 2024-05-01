@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import InfoBlock from "../Components/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
 import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
-import { Alert } from "@mui/material";
+
 
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<ProductType[]>([]);

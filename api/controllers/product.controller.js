@@ -33,10 +33,11 @@ export const getProducts = async (req, res, next) => {
     if (label.length) {
       query.label = label;
     }
+ 
 
     const totalProducts = await Product.countDocuments(query);
     const totalPages = Math.ceil(totalProducts / limit);
-
+    
     const products = await Product.find(query)
       .sort(sortOptions)
       .limit(limit)
@@ -105,3 +106,5 @@ export const getFavorite = async (req, res, next) => {
     next(error); 
   }
 };
+
+

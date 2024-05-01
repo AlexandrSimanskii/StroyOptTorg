@@ -74,6 +74,7 @@
       align-items: center;
       column-gap: 27px;
       &-element {
+        position: relative;
         cursor: pointer;
         font-size: 14px;
         height: 100%;
@@ -109,6 +110,29 @@
       cursor: pointer;
     }
   }
+  &-img__box {
+    position: relative;
+  }
+}
+.quantity {
+  background-color: red;
+  position: absolute;
+  display: block;
+
+  align-items: center;
+  top: -10px;
+  transform: translateX(100%);
+  right: 0;
+  padding: 2px;
+  padding-left: 4px;
+  border-radius: 10px;
+  min-width: 16px;
+  max-width: 36px;
+  height: 20px;
+  color: $font-color;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 1260px) {

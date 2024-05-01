@@ -16,7 +16,7 @@ import Delivery from "./pages/Delivery.tsx";
 import Answear from "./pages/Answear.tsx";
 import Blog from "./pages/Blog.tsx";
 import Cart from "./pages/Cart.tsx";
-import NewsPage from "./pages/NewsPage.tsx";
+
 import Product from "./pages/Product.tsx";
 
 import SignUp from "./pages/SignUp.tsx";
@@ -50,7 +50,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/news" element={<NewsPage />} />
+         
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

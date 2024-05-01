@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { UserType } from "../../types/types";
+import { UserType, UserCartType } from "../../types/types";
 
 const initialState: UserType = {
   _id: "",
@@ -19,25 +19,53 @@ export const userSlice = createSlice({
   initialState,
 
   reducers: {
-    signInSuccess: (state, action) => {
+    signInSuccessSlice: (state, action) => {
       return action.payload;
     },
-    logOut: (state) => {
+    logOutSlise: (state) => {
       state = initialState;
       return state;
     },
-    addFavorite: (state, action: PayloadAction<string>) => {
+    addFavoriteSlice: (state, action: PayloadAction<string>) => {
       state.favorite.push(action.payload);
-      return state;
     },
-    deleteFavorite: (state, action: PayloadAction<string>) => {
+    deleteFavoriteSlice: (state, action: PayloadAction<string>) => {
       state.favorite = state.favorite.filter((item) => item !== action.payload);
+    },
+    deleteAllFavoritesSlice: (state) => {
+      state.favorite = [];
+    },
+    addInCartSlice: (state, action: PayloadAction<UserCartType>) => {
+      const existingIndex = state.cart.findIndex(
+        (item) => item._id === action.payload._id
+      );
+      if (existingIndex === -1) {
+        state.cart.push(action.payload);
+      } else {
+        state.cart[existingIndex] = action.payload;
+      }
+    },
+    addFavoriteInCartSlice: (state, action: PayloadAction<string[]>) => {
+      const data = action.payload.map((item) => ({ _id: item, count: 1 }));
+      state.cart.push(...data);
+    },
+
+    deleteFromCartSlice: (state, action: PayloadAction<string>) => {
+      state.cart = state.cart.filter((item) => item._id !== action.payload);
     },
   },
 });
 
-export const { signInSuccess, logOut, addFavorite, deleteFavorite } =
-  userSlice.actions;
+export const {
+  signInSuccessSlice,
+  logOutSlise,
+  addFavoriteSlice,
+  deleteFavoriteSlice,
+  deleteAllFavoritesSlice,
+  addInCartSlice,
+  addFavoriteInCartSlice,
+  deleteFromCartSlice,
+} = userSlice.actions;
 
 export default userSlice.reducer;
 

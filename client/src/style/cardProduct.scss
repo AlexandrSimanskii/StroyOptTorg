@@ -71,6 +71,9 @@
       border: none;
       border-radius: 6px;
       background-color: $theme-color;
+      &--added{
+        background-color: black;
+      }
     }
     &__addition {
       display: flex;
@@ -89,6 +92,16 @@
     }
   }
 }
+.MuiStack-root {
+  min-width: 220px;
+  max-width: 220px;
+
+  height: 320px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid $light-border-color;
+}
+
 @media (max-width: 1024px) {
   .card {
     img {

@@ -2,29 +2,32 @@ import { useEffect, useState } from "react";
 import AsideFilter from "../Components/AsideFilter/AsideFilter";
 import SortFilter from "../Components/AsideFilter/SortFilter";
 import CardProduct from "../Components/CardProduct/ProductCard";
-import { Product } from "../types/types";
+import { ProductType } from "../types/types";
 import Pagination from "../Components/Pagination";
 import { useNavigate } from "react-router-dom";
 
 import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
 import { getProducts } from "../store/products/productsSlice";
+import CardSkeleton from "../Components/CardProduct/CardSkeleton";
 
 const Catalog = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<ProductType[]>([]);
   const [startIndex, setStartIndex] = useState(0);
   const [limit, setLimit] = useState(12);
+  const [isProduct, setIsProduct] = useState("");
   const [sort, setSort] = useState("createdAt_desc");
-  const [price, setPrice] = useState<number[]>([20, 20007]);
+  const [price, setPrice] = useState<number[]>([20, 200000]);
   const [category, setCategory] = useState("");
   const [label, setLabel] = useState<string[]>([]);
   const [countPages, setCountPages] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const urlSearchParams = new URLSearchParams();
-  const navigate = useNavigate();
+
   const dispatch = useAppDispatch();
-  const currentProduct = useAppSelector((state) => state.products);
 
   const fetchProducts = async () => {
+    setLoading(true);
     try {
       urlSearchParams.set("startIndex", startIndex.toString());
       urlSearchParams.set("price", price.join(","));
@@ -34,16 +37,23 @@ const Catalog = () => {
       urlSearchParams.set("category", category);
       urlSearchParams.set("limit", limit.toString());
 
-      const searchQuery = urlSearchParams.toString();
-
       const res = await fetch(`/api/products/get?${urlSearchParams}`);
       const data = await res.json();
+      if (!data.success) {
+        console.log(data.message);
+        setLoading(false);
+      }
+
       dispatch(getProducts(data.products));
       setProducts(data.products);
+      if (data.product.length === 0) {
+        setIsProduct("Продукты с такими параметрами не найдено.");
+      }
       setCountPages(data.totalPages);
-      navigate(`?${searchQuery}`);
+      setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 
@@ -61,6 +71,8 @@ const Catalog = () => {
     getMinMaxPrices();
     fetchProducts();
   }, [startIndex]);
+
+  console.log(countPages);
 
   return (
     <div className="catalog">
@@ -93,7 +105,12 @@ const Catalog = () => {
               setCountPages={setCountPages}
             />
             <div className="catalog-cards">
+              {loading &&
+                Array.from({ length: limit }, (_, i) => (
+                  <CardSkeleton key={i} />
+                ))}
               {products.length > 0 &&
+                !loading &&
                 products.map((product) => (
                   <CardProduct key={product._id} product={product} />
                 ))}
@@ -103,10 +120,9 @@ const Catalog = () => {
                 setStartIndex={setStartIndex}
                 limit={limit}
                 countPages={countPages}
-                setCountPages={setCountPages}
               />
             ) : (
-              <p>Продукты с такими параметрами не найдено.</p>
+              <p>{isProduct}</p>
             )}
           </div>
         </div>

@@ -1,24 +1,13 @@
 import { useEffect, useState } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import CardProduct from "../CardProduct/ProductCard";
+import ProductCard from "../CardProduct/ProductCard";
+import { ProductType } from "../../types/types";
 
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-interface Product {
-  name: string;
-  image: string;
-  regularPrice: number;
-  discountPrice: number;
-  sale: number;
-  article: string;
-  _id: string;
-  isLike: boolean;
-  isComparison: boolean;
-}
-
 const HomeHitSaleSlider = () => {
-  const [bestseller, setBestseller] = useState<Product[]>([]);
+  const [bestseller, setBestseller] = useState<ProductType[]>([]);
 
   const getBestsellerProduct = async () => {
     try {
@@ -37,7 +26,7 @@ const HomeHitSaleSlider = () => {
   useEffect(() => {
     const swiper = new Swiper(".slider", {
       direction: "horizontal",
-      loop: true,
+      // loop: true,
       slidesPerView: 1,
 
       navigation: {
@@ -71,7 +60,7 @@ const HomeHitSaleSlider = () => {
             <div className="swiper-wrapper">
               {bestseller.map((product) => (
                 <div className="swiper-slide" key={product._id}>
-                  <CardProduct product={product} />
+                  <ProductCard product={product} />
                 </div>
               ))}
             </div>

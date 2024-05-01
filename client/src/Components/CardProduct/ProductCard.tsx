@@ -9,7 +9,12 @@ import {
   useAppSelector,
   useAppDispatch,
 } from "../../store/redux_hooks/reduxHook";
-import { addFavorite, deleteFavorite } from "../../store/users/userSlise";
+import {
+  addFavoriteSlice,
+  deleteFavoriteSlice,
+  addInCartSlice,
+  deleteFromCartSlice,
+} from "../../store/users/userSlise";
 
 interface CardProductProps {
   product: ProductType;
@@ -37,7 +42,7 @@ const CardProduct = ({ product }: CardProductProps) => {
           return;
         }
         setIsFavorite(true);
-        dispatch(addFavorite(product._id));
+        dispatch(addFavoriteSlice(product._id));
       } catch (error) {
         console.log(error);
       }
@@ -54,12 +59,52 @@ const CardProduct = ({ product }: CardProductProps) => {
       if (data.success) {
         return;
       }
-      dispatch(deleteFavorite(product._id));
+      dispatch(deleteFavoriteSlice(product._id));
       setIsFavorite(false);
     } catch (error) {
       console.log(error);
     }
   };
+
+  const handleAddInCart = async () => {
+    try {
+      const res = await fetch(`api/users/${user._id}/cart/add`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          currentProduct: { _id: product._id, count: 1 },
+        }),
+      });
+      const data = await res.json();
+      if (data.success == false) {
+        return console.log(data.message);
+      }
+
+      dispatch(addInCartSlice({ _id: product._id, count: 1 }));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleDeleteFromCart = async () => {
+    try {
+      const res = await fetch(`api/users/${user._id}/cart/delete`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          productId: product._id,
+        }),
+      });
+      const data = await res.json();
+      if (data.success == false) {
+        return console.log(data.message);
+      }
+
+      dispatch(deleteFromCartSlice(product._id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
 
   return (
     <div className="card">
@@ -83,9 +128,19 @@ const CardProduct = ({ product }: CardProductProps) => {
         </p>
       )}
       <div className="card-bottom">
-        <button className="card-bottom__btn">
-          <HiOutlineShoppingCart /> Купить
-        </button>
+        {user.cart.some((item) => item._id === product._id) ? (
+          <button
+            className="card-bottom__btn card-bottom__btn--added"
+            onClick={handleDeleteFromCart}
+          >
+            В корзине
+          </button>
+        ) : (
+          <button className="card-bottom__btn" onClick={handleAddInCart}>
+            <HiOutlineShoppingCart /> Купить
+          </button>
+        )}
+
         {user._id && (
           <div className="card-bottom__addition">
             {isFavorite ? (
