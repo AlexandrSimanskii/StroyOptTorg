@@ -1,7 +1,7 @@
 import HomeSlider from "../Components/HomeComponents/HomeSlider.tsx";
 import { assortiment, catalog } from "../assets/data/homeData";
 import AssortimentCard from "../Components/HomeComponents/AssortimentCard.tsx";
-import AdvertisingCard from "../Components/AdvertisingCards.tsx";
+import AdvertisingCard from "../Components/Advertisign/AdvertisingCards.tsx";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import HomeHitSaleSlider from "../Components/HomeComponents/HomeHitSaleSlider.tsx";
 import CatalogList from "../Components/HomeComponents/CatalogList.tsx";
@@ -9,10 +9,9 @@ import { useEffect, useState } from "react";
 import { ProductType } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct/ProductCard.tsx";
 import { Link } from "react-router-dom";
-import InfoBlock from "../Components/InfoBlock.tsx";
+import InfoBlock from "../Components/InfoBlock/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
 import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
-
 
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<ProductType[]>([]);

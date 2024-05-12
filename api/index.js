@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 import productRouter from "./routes/product.router.js";
 import newsRouter from "./routes/news.router.js";
 import reviewRouter from "./routes/review.router.js";
@@ -21,7 +22,7 @@ mongoose
 app.listen(3004, () => {
   console.log("Server is running on port 3004");
 });
-
+app.use(cookieParser());
 app.use(express.json());
 app.use("/api", authRouter);
 app.use("/api/users", usersRouter);

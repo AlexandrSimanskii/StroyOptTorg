@@ -33,11 +33,10 @@ export const getProducts = async (req, res, next) => {
     if (label.length) {
       query.label = label;
     }
- 
 
     const totalProducts = await Product.countDocuments(query);
     const totalPages = Math.ceil(totalProducts / limit);
-    
+
     const products = await Product.find(query)
       .sort(sortOptions)
       .limit(limit)
@@ -100,11 +99,44 @@ export const getMinMaxPrices = async (req, res, next) => {
 export const getFavorite = async (req, res, next) => {
   const productIds = req.body;
   try {
-    const products = await Product.find({ _id: { $in: productIds } }); 
+    const products = await Product.find({ _id: { $in: productIds } });
     res.json(products);
   } catch (error) {
-    next(error); 
+    next(error);
   }
 };
 
+export const getUserCart = async (req, res, next) => {
+  try {
+    const queryProduct = req.body.product;
+    console.log(queryProduct);
+    const products = await Product.find({ _id: { $in: queryProduct } });
+    if (!products) {
+      next(errorHandler(403, "Ошибка при получении продуктов"));
+    }
 
+    const data = products.map((item) => {
+      const newData = {
+        _id: item._id,
+        name: item.name,
+        regularPrice: item.regularPrice,
+        article: item.article,
+        img: item.images[0],
+        
+      };
+      if (item.discountPrice) {
+        newData.discountPrice = item.discountPrice;
+      }
+      const quentity = queryProduct.findIndex(
+        (elem) => elem._id === item._id.toString()
+      );
+      newData.count = queryProduct[quentity].count;
+      return newData;
+    });
+
+    res.status(200).json(data);
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};

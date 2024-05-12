@@ -1,5 +1,5 @@
-import { catalog } from "../assets/data/homeData";
-import AdvertisingCard from "./AdvertisingCards";
+import { catalog } from "../../assets/data/homeData";
+import AdvertisingCard from "../Advertisign/AdvertisingCards";
 
 const SideBar = () => {
   return (

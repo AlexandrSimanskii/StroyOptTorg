@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import mongoose from "mongoose";
 import { errorHandler } from "../utils/error.js";
+import bcrypt from "bcrypt";
 
 export const addInFavorite = async (req, res, next) => {
   const { user_id, product_id } = req.body;
@@ -47,7 +48,7 @@ export const deleteAllFavorites = async (req, res, next) => {
 export const addInCartProduct = async (req, res, next) => {
   const userId = req.params.id;
   const product = req.body.currentProduct;
-
+  console.log(product);
   try {
     const currentUser = await User.findById(userId);
 
@@ -64,7 +65,7 @@ export const addInCartProduct = async (req, res, next) => {
     }
 
     await currentUser.save();
-    res.status(200).json({ message: "Added to favorites successfully" });
+    res.status(200).json({ message: "Added to cart successfully" });
   } catch (error) {
     next(error);
   }
@@ -105,6 +106,73 @@ export const deleteFromCart = async (req, res, next) => {
 
     await currentUser.save();
     res.status(200).json({ message: "Delete From favorites successfully" });
+  } catch (error) {
+    next(error);
+  }
+};
+export const updateOrders = async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return next(errorHandler(404, "Нет такого пользователя"));
+    }
+
+    user.order = [...user.order, req.body.orders];
+    user.cart = [];
+    await user.save();
+    res.status(200).json("Заказы обновленны");
+  } catch (error) {
+    next(error);
+  }
+};
+export const updatePassword = async (req, res, next) => {
+  if (req.user.id !== req.params.id)
+    return next(errorHandler(403, "Вы можете обновить только свой аккаунт!"));
+
+  try {
+    const currentUser = await User.findById(req.params.id);
+    const currentPassword = bcrypt.compareSync(
+      req.body.password,
+      currentUser.password
+    );
+    if (!currentPassword) {
+      return next(errorHandler(401, "Почта и пароль не совпадают"));
+    }
+
+    const hashedPassword = bcrypt.hashSync(req.body.newPassword, 10);
+
+    const updateUser = await User.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: {
+          password: hashedPassword,
+        },
+      },
+      { new: true }
+    );
+
+    const { password, ...rest } = updateUser._doc;
+
+    res.status(200).json({ success: true });
+  } catch (error) {
+    next(error);
+  }
+};
+export const updateUser = async (req, res, next) => {
+  if (req.user.id !== req.params.id)
+    return next(errorHandler(403, "Вы можете обновить только свой аккаунт!"));
+  const { region, phone, username, email } = req.body;
+  try {
+    const user = await User.findById(req.params.id);
+    user.username = username;
+    user.phone = phone;
+    user.region = region;
+    user.email = email;
+    console.log(user);
+    user.save();
+    const { password, __v, createdAt, updatedAt, ...rest } = user._doc;
+console.log(rest);
+    res.status(200).json(rest);
   } catch (error) {
     next(error);
   }

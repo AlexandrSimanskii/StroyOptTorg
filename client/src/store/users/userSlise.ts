@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { UserType, UserCartType } from "../../types/types";
+import { UserType, UserCartType, ProductOrderType } from "../../types/types";
 
 const initialState: UserType = {
   _id: "",
@@ -53,6 +53,17 @@ export const userSlice = createSlice({
     deleteFromCartSlice: (state, action: PayloadAction<string>) => {
       state.cart = state.cart.filter((item) => item._id !== action.payload);
     },
+    updateUserOrder: (state, action: PayloadAction<ProductOrderType>) => {
+      state.order.push(action.payload);
+      state.cart = [];
+    },
+    updateUser: (state, action: PayloadAction<UserType>) => {
+      const { phone, username, email, region } = action.payload;
+      state.phone = phone;
+      state.username = username;
+      state.email = email;
+      state.region = region;
+    },
   },
 });
 
@@ -65,44 +76,8 @@ export const {
   addInCartSlice,
   addFavoriteInCartSlice,
   deleteFromCartSlice,
+  updateUserOrder,
+  updateUser,
 } = userSlice.actions;
 
 export default userSlice.reducer;
-
-//   updateUserStart: (state) => {
-//     state.loading = true;
-//   },
-//   updateUserSuccess: (state, action) => {
-//     state.currentUser = action.payload;
-//     state.loading = false;
-//     state.error = null;
-//   },
-//   updateUserFailure: (state, action) => {
-//     state.error = action.payload;
-//     state.loading = false;
-//   },
-//   deleteUserStart: (state) => {
-//     state.loading = true;
-//   },
-//   deleteUserSuccess: (state) => {
-//     state.currentUser = null;
-//     state.error = null;
-//     state.loading = false;
-//   },
-//   deleteUserFailure: (state, action) => {
-//     state.error = action.payload;
-//     state.loading = false;
-//   },
-
-//   logOutUserStart: (state) => {
-//     state.loading = true;
-//   },
-//   logOutUserSuccess: (state) => {
-//     state.currentUser = null;
-//     state.error = null;
-//     state.loading = false;
-//   },
-//   logOutUserFailure: (state, action) => {
-//     state.error = action.payload;
-//     state.loading = false;
-//   },

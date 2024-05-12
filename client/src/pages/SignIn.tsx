@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useAppDispatch } from "../store/redux_hooks/reduxHook";
 import { signInSuccessSlice } from "../store/users/userSlise";
 
-
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -23,11 +22,12 @@ const SignIn = () => {
     register,
     handleSubmit,
 
-    formState: { errors },
-  } = useForm<Inputs>({ mode: "onSubmit" });
+    formState: { errors, isValid },
+  } = useForm<Inputs>({ mode: "onBlur" });
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setLoading(true);
+
     try {
       const res = await fetch("/api/signin", {
         method: "POST",
@@ -107,7 +107,17 @@ const SignIn = () => {
               {error && <p>{error}</p>}
               {errors.password && <span>{errors.password.message}</span>}
             </label>
-            <button>Авторизоваться</button>
+            <button
+              disabled={!isValid}
+              onClick={() => {
+                console.log(error);
+              }}
+              className={`signin-auth-btn ${
+                isValid ? "" : "signin-auth-btn--disabled"
+              }   `}
+            >
+              Войти
+            </button>
           </form>
           <Account />
         </div>

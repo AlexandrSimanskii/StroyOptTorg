@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import SideBar from "../Components/SideBar";
-import Pagination from "../Components/Pagination";
+import SideBar from "../Components/SideBar/SideBar";
+import Pagination from "../Components/Pagination/Pagination";
 import Form from "../Components/Contacts/ContactsForm";
 import { ReviewType } from "../types/types";
 
@@ -103,7 +103,7 @@ const Reviews = () => {
                 setStartIndex={setStartIndex}
                 limit={limit}
                 countPages={countPages}
-                setCountPages={setCountPages}
+                // setCountPages={setCountPages}
               />
             )}
             {!reviews.length && <p>Пока никто не оставил свой отзыв</p>}

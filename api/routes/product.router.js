@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 router.get("/get", getProducts);
-router.get("/cart", getUserCart);
+router.post("/get/cart", getUserCart);
 router.get("/get/:id", getProduct);
 router.get("/prices", getMinMaxPrices);
 router.post("/favorite/get", getFavorite);

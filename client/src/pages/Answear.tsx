@@ -1,5 +1,5 @@
-import Accardion from "../Components/Accardion";
-import SideBar from "../Components/SideBar";
+import Accardion from "../Components/Accardion/Accardion";
+import SideBar from "../Components/SideBar/SideBar";
 
 import { askAnswearData } from "../assets/data/returnData";
 

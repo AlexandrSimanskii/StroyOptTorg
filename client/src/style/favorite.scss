@@ -8,8 +8,10 @@
     margin-bottom: 40px;
   }
   &-cards {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 40px;
   }
   &-bar {
@@ -31,8 +33,31 @@
       row-gap: 16px;
     }
   }
-  &-btn {
+  &-bar__btn {
     background-color: $theme-color;
     color: $font-color;
+  }
+}
+@media (max-width: 900px) {
+  .favorite {
+    &-bar {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      &__title {
+        width: 100%;
+      }
+      &__btn {
+        width: 45%;
+        justify-content: space-between;
+      }
+    }
+    &-inner {
+      flex-direction: column;
+    }
+    &-bar__list {
+      display: none;
+    }
   }
 }

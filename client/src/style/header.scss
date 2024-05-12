@@ -1,5 +1,8 @@
 .header {
   margin-bottom: 28px;
+  position: relative;
+  z-index: 100;
+  background-color: $font-color;
   &-menu {
     display: none;
     &__icons {

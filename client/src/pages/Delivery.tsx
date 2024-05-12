@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import SideBar from "../Components/SideBar";
+import SideBar from "../Components/SideBar/SideBar";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 

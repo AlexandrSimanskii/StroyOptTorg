@@ -107,10 +107,10 @@ const Favorite = () => {
                 ))}
               </ol>
 
-              <button onClick={addAllFavoriteInCart} className="favorite-btn">
+              <button onClick={addAllFavoriteInCart} className="favorite-bar__btn">
                 Добавить все в корзину
               </button>
-              <button onClick={deleteAllFavorites} className="favorite-btn">
+              <button onClick={deleteAllFavorites} className="favorite-bar__btn">
                 Отчистить весь список
               </button>
             </div>

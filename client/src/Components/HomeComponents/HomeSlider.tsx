@@ -8,7 +8,10 @@ const HomeSlider = () => {
     new Swiper(".swiper", {
       direction: "horizontal",
       loop: true,
-
+      speed: 4000,
+      autoplay: {
+        delay: 5000,
+      },
       pagination: {
         el: ".swiper-pagination",
       },

@@ -3,7 +3,7 @@ import AsideFilter from "../Components/AsideFilter/AsideFilter";
 import SortFilter from "../Components/AsideFilter/SortFilter";
 import CardProduct from "../Components/CardProduct/ProductCard";
 import { ProductType } from "../types/types";
-import Pagination from "../Components/Pagination";
+import Pagination from "../Components/Pagination/Pagination";
 import { useNavigate } from "react-router-dom";
 
 import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
@@ -39,14 +39,15 @@ const Catalog = () => {
 
       const res = await fetch(`/api/products/get?${urlSearchParams}`);
       const data = await res.json();
-      if (!data.success) {
+      if (data.success == false) {
         console.log(data.message);
         setLoading(false);
       }
 
       dispatch(getProducts(data.products));
       setProducts(data.products);
-      if (data.product.length === 0) {
+
+      if (data.product?.length === 0) {
         setIsProduct("Продукты с такими параметрами не найдено.");
       }
       setCountPages(data.totalPages);
@@ -70,9 +71,8 @@ const Catalog = () => {
   useEffect(() => {
     getMinMaxPrices();
     fetchProducts();
-  }, [startIndex]);
-
-  console.log(countPages);
+  }, [startIndex, sort]);
+  console.log(sort);
 
   return (
     <div className="catalog">

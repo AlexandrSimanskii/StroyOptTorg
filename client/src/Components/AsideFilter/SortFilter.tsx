@@ -9,7 +9,7 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { SortFilterProps, Product } from "../../types/types";
+import { SortFilterPropsType, ProductType } from "../../types/types";
 
 const SortFilter = ({
   limit,
@@ -23,7 +23,7 @@ const SortFilter = ({
   category,
   startIndex,
   setCountPages,
-}: SortFilterProps) => {
+}: SortFilterPropsType) => {
   const navigate = useNavigate();
 
   const handleButtonClick = async (buttonName: number) => {
@@ -51,32 +51,6 @@ const SortFilter = ({
   };
 
   const handleChangeSort = async (event: SelectChangeEvent<string>) => {
-    const sortData = event.target.value.split("_");
-    let sortedProducts: Product[] = [];
-
-    if (sortData[0] === "createdAt") {
-      return;
-    }
-    if (sortData[0] === "regularPrice") {
-      sortedProducts = products.sort((a, b) => {
-        const priceA =
-          a.discountPrice !== undefined ? a.discountPrice : a.regularPrice;
-        const priceB =
-          b.discountPrice !== undefined ? b.discountPrice : b.regularPrice;
-
-        return sortData[1] === "asc" ? priceA - priceB : priceB - priceA;
-      });
-    }
-
-    if (sortData[0] === "az") {
-      sortedProducts = [...products].sort((a, b) =>
-        sortData[1] === "asc"
-          ? a.name.localeCompare(b.name)
-          : b.name.localeCompare(a.name)
-      );
-    }
-
-    setProducts(sortedProducts);
     setSort(event.target.value);
   };
 

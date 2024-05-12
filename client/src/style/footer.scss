@@ -1,5 +1,6 @@
 .footer {
-  // margin-top: 50px;
+  position: relative;
+  z-index: 10;
   background-color: rgba(243, 244, 245, 1);
   &-top {
     padding: 41px 0;

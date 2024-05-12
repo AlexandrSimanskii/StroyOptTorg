@@ -1,7 +1,7 @@
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { FaHeart } from "react-icons/fa";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { FiBarChart2 } from "react-icons/fi";
+
 import { Link } from "react-router-dom";
 import { ProductType } from "../../types/types";
 import { useEffect, useState } from "react";
@@ -68,7 +68,7 @@ const CardProduct = ({ product }: CardProductProps) => {
 
   const handleAddInCart = async () => {
     try {
-      const res = await fetch(`api/users/${user._id}/cart/add`, {
+      const res = await fetch(`/api/users/${user._id}/cart/add`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -87,7 +87,7 @@ const CardProduct = ({ product }: CardProductProps) => {
   };
   const handleDeleteFromCart = async () => {
     try {
-      const res = await fetch(`api/users/${user._id}/cart/delete`, {
+      const res = await fetch(`/api/users/${user._id}/cart/delete`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -104,7 +104,6 @@ const CardProduct = ({ product }: CardProductProps) => {
       console.log(error);
     }
   };
-  
 
   return (
     <div className="card">
@@ -141,22 +140,19 @@ const CardProduct = ({ product }: CardProductProps) => {
           </button>
         )}
 
-        {user._id && (
-          <div className="card-bottom__addition">
-            {isFavorite ? (
-              <FaHeart
-                className="card-bottom__addition-element card-bottom__addition-element--active"
-                onClick={deleteFromFavorite}
-              />
-            ) : (
-              <IoMdHeartEmpty
-                onClick={addInFavorite}
-                className="card-bottom__addition-element "
-              />
-            )}
-            <FiBarChart2 className="card-bottom__addition-element" />
-          </div>
-        )}
+        <div className="card-bottom__addition">
+          {isFavorite ? (
+            <FaHeart
+              className="card-bottom__addition-element card-bottom__addition-element--active"
+              onClick={deleteFromFavorite}
+            />
+          ) : (
+            <IoMdHeartEmpty
+              onClick={addInFavorite}
+              className="card-bottom__addition-element "
+            />
+          )}
+        </div>
       </div>
     </div>
   );

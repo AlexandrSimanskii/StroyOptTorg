@@ -43,6 +43,9 @@ ol {
 }
 a {
   text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
 }
 h1 {
   font-size: 48px;
@@ -85,10 +88,29 @@ textarea {
   }
 }
 .outlet {
+  min-height: 400px;
   flex-grow: 1;
 }
 input::placeholder {
   color: #adb1b7;
+}
+thead {
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+tr {
+  border-top: 2px solid $light-border-color;
+  border-bottom: 2px solid $light-border-color;
+  border-radius: 10px;
+}
+th {
+  text-align: start;
+  padding: 20px;
+  text-wrap: nowrap;
+}
+td {
+  padding: 20px;
 }
 
 @import "about";
@@ -96,7 +118,10 @@ input::placeholder {
 @import "advertisingCard";
 @import "aside";
 @import "cardProduct";
+@import "cart";
 @import "catalog";
+@import "checkOut";
+@import "confirmLogOut";
 @import "contacts";
 @import "delivery";
 @import "favorite";
@@ -113,6 +138,7 @@ input::placeholder {
 @import "register";
 @import "return";
 @import "reviews";
+@import "room";
 @import "infoBlock";
 @import "sideBar";
 @import "similarSlider";

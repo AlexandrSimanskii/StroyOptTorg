@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import About from "./pages/About.tsx";
 import { Suspense } from "react";
 
-import Layout from "./Components/Layout.tsx";
+import Layout from "./Components/Loyout/Layout.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Catalog from "./pages/Catalog.tsx";
 import Contacts from "./pages/Contacts.tsx";
@@ -22,6 +22,8 @@ import Product from "./pages/Product.tsx";
 import SignUp from "./pages/SignUp.tsx";
 import SignIn from "./pages/SignIn.tsx";
 import Favorite from "./pages/Favorite.tsx";
+import Checkout from "./pages/CheckOut.tsx";
+import PersonRoom from "./pages/PersonRoom.tsx";
 
 function App() {
   return (
@@ -45,12 +47,14 @@ function App() {
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/personroom" element={<PersonRoom />} />
           <Route path="/answear" element={<Answear />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/contacts" element={<Contacts />} />
-         
+
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

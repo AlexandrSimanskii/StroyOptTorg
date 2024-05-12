@@ -32,6 +32,16 @@ export type CharacteristicsType = {
   "Тип аккумулятора"?: string;
 };
 
+export type ProductOrderType = {
+  order: {
+    _id: string;
+    count: number;
+  }[];
+  date: string;
+  "total price": string;
+  id: string;
+};
+
 export type UserCartType = {
   _id: string;
   count: number;
@@ -59,7 +69,7 @@ export type UserType = {
   username: string;
   region: string;
   cart: UserCartType[];
-  order: string[];
+  order: ProductOrderType[];
   favorite: string[];
 };
 
@@ -112,4 +122,13 @@ export type InputsType = {
   email: string;
   text: string;
   phone?: string;
+};
+export type CartProductType = {
+  _id: string;
+  name: string;
+  regularPrice: string;
+  article: string;
+  img: string;
+  discountPrice?: string;
+  count: number;
 };

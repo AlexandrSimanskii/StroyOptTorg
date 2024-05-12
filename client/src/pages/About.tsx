@@ -1,4 +1,4 @@
-import InfoBlock from "../Components/InfoBlock";
+import InfoBlock from "../Components/InfoBlock/InfoBlock";
 import NewsComp from "../Components/News/NewsComp";
 
 const About = () => {

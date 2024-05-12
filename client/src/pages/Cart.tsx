@@ -1,27 +1,28 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../store/redux_hooks/reduxHook";
-import { ProductType } from "../types/types";
+import { CartProductType } from "../types/types";
+import CartTable from "../Components/Cart/CartTable";
 
 const Cart = () => {
   const user = useAppSelector((state) => state.user);
-  const [cartProducts, setCartProducts] = useState<ProductType[]>();
-
+  const [cartProducts, setCartProducts] = useState<CartProductType[]>([]);
+  const navigate = useNavigate();
   const getCartProduct = async () => {
-    const fetchProd = user.cart.map((item) => item._id);
-
     try {
       const res = await fetch("/api/products/get/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(fetchProd),
+        body: JSON.stringify({ product: user.cart }),
       });
 
       const data = await res.json();
       if (data.success === false) {
         return console.log(data.message);
       }
+
       setCartProducts(data);
     } catch (error) {
       console.log(error);
@@ -35,27 +36,43 @@ const Cart = () => {
   return (
     <div className="cart">
       <div className="container">
-        <h2>Корзина товаров</h2>
+        <h2 className="cart-title">Корзина товаров</h2>
         <div className="cart-inner">
-          {/* <table>
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {" "}
-              <th scope="row">
-                <img src="" alt="" />
-              </th>
-              <td>HTML tables</td>
-              <td>22</td>
-            </tbody>
-          </table> */}
-          <div className="cart-bar"></div>
+          <CartTable
+            cartProducts={cartProducts}
+            setCartProducts={setCartProducts}
+          />
+          <div className="cart-bar">
+            <h4>Итого</h4>
+            <div className="product-params__group">
+              <dt>Скидка от суммы товара</dt>
+              <div className="product-params__doted"></div>
+              <dd className="product-params__dd">0</dd>
+            </div>
+            <div className="product-params__group">
+              <dt>Сумма</dt>
+              <div className="product-params__doted"></div>
+              <dd className="product-params__dd">
+                {cartProducts.reduce(
+                  (acc, el) =>
+                    acc +
+                    (el.discountPrice
+                      ? Number(el.discountPrice) * el.count
+                      : Number(el.regularPrice) * el.count),
+                  0
+                )}{" "}
+                р
+              </dd>
+            </div>
+            <button
+              onClick={() => {
+                user.cart.length && navigate("/checkout");
+              }}
+              className={` ${user.cart.length > 0 && "cart-bar__btn"}`}
+            >
+              {user.cart.length > 0 && "Перейти к оформлению"}
+            </button>
+          </div>
         </div>
       </div>
     </div>

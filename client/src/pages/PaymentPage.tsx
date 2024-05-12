@@ -1,4 +1,4 @@
-import SideBar from "../Components/SideBar";
+import SideBar from "../Components/SideBar/SideBar";
 
 const PaymentPage = () => {
   return (
@@ -144,7 +144,7 @@ const PaymentPage = () => {
                   может потребоваться ввод специального пароля.
                 </p>
                 {""}
-                <p >
+                <p>
                   Настоящий сайт поддерживает 256-битное шифрование.
                   Конфиденциальность сообщаемой персональной информации
                   обеспечивается ПАО СБЕРБАНК. Введённая информация не будет

@@ -37,3 +37,11 @@
     }
   }
 }
+.signin-auth-btn {
+  background-color: $theme-color;
+  color: $font-color;
+  &--disabled {
+    background-color: $light-border-color;
+    color: $btn-color;
+  }
+}

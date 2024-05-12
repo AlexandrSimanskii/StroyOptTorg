@@ -12,6 +12,7 @@
     margin-bottom: 50px;
   }
   &-params {
+    margin-bottom: 20px;
     border-radius: 6px;
     background-color: hsl(0, 0%, 100%);
     &__dd {
@@ -48,6 +49,7 @@
     padding: 20px;
     border-radius: 6px;
     width: 100%;
+    margin-top: 40px;
     &__inner {
       margin: 0;
       gap: 37px;
@@ -101,8 +103,12 @@
     color: #003b73;
   }
   &__added {
+    margin-top: 20px;
     background-color: $theme-color;
     color: $font-color;
+    &--active {
+      background-color: $btn-color;
+    }
   }
   &__pay {
     background-color: $light-border-color;
@@ -123,12 +129,16 @@
     display: flex;
     align-items: center;
     column-gap: 6px;
-    &__icon {
+    &__heart {
       border: 1px solid $light-border-color;
       border-radius: 4px;
       width: 40px;
       height: 40px;
       padding: 10px;
+      &--active {
+        color: red;
+        border-color: red;
+      }
     }
   }
 }

@@ -2,9 +2,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import RangeInput from "./RangeInput";
 import { IoMenu } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import AsideCategory from "./AsideCategory";
 import AsideBrand from "./AsideBrand";
-import { AsideFilterProps } from "../../types/types";
+import { AsideFilterPropsType } from "../../types/types";
 import { useNavigate } from "react-router-dom";
 import {
   Accordion,
@@ -13,6 +12,7 @@ import {
   Button,
 } from "@mui/material";
 import { useState } from "react";
+import { ref } from "firebase/storage";
 
 const AsideFilter = ({
   limit,
@@ -25,7 +25,7 @@ const AsideFilter = ({
   setLabel,
   setProducts,
   setCountPages,
-}: AsideFilterProps) => {
+}: AsideFilterPropsType) => {
   const [asideOpen, setAsideOpen] = useState(false);
 
   const navigate = useNavigate();
@@ -52,6 +52,7 @@ const AsideFilter = ({
       console.log(error);
     }
   };
+
 
   return (
     <>
@@ -100,7 +101,9 @@ const AsideFilter = ({
           </Button>
         </form>
       </aside>
-      {asideOpen && <span className="open"></span>}
+      {asideOpen && (
+        <span onClick={() => setAsideOpen(false)} className="open"></span>
+      )}
     </>
   );
 };
