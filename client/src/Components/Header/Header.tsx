@@ -2,7 +2,7 @@ import { LuMenu } from "react-icons/lu";
 import { Link, useNavigate } from "react-router-dom";
 import {
   useAppSelector,
-  useAppDispatch,
+
 } from "../../store/redux_hooks/reduxHook";
 import { logOutSlise } from "../../store/users/userSlise";
 
@@ -11,7 +11,7 @@ import ConfirmLogOut from "../ConfirmLogOut/ConfirmLogOut";
 
 const Header = () => {
   const [logoutVisible, setLogoutVisible] = useState(false);
-  const dispath = useAppDispatch();
+ 
   const user = useAppSelector((state) => state.user);
   const navigate = useNavigate();
 
@@ -34,9 +34,11 @@ const Header = () => {
             </div>
             <nav className="header-nav">
               <ul className="header-nav-list">
-                <li className="header-nav-list__element">
-                  <Link to={"/personroom"}>Личный кабинет</Link>
-                </li>
+                {user._id && (
+                  <li className="header-nav-list__element">
+                    <Link to={"/personroom"}>Личный кабинет</Link>
+                  </li>
+                )}
                 <li className="header-nav-list__element">
                   <Link to={"/about"}>О компании</Link>
                 </li>
