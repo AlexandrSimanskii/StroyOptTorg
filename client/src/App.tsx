@@ -1,29 +1,26 @@
+import { Suspense, lazy } from "react";
 import "./style/main.scss";
 import Home from "../src/pages/Home.tsx";
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/About.tsx";
-import { Suspense } from "react";
+const About = lazy(() => import("./pages/About.tsx"));
 
-import Layout from "./Components/Loyout/Layout.tsx";
-import NotFound from "./pages/NotFound.tsx";
-import Catalog from "./pages/Catalog.tsx";
-import Contacts from "./pages/Contacts.tsx";
-import Reviews from "./pages/Reviews.tsx";
-
-import Return from "./pages/Return.tsx";
-import PaymentPage from "./pages/PaymentPage.tsx";
-import Delivery from "./pages/Delivery.tsx";
-import Answear from "./pages/Answear.tsx";
-import Blog from "./pages/Blog.tsx";
-import Cart from "./pages/Cart.tsx";
-
-import Product from "./pages/Product.tsx";
-
+const Loyout = lazy(() => import("./Components/Loyout/Layout.tsx"));
+const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const Catalog = lazy(() => import("./pages/Catalog.tsx"));
+const Contacts = lazy(() => import("./pages/Contacts.tsx"));
+const Reviews = lazy(() => import("./pages/Reviews.tsx"));
+const Return = lazy(() => import("./pages/Return.tsx"));
+const PaymentPage = lazy(() => import("./pages/PaymentPage.tsx"));
+const Delivery = lazy(() => import("./pages/Delivery.tsx"));
+const Answear = lazy(() => import("./pages/Answear.tsx"));
+const Blog = lazy(() => import("./pages/Blog.tsx"));
+const Cart = lazy(() => import("./pages/Cart.tsx"));
+const Product = lazy(() => import("./pages/Product.tsx"));
 import SignUp from "./pages/SignUp.tsx";
 import SignIn from "./pages/SignIn.tsx";
-import Favorite from "./pages/Favorite.tsx";
-import Checkout from "./pages/CheckOut.tsx";
-import PersonRoom from "./pages/PersonRoom.tsx";
+const Favorite = lazy(() => import("./pages/Favorite.tsx"));
+const Checkout = lazy(() => import("./pages/CheckOut.tsx"));
+const PersonRoom = lazy(() => import("./pages/PersonRoom.tsx"));
 
 function App() {
   return (
@@ -33,7 +30,7 @@ function App() {
           path="/"
           element={
             <Suspense fallback={<p>Loading</p>}>
-              <Layout />
+              <Loyout />
             </Suspense>
           }
         >

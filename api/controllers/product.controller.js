@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { errorHandler } from "../utils/error.js";
 
 export const getProducts = async (req, res, next) => {
-  console.log(req.query);
+
 
   try {
     const limit = parseInt(req.query.limit) || 6;
