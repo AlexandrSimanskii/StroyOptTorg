@@ -1,6 +1,6 @@
-import { News } from "../../types/types.js";
+import { NewsType } from "../../types/types.js";
 
-const NewsCard: React.FC<{ data: News }> = ({ data }) => {
+const NewsCard: React.FC<{ data: NewsType }> = ({ data }) => {
   return (
     <div className="news-card">
       <img className="news-card__img" src={data.image} alt="" />

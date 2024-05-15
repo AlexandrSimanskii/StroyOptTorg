@@ -9,19 +9,19 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { SortFilterPropsType, ProductType } from "../../types/types";
+import { SortFilterPropsType,  } from "../../types/types";
 
 const SortFilter = ({
   limit,
-  sort,
+  
   setLimit,
   setSort,
-  products,
+
   setProducts,
-  price,
-  label,
-  category,
-  startIndex,
+ 
+ 
+ 
+
   setCountPages,
 }: SortFilterPropsType) => {
   const navigate = useNavigate();
@@ -32,7 +32,7 @@ const SortFilter = ({
     const queryParams = params.toString();
 
     if (buttonName < limit) {
-      setProducts((prev) => prev.filter((item, id) => id < buttonName));
+      setProducts((prev) => prev.filter((_, id) => id < buttonName));
       setLimit(buttonName);
     } else if (buttonName > limit) {
       try {

@@ -40,9 +40,9 @@ const RoomPopup = ({ prod }: CartTableProps) => {
                   }
                 </td>
 
-                <td>
-                  <div className="cart-table__amount">
-                    <p className="table-product__price table-product__price--hiden">
+                <td className="table-product__price--hiden">
+                  <div className="cart-table__amount ">
+                    <p className="table-product__price ">
                       {(item.discountPrice
                         ? Number(item.discountPrice)
                         : Number(item.regularPrice)) * item.count}{" "}

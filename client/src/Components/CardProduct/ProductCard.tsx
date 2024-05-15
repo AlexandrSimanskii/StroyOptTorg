@@ -15,6 +15,12 @@ import {
   addInCartSlice,
   deleteFromCartSlice,
 } from "../../store/users/userSlise";
+import {
+  addFavoriteNotAuth,
+  addInCartNotAuth,
+  deleteFavoriteNotAuth,
+  deleteFromCartNotAuth,
+} from "../../store/NotAuth/notAuthSlice";
 
 interface CardProductProps {
   product: ProductType;
@@ -22,12 +28,26 @@ interface CardProductProps {
 
 const CardProduct = ({ product }: CardProductProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [inCart, setInCart] = useState(false);
   const user = useAppSelector((state) => state.user);
+  const notAuth = useAppSelector((state) => state.notAuth);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    user.favorite.includes(product._id) && setIsFavorite(true);
-  }, []);
+    if (user._id) {
+      setInCart(user.cart.some((item) => item._id === product._id));
+    } else {
+      setInCart(notAuth.cart.some((item) => item._id === product._id));
+    }
+  }, [user.cart, user._id, notAuth.cart, product._id]);
+
+  useEffect(() => {
+    if (user._id) {
+      setIsFavorite(user.favorite.includes(product._id));
+    } else {
+      setIsFavorite(notAuth.favorite.includes(product._id));
+    }
+  }, [user.favorite, user._id, notAuth.favorite, product._id]);
 
   const addInFavorite = async () => {
     if (user._id) {
@@ -46,62 +66,82 @@ const CardProduct = ({ product }: CardProductProps) => {
       } catch (error) {
         console.log(error);
       }
+    } else {
+      dispatch(addFavoriteNotAuth(product._id));
+      setIsFavorite(true);
     }
   };
   const deleteFromFavorite = async () => {
-    try {
-      const res = await fetch("/api/users/favorite/delete", {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user_id: user._id, product_id: product._id }),
-      });
-      const data = await res.json();
-      if (data.success) {
-        return;
+    if (user._id) {
+      try {
+        const res = await fetch("/api/users/favorite/delete", {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ user_id: user._id, product_id: product._id }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          return;
+        }
+        dispatch(deleteFavoriteSlice(product._id));
+        setIsFavorite(false);
+      } catch (error) {
+        console.log(error);
       }
-      dispatch(deleteFavoriteSlice(product._id));
+    } else {
+      dispatch(deleteFavoriteNotAuth(product._id));
       setIsFavorite(false);
-    } catch (error) {
-      console.log(error);
     }
   };
 
   const handleAddInCart = async () => {
-    try {
-      const res = await fetch(`/api/users/${user._id}/cart/add`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          currentProduct: { _id: product._id, count: 1 },
-        }),
-      });
-      const data = await res.json();
-      if (data.success == false) {
-        return console.log(data.message);
-      }
+    if (user._id) {
+      try {
+        const res = await fetch(`/api/users/${user._id}/cart/add`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            currentProduct: { _id: product._id, count: 1 },
+          }),
+        });
+        const data = await res.json();
+        if (data.success == false) {
+          return console.log(data.message);
+        }
 
-      dispatch(addInCartSlice({ _id: product._id, count: 1 }));
-    } catch (error) {
-      console.log(error);
+        dispatch(addInCartSlice({ _id: product._id, count: 1 }));
+        setInCart(true);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      dispatch(addInCartNotAuth({ _id: product._id, count: 1 }));
+      setInCart(true);
     }
   };
   const handleDeleteFromCart = async () => {
-    try {
-      const res = await fetch(`/api/users/${user._id}/cart/delete`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          productId: product._id,
-        }),
-      });
-      const data = await res.json();
-      if (data.success == false) {
-        return console.log(data.message);
-      }
+    if (user._id) {
+      try {
+        const res = await fetch(`/api/users/${user._id}/cart/delete`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            productId: product._id,
+          }),
+        });
+        const data = await res.json();
+        if (data.success == false) {
+          return console.log(data.message);
+        }
 
-      dispatch(deleteFromCartSlice(product._id));
-    } catch (error) {
-      console.log(error);
+        dispatch(deleteFromCartSlice(product._id));
+        setInCart(false);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      dispatch(deleteFromCartNotAuth(product._id));
+      setInCart(false);
     }
   };
 
@@ -127,7 +167,7 @@ const CardProduct = ({ product }: CardProductProps) => {
         </p>
       )}
       <div className="card-bottom">
-        {user.cart.some((item) => item._id === product._id) ? (
+        {inCart ? (
           <button
             className="card-bottom__btn card-bottom__btn--added"
             onClick={handleDeleteFromCart}

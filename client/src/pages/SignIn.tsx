@@ -116,7 +116,7 @@ const SignIn = () => {
                 isValid ? "" : "signin-auth-btn--disabled"
               }   `}
             >
-              Войти
+              {loading ? "загрузка" : "войти"}
             </button>
           </form>
           <Account />

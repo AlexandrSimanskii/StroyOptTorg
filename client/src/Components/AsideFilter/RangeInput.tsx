@@ -1,4 +1,4 @@
-import {  Slider, Box, styled } from "@mui/material";
+import { Slider, Box, styled } from "@mui/material";
 import { useEffect, useState } from "react";
 const Range = styled(Slider)({
   color: " rgb(24, 111, 212)",
@@ -21,7 +21,7 @@ const RangeInput = ({ price, setPrice }: RangeInputProps) => {
   const [maxValue, setMaxValue] = useState(price[1]);
   const [minValue, setMinValue] = useState(price[0]);
 
-  const handleChange = (event: Event, newValue: number | number[]) => {
+  const handleChange = (_: Event, newValue: number | number[]) => {
     setPrice(newValue as number[]);
   };
 

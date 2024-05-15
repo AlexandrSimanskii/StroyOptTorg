@@ -1,13 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { productSlice } from "./products/productsSlice";
 import { userSlice } from "./users/userSlise";
+import { notAuthSlice } from "./NotAuth/notAuthSlice";
+
 import { combineReducers } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { searchSlice } from "./SearchSlice/searchSlice";
 
 const rootReducer = combineReducers({
   user: userSlice.reducer,
+  search: searchSlice.reducer,
   products: productSlice.reducer,
+  notAuth: notAuthSlice.reducer,
 });
 
 const persistConfig = {

@@ -60,7 +60,7 @@ const Checkout = () => {
     watch,
     register,
     handleSubmit,
-    formState: { errors },
+    // formState: { errors },
   } = useForm();
 
   const pay = watch("pay") || "Наличные";
@@ -83,6 +83,7 @@ const Checkout = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ orders: data }),
       });
+      console.log(res);
 
       setPopup(true);
       dispatch(updateUserOrder(data));
@@ -126,9 +127,7 @@ const Checkout = () => {
           >
             <div className="checkout-user__inform">
               <div className="form__field">
-                <p className="user__inform-title">
-                  Данные покупателя
-                </p>
+                <p className="user__inform-title">Данные покупателя</p>
                 <input
                   className="checkout-input"
                   {...register("name")}

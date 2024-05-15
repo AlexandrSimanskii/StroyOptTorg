@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { News } from "../../types/types.ts";
+import { NewsType } from "../../types/types.ts";
 import NewsCard from "./NewsCard.tsx";
 
 const NewsComp = () => {
-  const [news, setNews] = useState<News[]>([]);
+  const [news, setNews] = useState<NewsType[]>([]);
   const getNews = async () => {
     try {
       const res = await fetch("/api/news/get?limit=4");

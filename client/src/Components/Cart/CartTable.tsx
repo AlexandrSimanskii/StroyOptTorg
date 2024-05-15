@@ -7,6 +7,10 @@ import {
   useAppSelector,
 } from "../../store/redux_hooks/reduxHook";
 import {
+  addInCartNotAuth,
+  deleteFromCartNotAuth,
+} from "../../store/NotAuth/notAuthSlice";
+import {
   addInCartSlice,
   deleteFromCartSlice,
 } from "../../store/users/userSlise";
@@ -18,67 +22,83 @@ type CartTableProps = {
 
 const CartTable = ({ cartProducts, setCartProducts }: CartTableProps) => {
   const user = useAppSelector((state) => state.user);
+
   const dispatch = useAppDispatch();
 
   const handleDeleteFromCart = async (product: CartProductType) => {
-    try {
-      const res = await fetch(`api/users/${user._id}/cart/delete`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          productId: product._id,
-        }),
-      });
-      const data = await res.json();
-      if (data.success == false) {
-        return console.log(data.message);
-      }
+    if (user._id) {
+      try {
+        const res = await fetch(`api/users/${user._id}/cart/delete`, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            productId: product._id,
+          }),
+        });
+        const data = await res.json();
+        if (data.success == false) {
+          return console.log(data.message);
+        }
 
-      dispatch(deleteFromCartSlice(product._id));
+        dispatch(deleteFromCartSlice(product._id));
+        setCartProducts((prev) =>
+          prev.filter((item) => item._id !== product._id)
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      dispatch(deleteFromCartNotAuth(product._id));
       setCartProducts((prev) =>
         prev.filter((item) => item._id !== product._id)
       );
-    } catch (error) {
-      console.log(error);
     }
   };
 
   const handlePlusProduct = async (product: CartProductType) => {
-    try {
-      const res = await fetch(`api/users/${user._id}/cart/add`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          currentProduct: { _id: product._id, count: ++product.count },
-        }),
-      });
-      const data = await res.json();
-      if (data.success == false) {
-        return console.log(data.message);
-      }
+    if (user._id) {
+      try {
+        const res = await fetch(`api/users/${user._id}/cart/add`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            currentProduct: { _id: product._id, count: ++product.count },
+          }),
+        });
+        const data = await res.json();
+        if (data.success == false) {
+          return console.log(data.message);
+        }
 
-      dispatch(addInCartSlice({ _id: product._id, count: product.count }));
-    } catch (error) {
-      console.log(error);
+        dispatch(addInCartSlice({ _id: product._id, count: product.count }));
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      dispatch(addInCartNotAuth({ _id: product._id, count: ++product.count }));
     }
   };
   const handleMinusProduct = async (product: CartProductType) => {
-    try {
-      const res = await fetch(`api/users/${user._id}/cart/add`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          currentProduct: { _id: product._id, count: --product.count },
-        }),
-      });
-      const data = await res.json();
-      if (data.success == false) {
-        return console.log(data.message);
-      }
+    if (user._id) {
+      try {
+        const res = await fetch(`api/users/${user._id}/cart/add`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            currentProduct: { _id: product._id, count: product.count },
+          }),
+        });
+        const data = await res.json();
+        if (data.success == false) {
+          return console.log(data.message);
+        }
 
-      dispatch(addInCartSlice({ _id: product._id, count: product.count }));
-    } catch (error) {
-      console.log(error);
+        dispatch(addInCartSlice({ _id: product._id, count: product.count }));
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      dispatch(addInCartNotAuth({ _id: product._id, count: --product.count }));
     }
   };
 

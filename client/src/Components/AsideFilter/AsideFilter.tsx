@@ -12,7 +12,6 @@ import {
   Button,
 } from "@mui/material";
 import { useState } from "react";
-import { ref } from "firebase/storage";
 
 const AsideFilter = ({
   limit,
@@ -20,7 +19,7 @@ const AsideFilter = ({
   price,
   setPrice,
   category,
-  setCategory,
+
   label,
   setLabel,
   setProducts,
@@ -52,7 +51,6 @@ const AsideFilter = ({
       console.log(error);
     }
   };
-
 
   return (
     <>

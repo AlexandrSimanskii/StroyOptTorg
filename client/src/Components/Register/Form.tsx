@@ -85,7 +85,7 @@ const RegisterForm = () => {
           {errors.email && <span>{errors.email.message}</span>}
         </label>
         <label className="label">
-          Номер телефона<span className="contact-label__required">*</span>:
+          Телефон<span className="contact-label__required">*</span>:
           <InputMask
             mask={`+\\7\\(999)-999-99-99`}
             className="input"

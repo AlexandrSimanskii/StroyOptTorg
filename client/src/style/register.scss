@@ -1,4 +1,5 @@
 .register {
+  margin-top: 30px;
   &-content {
     margin-top: 20px;
     border: 1px solid $light-border-color;
@@ -43,5 +44,38 @@
   &--disabled {
     background-color: $light-border-color;
     color: $btn-color;
+  }
+}
+@media (max-width: 1260px) {
+  .register {
+    &-account {
+      margin-top: 20px;
+    }
+    &-content {
+      column-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .register-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .register {
+    &-account {
+      padding-left: 60px;
+
+      &::after {
+        content: url("/images/icons/register_user.svg");
+        position: absolute;
+        left: 10px;
+        top: 0;
+      }
+    }
+  }
+  .register-content {
+    padding: 16px;
   }
 }

@@ -29,6 +29,8 @@ const Pagination = ({
     if (page >= 1) {
       setStartIndex((page - 1) * limit);
     }
+    console.log(event);
+    
   };
 
   const { items } = usePagination({

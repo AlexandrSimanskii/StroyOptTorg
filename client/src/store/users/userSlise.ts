@@ -19,7 +19,7 @@ export const userSlice = createSlice({
   initialState,
 
   reducers: {
-    signInSuccessSlice: (state, action) => {
+    signInSuccessSlice: (_state, action) => {
       return action.payload;
     },
     logOutSlise: (state) => {

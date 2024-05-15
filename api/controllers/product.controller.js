@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import { errorHandler } from "../utils/error.js";
 
 export const getProducts = async (req, res, next) => {
+  console.log(req.query);
+
   try {
     const limit = parseInt(req.query.limit) || 6;
     const startIndex = parseInt(req.query.startIndex) || 0;
@@ -53,6 +55,7 @@ export const getProducts = async (req, res, next) => {
     next(error);
   }
 };
+
 export const getProduct = async (req, res, next) => {
   console.log(req.params.id);
   try {
@@ -122,7 +125,6 @@ export const getUserCart = async (req, res, next) => {
         regularPrice: item.regularPrice,
         article: item.article,
         img: item.images[0],
-        
       };
       if (item.discountPrice) {
         newData.discountPrice = item.discountPrice;

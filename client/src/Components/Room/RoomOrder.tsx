@@ -7,6 +7,7 @@ const RoomOrder = () => {
   const [popup, setPopup] = useState(false);
   const [prod, setProd] = useState([]);
   const user = useAppSelector((state) => state.user);
+
   const getOrder = async (item: ProductOrderType) => {
     try {
       const res = await fetch("/api/products/get/cart", {
@@ -37,8 +38,8 @@ const RoomOrder = () => {
               <tr>
                 <th>Номер</th>
 
-                <th>Дата</th>
-                <th>Количество</th>
+                <th className="invisible">Дата</th>
+                <th className="invisible">Количество</th>
                 <th>Итого</th>
               </tr>
             </thead>
@@ -47,8 +48,10 @@ const RoomOrder = () => {
                 <tr key={id}>
                   <td>{item.id}</td>
 
-                  <td>{item.date}</td>
-                  <td>{item.order.reduce((acc, el) => acc + el.count, 0)}</td>
+                  <td className="invisible">{item.date}</td>
+                  <td className="invisible">
+                    {item.order.reduce((acc, el) => acc + el.count, 0)}
+                  </td>
                   <td className="room__total-price">
                     <p>{item["total price"]}</p>
                     <MdKeyboardArrowRight

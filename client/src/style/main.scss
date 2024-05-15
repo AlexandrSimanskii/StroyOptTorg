@@ -42,6 +42,7 @@ ol {
   list-style-position: inside;
 }
 a {
+  color: $btn-color;
   text-decoration: none;
   &:visited {
     color: inherit;

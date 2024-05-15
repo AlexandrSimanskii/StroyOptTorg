@@ -6,6 +6,7 @@ import CartTable from "../Components/Cart/CartTable";
 
 const Cart = () => {
   const user = useAppSelector((state) => state.user);
+  const notAuth = useAppSelector((state) => state.notAuth);
   const [cartProducts, setCartProducts] = useState<CartProductType[]>([]);
   const navigate = useNavigate();
   const getCartProduct = async () => {
@@ -15,7 +16,7 @@ const Cart = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ product: user.cart }),
+        body: JSON.stringify({ product: user._id ? user.cart : notAuth.cart }),
       });
 
       const data = await res.json();

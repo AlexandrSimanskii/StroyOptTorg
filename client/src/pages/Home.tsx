@@ -8,7 +8,7 @@ import CatalogList from "../Components/HomeComponents/CatalogList.tsx";
 import { useEffect, useState } from "react";
 import { ProductType } from "../types/types.ts";
 import CardProduct from "../Components/CardProduct/ProductCard.tsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InfoBlock from "../Components/InfoBlock/InfoBlock.tsx";
 import NewsComp from "../Components/News/NewsComp.tsx";
 import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
@@ -16,6 +16,7 @@ import { useAppSelector } from "../store/redux_hooks/reduxHook.ts";
 const Home = () => {
   const [betterProducts, setBetterProducts] = useState<ProductType[]>([]);
   const user = useAppSelector((state) => state.user);
+  const navigate = useNavigate();
   const getBetterProducts = async () => {
     try {
       const res = await fetch("/api/products/get?limit=5&startIndex=15");
@@ -33,7 +34,7 @@ const Home = () => {
   console.log(user);
 
   return (
-    <main>
+    <main className="home">
       <div className="container">
         <HomeSlider />
         <section className="home-catalog">
@@ -143,7 +144,10 @@ const Home = () => {
                 и дизайнерские фантазии и с минимальными затратами времени и
                 денежных средств.
               </p>
-              <button className="home-about__btn">
+              <button
+                onClick={() => navigate("/about")}
+                className="home-about__btn"
+              >
                 Подробнее о компании{" "}
                 <MdKeyboardArrowRight className="home-about__btn-arrow" />
               </button>
@@ -156,7 +160,6 @@ const Home = () => {
             <div className="home-news__inner"></div>
             <div className="home-news__group">
               <h2 className="title">Последние новости</h2>
-              <button className="home-news__btn">Больше новостей</button>
             </div>
             <NewsComp />
           </div>

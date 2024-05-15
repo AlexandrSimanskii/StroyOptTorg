@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { IoSend } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Footer = () => {
-  const [catalog, setCatalog] = useState(false);
-  const [inform, setInform] = useState(false);
+  // const [catalog, setCatalog] = useState(false);
+  // const [inform, setInform] = useState(false);
 
   const catalogCollection = [
     "Общестроительные материалы",
@@ -24,13 +24,13 @@ const Footer = () => {
     "О компании",
     "Вопрос-ответ",
     "Оплата",
-    "Новости",
+   
     "Доставка",
     "Контакты",
     "Возврат",
     "Вход/Регистрация",
     "Отзывы",
-    "Все акции",
+   
   ];
   return (
     <footer className="footer">
@@ -70,7 +70,7 @@ const Footer = () => {
               <p className="footer-main-list-name ">Информация</p>
               <IoIosArrowDown
                 onClick={() => {
-                  setInform((prev) => !prev);
+                  // setInform((prev) => !prev);
                 }}
                 className="footer-main-list-arrow"
               />
@@ -89,7 +89,7 @@ const Footer = () => {
               <IoIosArrowDown
                 className="footer-main-list-arrow"
                 onClick={() => {
-                  setCatalog((prev) => !prev);
+                  // setCatalog((prev) => !prev);
                 }}
               />
             </div>

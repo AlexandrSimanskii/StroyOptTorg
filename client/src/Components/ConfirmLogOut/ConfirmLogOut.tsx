@@ -1,16 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { logOutSlise } from "../../store/users/userSlise";
 import { RxCross2 } from "react-icons/rx";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../store/redux_hooks/reduxHook";
+import { useAppDispatch } from "../../store/redux_hooks/reduxHook";
 type Props = {
   setLogoutVisible: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const ConfirmLogOut = ({ setLogoutVisible }: Props) => {
-  const user = useAppSelector((state) => state.user);
   const dispath = useAppDispatch();
   const navigate = useNavigate();
 

@@ -4,7 +4,7 @@ import SortFilter from "../Components/AsideFilter/SortFilter";
 import CardProduct from "../Components/CardProduct/ProductCard";
 import { ProductType } from "../types/types";
 import Pagination from "../Components/Pagination/Pagination";
-import { useNavigate } from "react-router-dom";
+
 
 import { useAppSelector, useAppDispatch } from "../store/redux_hooks/reduxHook";
 import { getProducts } from "../store/products/productsSlice";
@@ -25,10 +25,11 @@ const Catalog = () => {
   const urlSearchParams = new URLSearchParams();
 
   const dispatch = useAppDispatch();
-
+  const searchTerm = useAppSelector((state) => state.search);
   const fetchProducts = async () => {
     setLoading(true);
     try {
+      urlSearchParams.set("searchTerm", searchTerm);
       urlSearchParams.set("startIndex", startIndex.toString());
       urlSearchParams.set("price", price.join(","));
       urlSearchParams.set("label", label.join(","));
@@ -71,8 +72,7 @@ const Catalog = () => {
   useEffect(() => {
     getMinMaxPrices();
     fetchProducts();
-  }, [startIndex, sort]);
-  console.log(sort);
+  }, [startIndex, sort, searchTerm]);
 
   return (
     <div className="catalog">
@@ -110,10 +110,10 @@ const Catalog = () => {
                   <CardSkeleton key={i} />
                 ))}
               {products.length > 0 &&
-                !loading &&
+                !loading ?
                 products.map((product) => (
                   <CardProduct key={product._id} product={product} />
-                ))}
+                )):<p>Нет продуктов с такими параметрами!</p>}
             </div>
             {countPages !== 0 ? (
               <Pagination

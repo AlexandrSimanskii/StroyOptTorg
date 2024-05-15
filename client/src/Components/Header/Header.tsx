@@ -1,20 +1,28 @@
+import { useRef } from "react";
 import { LuMenu } from "react-icons/lu";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   useAppSelector,
-
+  useAppDispatch,
 } from "../../store/redux_hooks/reduxHook";
-import { logOutSlise } from "../../store/users/userSlise";
-
-import { useState } from "react";
+import {
+  setSearchSlice,
+  clearSearchSlice,
+} from "../../store/SearchSlice/searchSlice";
+import { useEffect, useState } from "react";
 import ConfirmLogOut from "../ConfirmLogOut/ConfirmLogOut";
 
 const Header = () => {
   const [logoutVisible, setLogoutVisible] = useState(false);
- 
+  const [quantityCart, setQuantityCart] = useState(0);
+  const [quantityFavorite, setQuantityFavorite] = useState(0);
   const user = useAppSelector((state) => state.user);
+  const notAuth = useAppSelector((state) => state.notAuth);
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const dispatch = useAppDispatch();
+  const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
-
+  const { pathname } = useLocation();
   const handleClick = () => {
     if (!user._id) {
       navigate("/signup");
@@ -23,17 +31,56 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    if (user._id) {
+      setQuantityFavorite(user.favorite.length);
+    } else {
+      setQuantityFavorite(notAuth.favorite.length);
+    }
+  }, [user.favorite, notAuth.favorite, user._id]);
+
+  useEffect(() => {
+    if (user._id) {
+      setQuantityCart(user.cart.length);
+    } else {
+      setQuantityCart(notAuth.cart.length);
+    }
+  }, [user.cart, notAuth.cart, user._id]);
+
+  useEffect(() => {
+    pathname !== "/catalog" && dispatch(clearSearchSlice());
+    if (inputRef.current) {
+      inputRef.current.value = "";
+    }
+  }, [pathname]);
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    location.pathname !== "/catalog" && navigate("/catalog"),
+      dispatch(setSearchSlice(e.target.value));
+  };
+
   return (
     <>
       <header className="header">
         <div className="container">
           <div className="header-top">
             <div className="header-menu">
-              <LuMenu className="header-menu__icons" />
+              <LuMenu
+                className="header-menu__icons"
+                onClick={() => setMenuIsOpen(true)}
+              />
               <p className="header-menu__text">Меню</p>
             </div>
-            <nav className="header-nav">
-              <ul className="header-nav-list">
+
+            <nav
+              className={`header-nav ${
+                menuIsOpen == true && "header-nav--open"
+              }`}
+            >
+              <ul
+                onClick={() => setMenuIsOpen(false)}
+                className="header-nav-list"
+              >
                 {user._id && (
                   <li className="header-nav-list__element">
                     <Link to={"/personroom"}>Личный кабинет</Link>
@@ -75,7 +122,7 @@ const Header = () => {
             <Link to={"/"}>
               <img
                 className="header-bottom__logo"
-                src="/public/images/image/logo 1.svg "
+                src="/images/image/logo 1.svg "
                 alt="logo"
               />
             </Link>
@@ -88,7 +135,12 @@ const Header = () => {
                 </button>{" "}
               </Link>
               <form className="header-search-form">
-                <input className="header-search-input" type="text" />
+                <input
+                  ref={inputRef}
+                  className="header-search-input"
+                  onChange={handleSearch}
+                  type="text"
+                />
                 <img
                   className="header-search-img"
                   src="../../public/images/icons/search.svg"
@@ -117,8 +169,8 @@ const Header = () => {
                       src="/images/icons/heart.svg"
                       alt="search"
                     />{" "}
-                    {user.favorite.length > 0 && (
-                      <span className="quantity">{user?.favorite.length}</span>
+                    {quantityFavorite > 0 && (
+                      <span className="quantity">{quantityFavorite}</span>
                     )}
                   </div>
                   <p className="header-bottom__list-text">Избранное</p>
@@ -132,8 +184,8 @@ const Header = () => {
                       src="/images/icons/cart.svg"
                       alt="search"
                     />
-                    {user.cart.length > 0 && (
-                      <span className="quantity">{user?.cart.length}</span>
+                    {quantityCart > 0 && (
+                      <span className="quantity">{quantityCart}</span>
                     )}
                   </div>
 
@@ -142,7 +194,10 @@ const Header = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div>{" "}
+        {menuIsOpen && (
+          <span onClick={() => setMenuIsOpen(false)} className="o"></span>
+        )}
       </header>
       {user._id && logoutVisible && (
         <ConfirmLogOut setLogoutVisible={setLogoutVisible} />

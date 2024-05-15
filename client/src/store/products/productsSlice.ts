@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../store";
-import { Product } from "../../types/types";
 
-type Products = Product[];
+import { ProductType } from "../../types/types";
+
+type Products = ProductType[];
 
 const initialState: Products = [];
 
@@ -13,13 +13,12 @@ export const productSlice = createSlice({
   initialState,
 
   reducers: {
-    getProducts: (state, action: PayloadAction<Products>) => {
+    getProducts: (_state, action: PayloadAction<Products>) => {
       return action.payload;
     },
   },
 });
 
 export const { getProducts } = productSlice.actions;
-export const selectCount = (state: RootState) => state.counter.value;
 
 export default productSlice.reducer;

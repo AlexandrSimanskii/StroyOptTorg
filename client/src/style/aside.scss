@@ -47,7 +47,7 @@ input[type="checkbox"] {
     }
   }
   .aside {
-    padding: 0 10px;
+    padding: 30px 10px;
     background-color: #fff;
     position: absolute;
     top: 0;
@@ -92,7 +92,10 @@ input[type="checkbox"] {
     filter: blur(10px);
   }
 }
-@media (max-width: 750) {
+@media (max-width: 350px) {
+  .aside-form {
+    width: 300px;
+  }
 }
 
 @keyframes aside-open {

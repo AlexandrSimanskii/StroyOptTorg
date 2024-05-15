@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
+
 import { useState, useRef, useEffect } from "react";
-import { useAppDispatch } from "../../store/redux_hooks/reduxHook";
+
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -18,8 +18,8 @@ const ChangePassword = ({ _id }: Props) => {
   const [loading, setLoading] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmVisible, setConfirmVisible] = useState(false);
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useAppDispatch();
+  // const navigate = useNavigate();
   const requiredMessage = "Обязательно к заполнению";
 
   const {

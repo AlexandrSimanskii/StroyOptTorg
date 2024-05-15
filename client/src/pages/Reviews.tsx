@@ -8,7 +8,7 @@ const Reviews = () => {
   const [isSortActive, setIsSortActive] = useState(true);
   const [reviews, setReviews] = useState<ReviewType[]>([]);
   const [order, setOrder] = useState("desc");
-  const [limit, setLimit] = useState(10);
+  // const [limit, setLimit] = useState(10);
   const [startIndex, setStartIndex] = useState(0);
   const [countPages, setCountPages] = useState(1);
 
@@ -101,7 +101,7 @@ const Reviews = () => {
             {countPages > 1 && (
               <Pagination
                 setStartIndex={setStartIndex}
-                limit={limit}
+                limit={10}
                 countPages={countPages}
                 // setCountPages={setCountPages}
               />
