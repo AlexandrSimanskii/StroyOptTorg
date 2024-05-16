@@ -112,7 +112,7 @@ const Home = () => {
               <dl className="home-description">
                 <div className="home-description-group">
                   <dt className="home-description-term home-description-term-area">
-                    17805,3м<sup>2</sup>
+                    17805,3 кв.м
                   </dt>
                   <dd className="home-description-definition">
                     торговых и складских <br /> помещений

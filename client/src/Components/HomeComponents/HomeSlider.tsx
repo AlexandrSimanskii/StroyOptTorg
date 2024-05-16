@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 
 const HomeSlider = () => {
   useEffect(() => {
@@ -9,9 +9,9 @@ const HomeSlider = () => {
       direction: "horizontal",
       loop: true,
       speed: 4000,
-      autoplay: {
-        delay: 5000,
-      },
+      // autoplay: {
+      //   delay: 5000,
+      // },
       pagination: {
         el: ".swiper-pagination",
       },
@@ -42,7 +42,8 @@ const HomeSlider = () => {
                 комнаты,а так же других сопутствующих товаров.
               </p>
               <button className="banner-inform__btn">
-                перейти к товарам <MdOutlineKeyboardArrowRight />
+                перейти к товарам{" "}
+          
               </button>
             </div>
           </div>
@@ -62,7 +63,7 @@ const HomeSlider = () => {
                 комнаты,а так же других сопутствующих товаров.
               </p>
               <button className="banner-inform__btn">
-                перейти к товарам <MdOutlineKeyboardArrowRight />
+                перейти к товарам 
               </button>
             </div>
           </div>
@@ -81,7 +82,7 @@ const HomeSlider = () => {
                 комнаты,а так же других сопутствующих товаров.
               </p>
               <button className="banner-inform__btn">
-                перейти к товарам <MdOutlineKeyboardArrowRight />
+                перейти к товарам 
               </button>
             </div>
           </div>
@@ -101,7 +102,7 @@ const HomeSlider = () => {
                 комнаты,а так же других сопутствующих товаров.
               </p>
               <button className="banner-inform__btn">
-                перейти к товарам <MdOutlineKeyboardArrowRight />
+                перейти к товарам 
               </button>
             </div>
           </div>

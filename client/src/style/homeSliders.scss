@@ -61,6 +61,7 @@
   left: 60px;
   top: 50%;
   transform: translateY(-50%);
+
   max-width: 524px;
   &__title {
     font-family: "HelveticaNeueCyr", sans-serif;
@@ -89,6 +90,7 @@
 }
 
 .slider {
+  margin-top: 20px;
   position: relative;
   overflow: hidden;
   & .swiper-slide {
@@ -118,7 +120,6 @@
     }
     &-next {
       transform: rotate(90deg);
-    
     }
     &__arrow {
       width: 40px;
@@ -134,7 +135,7 @@
 }
 @media (max-width: 1024px) {
   .banner-inform {
-    max-width: 524px;
+    max-width: 360px;
     &__title {
       font-size: 38px;
     }
@@ -142,12 +143,16 @@
       font-size: 15px;
     }
   }
-  .banner-inform {
-    max-width: 360px;
-  }
 }
 
 @media (max-width: 640px) {
+  .home-sale-list {
+    display: none;
+  }
+  .home-banner .swiper .swiper-slide {
+    background-position: center;
+  }
+
   .title {
     font-size: 24px;
   }
@@ -157,7 +162,7 @@
     align-items: center;
     text-align: center;
     right: 50%;
-    top: 55%;
+    top: 50%;
     transform: translate(50%);
     &__title {
       font-size: 28px;
