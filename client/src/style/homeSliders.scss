@@ -101,7 +101,7 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 50%;
+    top: 25%;
     right: 0;
     left: 0;
     z-index: 2;
@@ -120,6 +120,7 @@
     }
     &-next {
       transform: rotate(90deg);
+      // transform: translateX(-10px);
     }
     &__arrow {
       width: 40px;
