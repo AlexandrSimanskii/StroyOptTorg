@@ -2,7 +2,7 @@ import Review from "../models/review.model.js";
 import mongoose from "mongoose";
 
 export const getReview = async (req, res, next) => {
-  console.log(req.query);
+
   try {
     const sort = req.query.sort || "createdAt";
     const order = req.query.order || "desc";
