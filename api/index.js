@@ -7,6 +7,8 @@ import newsRouter from "./routes/news.router.js";
 import reviewRouter from "./routes/review.router.js";
 import authRouter from "./routes/auth.router.js";
 import usersRouter from "./routes/users.router.js";
+import productRouterDB from "./routes/productDB.router.js";
+import authRouterDB from "./routes/authDB.router.js";
 
 const app = express();
 
@@ -30,6 +32,8 @@ app.use("/api/users", usersRouter);
 app.use("/api/products", productRouter);
 app.use("/api/news", newsRouter);
 app.use("/api/review", reviewRouter);
+app.use("/api/productsDB", productRouterDB);
+app.use("/api/authDB", authRouterDB);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
