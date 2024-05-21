@@ -21,9 +21,20 @@ mongoose
   })
   .catch((err) => console.log("Не удалось подключиться к MongoDB", err));
 const PORT = process.env.PORT || 3004;
-const HOST = "0.0.0.0";
-app.listen(PORT, HOST, () => {
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://193.222.62.100";
+
+app.listen(PORT, () => {
   console.log("Server is running on port 3004");
+});
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", CORS_ORIGIN);
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
 });
 app.use(cookieParser());
 app.use(express.json());
