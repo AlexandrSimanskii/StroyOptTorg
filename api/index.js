@@ -21,16 +21,24 @@ mongoose
   })
   .catch((err) => console.log("Не удалось подключиться к MongoDB", err));
 const PORT = process.env.PORT || 3004;
-const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://193.222.62.100";
+const allowedOrigins = [
+  process.env.CORS_ORIGIN || "http://193.222.62.100",
+  "https://vercel.com/alexs-projects-f142ab41/mebel-front",
+];
 
 app.listen(PORT, () => {
   console.log("Server is running on port 3004");
 });
+
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", CORS_ORIGIN);
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
   res.setHeader("Access-Control-Allow-Credentials", true);
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, PATCH, DELETE, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+
   if (req.method === "OPTIONS") {
     return res.sendStatus(200);
   }
